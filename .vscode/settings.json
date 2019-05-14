@@ -1,6 +1,7 @@
 {
     "files.associations": {
         "plataforma.h": "c",
-        "player.h": "c"
+        "player.h": "c",
+        "listaplataformas.h": "c"
     }
 }

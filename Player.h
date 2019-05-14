@@ -26,9 +26,9 @@ double get_player_y_pantalla(Player player);
 double get_player_vx(Player player);
 double get_player_vy(Player player);
 
-void togglePlayerVx(Player player);
+void togglePlayerVx(Player player, double percent);
 
-void togglePlayerVy(Player player);
+void togglePlayerVy(Player player, double percent);
 
 int get_player_w(Player player);
 int get_player_h(Player player);
@@ -39,6 +39,10 @@ double set_player_animacion_angulo(Player player, double angulo);
 
 void set_player_x(Player player, double x);
 void set_player_y(Player player, double y);
+
+
+void set_player_vx(Player player, double vx);
+void set_player_vy(Player player, double vy);
 
 void iniciarDisparo(Player player, double angulo, double fuerza_disparo);
 

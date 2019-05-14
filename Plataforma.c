@@ -7,12 +7,13 @@ struct PlataformaRep{
     double w;
     double h;
 
-
+    int isH;
+    int isV;
 };
 
 
 
-Plataforma crea_plataforma(double x, double y, double w, double h){
+Plataforma crea_plataforma(double x, double y, double w, double h, int isH, int isV){
     Plataforma plataforma = malloc(sizeof(struct PlataformaRep));
 
     plataforma->x = x;
@@ -20,6 +21,10 @@ Plataforma crea_plataforma(double x, double y, double w, double h){
 
     plataforma->w = w;
     plataforma->h = h;
+
+
+    plataforma->isH = isH;
+    plataforma->isV = isV;
 
     return plataforma;
 }
@@ -34,22 +39,42 @@ int colision_plataforma_player(Plataforma plataforma, Player player){
 }
 
 void colisiones_plataforma(Plataforma plataforma, Player player){
-
-    //int x_colision = !(get_player_x(player) < plataforma -> x)&&(get_player_x(player) + get_player_w(player) > plataforma -> x + plataforma -> w);
  
     if(colision_plataforma_player(plataforma, player)){
 
-        if(get_player_vx(player)>0){ 
-            set_player_x(player, plataforma->x - get_player_w(player));
+        if(plataforma->isV == 1){
+             if(get_player_vx(player)>0){ 
+                set_player_x(player, plataforma->x - get_player_w(player));
+            }
+
+            if(get_player_vx(player)<0){
+                set_player_x(player, plataforma->x + plataforma -> w); 
+            }
+
+            
+
+            togglePlayerVx(player, 0.8); 
         }
 
-        if(get_player_vx(player)<0){
-            set_player_x(player, plataforma->x);
+            printf("colision!!\n");
+
+        if(plataforma->isH == 1){
+
+            printf("colision!!\n");
+
+            if(get_player_vy(player)<0){ 
+                set_player_y(player, plataforma->y + plataforma -> h);
+            }
+
+            if(get_player_vy(player)>0){ 
+                set_player_y(player, plataforma->y - get_player_w(player));
+                set_player_vx(player, get_player_vx(player)*0.3); 
+                
+            }
+
+            togglePlayerVy(player, 0.5); 
         }
 
-        
-
-        togglePlayerVx(player); 
-        printf("colision \n");
+       
     }
 }

@@ -89,12 +89,9 @@ void colision_player(Player player){
     if((player -> y + player -> h) > Pantalla_Altura()-41){
 
         player -> y = Pantalla_Altura()-40-player->h;
-
-            player -> vy = player -> vy * 0.7 * (-1);
-            player -> vx = player -> vx * 0.7;
-        
-
-
+        player -> vy = player -> vy * 0.7 * (-1);
+        player -> vx = player -> vx * 0.7;
+    
     }
 
     if(player->x <= 0) {
@@ -142,12 +139,20 @@ double get_player_vy(Player player){
     return player->vy;
 }
 
-void togglePlayerVx(Player player){
-    player -> vx = player -> vx * (-1);
+void set_player_vx(Player player, double vx){
+    player->vx = vx;
 }
 
-void togglePlayerVy(Player player){
-    player -> vy = player -> vy * (-1);
+void set_player_vy(Player player, double vy){
+    player->vy = vy;
+}
+
+void togglePlayerVx(Player player, double percent){
+    player -> vx = player -> vx * (-1) * percent; 
+}
+
+void togglePlayerVy(Player player, double percent){
+    player -> vy = player -> vy * (-1) * percent;
 }
 
 

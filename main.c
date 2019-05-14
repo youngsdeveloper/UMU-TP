@@ -10,6 +10,7 @@
 #include "Player.h"
 #include "Enemy.h"
 #include "Plataforma.h"
+#include "ListaPlataformas.h"
 
 
 int MAX_PANTALLA = 500;
@@ -34,13 +35,19 @@ int main( int argc, char *argv[] ){
     Player player = crea_player();
     Enemy enemy = crea_enemy();
 
+    NodoPlataforma cabeceraPlataformas = nuevo_nodo_plataforma(NULL);
 
 
     Pantalla_Crea("Sesion 6", 1000, MAX_PANTALLA);
     Pantalla_DibujaRellenoFondo(2555,255,255,255);
     Pantalla_ColorTrazo(0,0,0,255);
 
-    Plataforma plataforma = crea_plataforma(Pantalla_Anchura()/2-10,Pantalla_Altura()/4,20,Pantalla_Altura() - Pantalla_Altura()/4);
+
+    Plataforma plataforma = crea_plataforma(Pantalla_Anchura()/2-10,Pantalla_Altura()/2.5,20,Pantalla_Altura() - Pantalla_Altura()/2.5, 0, 1);
+    inserta_plataforma(cabeceraPlataformas, plataforma);
+
+    Plataforma plataforma2 = crea_plataforma(Pantalla_Anchura()-100,Pantalla_Altura()/2.5,100,10, 1, 0);
+    inserta_plataforma(cabeceraPlataformas, plataforma2);
 
 
     Imagen imagenJugador = Pantalla_ImagenLee("pelota.bmp",255);
@@ -61,15 +68,21 @@ int main( int argc, char *argv[] ){
 
 
         //Controles de direccion
-        if (Pantalla_TeclaPulsada(SDL_SCANCODE_RIGHT)) {
-            set_player_x(player, get_player_x(player) + 20);
-            set_player_animacion_angulo(player, get_player_animacion_angulo(player)+15);
-        }
-        if (Pantalla_TeclaPulsada(SDL_SCANCODE_LEFT)) {
-            set_player_x(player, get_player_x(player) - 20);
-            set_player_animacion_angulo(player, get_player_animacion_angulo(player)-15);
 
+        if(isDisparando(player) == 0){
+            if (Pantalla_TeclaPulsada(SDL_SCANCODE_RIGHT)) {
+                set_player_vx(player, 3);
+                set_player_x(player, get_player_x(player) + get_player_vx(player));
+                set_player_animacion_angulo(player, get_player_animacion_angulo(player)+15);
+            }
+            if (Pantalla_TeclaPulsada(SDL_SCANCODE_LEFT)) {
+                set_player_vx(player, -3);
+                set_player_x(player, get_player_x(player) + get_player_vx(player));
+                set_player_animacion_angulo(player, get_player_animacion_angulo(player)-15);
+            }   
         }
+
+
         /*
         if (Pantalla_TeclaPulsada(SDL_SCANCODE_UP)) {
             set_player_y(player, get_player_y(player) - get_player_vy(player));
@@ -96,14 +109,16 @@ int main( int argc, char *argv[] ){
             //jugando = 0;
         }
 
-        colisiones_plataforma(plataforma, player);
+        //colisiones_plataforma(plataforma, player);
+
+        colisiones_plataformas(cabeceraPlataformas, player);
 
         //Dibujamos
 
         //Fondo
         Pantalla_DibujaRellenoFondo(255,255,255, 255);
 
-        dibuja_plataforma(plataforma);
+        dibuja_plataformas(cabeceraPlataformas);
 
         //Jugador
         Pantalla_DibujaImagenTransformada(imagenJugador, get_player_x(player), get_player_y(player), get_player_w(player), get_player_h(player), get_player_animacion_angulo(player), SDL_FLIP_HORIZONTAL);
@@ -143,7 +158,7 @@ int main( int argc, char *argv[] ){
                 
                 double modulo_flecha = sqrt(pow(x_flecha, 2) + pow(y_flecha,2));
 
-                double MAX_FUERZA = 500; //200 EN PRODUCCION
+                double MAX_FUERZA = 250; //250 EN PRODUCCION
                 double MN_FUERZA = 50;
 
                 fuerza_disparo =  modulo_flecha*MAX_FUERZA/1000;

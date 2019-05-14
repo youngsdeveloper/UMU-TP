@@ -11,7 +11,7 @@
 
 typedef struct PlataformaRep * Plataforma;
 
-Plataforma crea_plataforma(double x, double y, double w, double h);
+Plataforma crea_plataforma(double x, double y, double w, double h, int isH, int isV);
 
 void dibuja_plataforma(Plataforma plataforma);
 int colision_plataforma_player(Plataforma plataforma, Player player);
