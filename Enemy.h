@@ -12,7 +12,7 @@
 
 typedef struct EnemyRep * Enemy;
 
-Enemy crea_enemy();
+Enemy crea_enemy(double x, double y);
 
 double get_enemy_x(Enemy Enemy);
 double get_enemy_y(Enemy Enemy);
@@ -21,11 +21,16 @@ double get_enemy_vy(Enemy Enemy);
 int get_enemy_w(Enemy Enemy);
 int get_enemy_h(Enemy Enemy);
 
+void dibuja_enemy(Enemy Enemy);
+
 
 void set_enemy_x(Enemy Enemy, double x);
 void set_enemy_y(Enemy Enemy, double y);
 
-void mueve_enemy(Enemy Enemy, Player player);
+void mueve_enemy(Enemy Enemy);
+
+void colision_enemy_player(Enemy Enemy, Player player);
+
 
 
 

@@ -12,11 +12,14 @@
 #include <math.h>
 
 
-typedef struct Nodo * NodoEjercito;
+typedef struct EjercitoRep * Ejercito;
 
-
-NodoEjercito nuevo_nodo_ejercito(Enemy bala);
-
+Ejercito crea_ejercito();
+void inserta_enemigo(Ejercito e, Enemy enemy);
+void dibuja_ejercito(Ejercito e);
+void mueve_ejercito(Ejercito e);
+double genera_aleatorio(int n, int m);
+void colision_ejercito(Ejercito e, Player player);
 #endif
 
 

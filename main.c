@@ -9,8 +9,8 @@
 #include "Rafaga.h"
 #include "Player.h"
 #include "Enemy.h"
-#include "Plataforma.h"
-#include "ListaPlataformas.h"
+#include "Ejercito.h"
+
 
 
 int MAX_PANTALLA = 500;
@@ -30,24 +30,139 @@ int pressed = 0;
 double angulo;
 double fuerza_disparo;
 
-int main( int argc, char *argv[] ){
+/*
+
+    1. Menu
+
+    2. Juego
+
+*/
+
+int GAME_PANTALLA = 1;
+    int ground_height = 40;
+
+
+
+
+void menu(){
+
+    double anim_menu_x = Pantalla_Anchura()-50-10;
+    double anim_menu_y = Pantalla_Altura()-50 - ground_height;
+
+    double anim_menu_vx = 0;
+    double anim_menu_vy = 0;
+
+    Imagen logo1 = Pantalla_ImagenLee("logo1.bmp", 255);
+    Imagen logo2 = Pantalla_ImagenLee("logo2.bmp", 255);
+
+    Imagen logo = logo1;
+
+    double x_mouse;
+    double y_mouse;
+
+    Pantalla_RatonCoordenadas(&x_mouse, &y_mouse);
+
+    int animationStart = 0;
+
+
+    while ( Pantalla_Activa() && GAME_PANTALLA == 1) {
+    
+        Pantalla_DibujaRellenoFondo(2555,255,255,255);
+
+
+
+        double logo_x = 500-200;
+        double logo_y = 50;
+        double logo_w = 400;
+        double logo_h = 100;
+
+
+        Pantalla_DibujaImagen(logo, logo_x, logo_y, logo_w, logo_h);
+
+        double btnPlay_x = 500-150/2;
+        double btnPlay_y = 200;
+        double btnPlay_w = 150;
+        double btnPlay_h = 50;
+
+        Imagen btnPlay = Pantalla_ImagenLee("btnPlay.bmp", 255);
+        Pantalla_DibujaImagen(btnPlay, btnPlay_x, btnPlay_y, btnPlay_w, btnPlay_h);
+
+
+        Imagen btnAyuda = Pantalla_ImagenLee("btnAyuda.bmp", 255);
+        Pantalla_DibujaImagen(btnAyuda, 500-150/2,200+50*1.5,150,50); 
+
+        Imagen imagenSuelo = Pantalla_ImagenLee("ground.bmp",255);
+        Pantalla_DibujaImagen(imagenSuelo, 0, MAX_PANTALLA-ground_height, Pantalla_Anchura(), ground_height);
+
+        Imagen imagenJugador = Pantalla_ImagenLee("pelota.bmp",255);
+
+        anim_menu_x = anim_menu_x + anim_menu_vx;
+        anim_menu_y = anim_menu_y + anim_menu_vy;
+
+        double x_mouse_new = 0;
+        double y_mouse_new = 0;
+        Pantalla_RatonCoordenadas(&x_mouse_new, &y_mouse_new);
+
+        if(Pantalla_RatonBotonPulsado(SDL_BUTTON_LEFT)){
+             if(dentro_rectangulo(btnPlay_x, btnPlay_y, btnPlay_w, btnPlay_h, x_mouse_new, y_mouse_new)){
+                GAME_PANTALLA = 2;
+            }   
+        }
+
+
+
+       
+
+        if(x_mouse!=x_mouse_new || y_mouse != y_mouse_new){
+            animationStart = 1;
+        }
+
+        if(animationStart==1){
+            anim_menu_vx = anim_menu_vx - 3;
+            anim_menu_vy = anim_menu_vy - 3;
+        }
+
+
+
+
+        Pantalla_DibujaImagen(imagenJugador, anim_menu_x, anim_menu_y, 50, 50);
+
+        if(solape_rectangulos(anim_menu_x, anim_menu_y, 50, 50, logo_x, logo_y, logo_w, logo_h)){
+            logo = logo2;
+        }
+
+    
+
+        Pantalla_Actualiza();
+        Pantalla_Espera(40);
+
+    }
+
+    
+
+}
+
+void ayuda(){
+    Pantalla_DibujaRellenoFondo(2555,255,255,255);
+    Pantalla_DibujaTexto("¿Te ayudamos?", 100, 100);
+
+    Pantalla_DibujaTexto("Haz click para jugar ya", 100, 400);
+    if(Pantalla_TeclaPulsada(SDL_SCANCODE_SPACE) ){
+        GAME_PANTALLA = 2;
+    }
+
+}
+
+int juego(){
 
     Player player = crea_player();
-    Enemy enemy = crea_enemy();
-
-    NodoPlataforma cabeceraPlataformas = nuevo_nodo_plataforma(NULL);
+    Ejercito ejercito = crea_ejercito();
 
 
-    Pantalla_Crea("Sesion 6", 1000, MAX_PANTALLA);
     Pantalla_DibujaRellenoFondo(2555,255,255,255);
     Pantalla_ColorTrazo(0,0,0,255);
 
 
-    Plataforma plataforma = crea_plataforma(Pantalla_Anchura()/2-10,Pantalla_Altura()/2.5,20,Pantalla_Altura() - Pantalla_Altura()/2.5, 0, 1);
-    inserta_plataforma(cabeceraPlataformas, plataforma);
-
-    Plataforma plataforma2 = crea_plataforma(Pantalla_Anchura()-100,Pantalla_Altura()/2.5,100,10, 1, 0);
-    inserta_plataforma(cabeceraPlataformas, plataforma2);
 
 
     Imagen imagenJugador = Pantalla_ImagenLee("pelota.bmp",255);
@@ -57,15 +172,14 @@ int main( int argc, char *argv[] ){
     Imagen imagenFlecha = Pantalla_ImagenLee("flecha.bmp",255);
     Imagen imagenPower = Pantalla_ImagenLee("power.bmp",255);
 
-    int ground_height = 40;
+
+   
+    genera_ejercito(ejercito, 200);
 
 
     NodoPtr cabecera = nuevo_nodo(NULL);
 
     while ( Pantalla_Activa() && jugando) {
-
-
-
 
         //Controles de direccion
 
@@ -97,35 +211,29 @@ int main( int argc, char *argv[] ){
 
 
         mueve_player(player);
-
-
         mueve_rafaga(cabecera);
+        mueve_ejercito(ejercito);
 
-        impactaBalaEnemigo(cabecera, enemy);
+        //impactaBalaEnemigo(cabecera, enemy);
 
-        mueve_enemy(enemy,player);
+        //mueve_enemy(enemy,player);
 
-        if(!(get_player_x(player)>= get_enemy_x(enemy) + get_enemy_w(enemy)) && !(get_player_x(player)+get_player_w(player)<get_enemy_x(enemy)) && !(get_player_y(player)>=get_enemy_y(enemy) + get_enemy_h(enemy)) && !(get_player_y(player)+get_player_h(player)<get_enemy_y(enemy))){
-            //jugando = 0;
-        }
+        colision_ejercito(ejercito, player);
 
-        //colisiones_plataforma(plataforma, player);
-
-        colisiones_plataformas(cabeceraPlataformas, player);
+        
 
         //Dibujamos
 
         //Fondo
         Pantalla_DibujaRellenoFondo(255,255,255, 255);
 
-        dibuja_plataformas(cabeceraPlataformas);
 
         //Jugador
         Pantalla_DibujaImagenTransformada(imagenJugador, get_player_x(player), get_player_y(player), get_player_w(player), get_player_h(player), get_player_animacion_angulo(player), SDL_FLIP_HORIZONTAL);
 
         //Enemigo
-        //Pantalla_DibujaImagen(imagenEnemigo, get_enemy_x(enemy) , get_enemy_y(enemy), get_enemy_w(enemy), get_enemy_h(enemy));
 
+        dibuja_ejercito(ejercito);
 
         //Rafaga de balas
         dibuja_rafaga(cabecera);
@@ -196,6 +304,8 @@ int main( int argc, char *argv[] ){
                 pressed = 0;
             }
         }
+
+
         //Siguiente Frame
         Pantalla_Actualiza();
         Pantalla_Espera(40);
@@ -205,6 +315,41 @@ int main( int argc, char *argv[] ){
     Pantalla_ImagenLibera(imagenBala);
 
     Pantalla_Libera();
+
+}
+
+int main( int argc, char *argv[] ){
+
+    Pantalla_Crea("MalditoPajaro", 1000, MAX_PANTALLA);
+    
+    while ( Pantalla_Activa()) {
+    
+        switch(GAME_PANTALLA){
+            case 1:
+                menu();
+                break;
+
+            case 2:
+                juego();
+                break;
+
+            case 3:
+                ayuda();
+                break;
+
+        }
+
+        Pantalla_Actualiza();
+        Pantalla_Espera(40);
+
+    }
+
+    Pantalla_Libera();
+
+
+
+
+    
 
 
     return 0;
