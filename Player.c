@@ -126,6 +126,10 @@ double get_player_animacion_angulo(Player player){
     return player->animacion_angulo;
 }
 
+double set_player_animacion_angulo(Player player, double anim_angulo){
+    player->animacion_angulo = anim_angulo;
+}
+
 double get_player_y(Player player){
     return player->y;
 }
@@ -137,6 +141,8 @@ double get_player_vx(Player player){
 double get_player_vy(Player player){
     return player->vy;
 }
+
+
 
 
 

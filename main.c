@@ -58,17 +58,21 @@ int main( int argc, char *argv[] ){
 
         //Controles de direccion
         if (Pantalla_TeclaPulsada(SDL_SCANCODE_RIGHT)) {
-            set_player_x(player, get_player_x(player) + get_player_vx(player));
+            set_player_x(player, get_player_x(player) + 20);
+            set_player_animacion_angulo(player, get_player_animacion_angulo(player)+15);
         }
         if (Pantalla_TeclaPulsada(SDL_SCANCODE_LEFT)) {
-            set_player_x(player, get_player_x(player) - get_player_vx(player));
+            set_player_x(player, get_player_x(player) - 20);
+            set_player_animacion_angulo(player, get_player_animacion_angulo(player)-15);
+
         }
+        /*
         if (Pantalla_TeclaPulsada(SDL_SCANCODE_UP)) {
             set_player_y(player, get_player_y(player) - get_player_vy(player));
         }
         if (Pantalla_TeclaPulsada(SDL_SCANCODE_DOWN)) {
             set_player_y(player, get_player_y(player) + get_player_vy(player));
-        }
+        }*/
         if(Pantalla_TeclaPulsada(SDL_SCANCODE_SPACE) ){
             Bala bala = crea_bala(get_player_x(player), get_player_y(player), imagenBala);
             inserta_rafaga(cabecera, bala);
@@ -132,11 +136,13 @@ int main( int argc, char *argv[] ){
                 
                 double modulo_flecha = sqrt(pow(x_flecha, 2) + pow(y_flecha,2));
 
-                double MAX_FUERZA = 300;
+                double MAX_FUERZA = 200;
+                double MN_FUERZA = 50;
+
                 fuerza_disparo =  modulo_flecha*MAX_FUERZA/1000;
-
-
-                printf("%f \n", modulo_flecha);
+                if(fuerza_disparo<50){
+                    fuerza_disparo = 50;
+                }
 
 
                 //Dibujamos flecha
