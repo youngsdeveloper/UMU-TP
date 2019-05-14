@@ -7,6 +7,7 @@
 #include <stdlib.h>
 #include <math.h>
 #include <time.h>
+#include "Pantalla.h"
 
 
 
@@ -24,6 +25,11 @@ double get_player_y_pantalla(Player player);
 
 double get_player_vx(Player player);
 double get_player_vy(Player player);
+
+void togglePlayerVx(Player player);
+
+void togglePlayerVy(Player player);
+
 int get_player_w(Player player);
 int get_player_h(Player player);
 

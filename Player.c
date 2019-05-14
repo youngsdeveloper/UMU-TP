@@ -142,8 +142,13 @@ double get_player_vy(Player player){
     return player->vy;
 }
 
+void togglePlayerVx(Player player){
+    player -> vx = player -> vx * (-1);
+}
 
-
+void togglePlayerVy(Player player){
+    player -> vy = player -> vy * (-1);
+}
 
 
 int get_player_w(Player player){

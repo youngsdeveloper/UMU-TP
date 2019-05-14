@@ -9,14 +9,14 @@
 #include "Rafaga.h"
 #include "Player.h"
 #include "Enemy.h"
+#include "Plataforma.h"
+
 
 int MAX_PANTALLA = 500;
 int jugando = 1;
 
 
 #define M_PI 3.14159265358979323846264338327
-
-
 
 
 double x_mouse;
@@ -35,9 +35,13 @@ int main( int argc, char *argv[] ){
     Enemy enemy = crea_enemy();
 
 
+
     Pantalla_Crea("Sesion 6", 1000, MAX_PANTALLA);
     Pantalla_DibujaRellenoFondo(2555,255,255,255);
     Pantalla_ColorTrazo(0,0,0,255);
+
+    Plataforma plataforma = crea_plataforma(Pantalla_Anchura()/2-10,Pantalla_Altura()/4,20,Pantalla_Altura() - Pantalla_Altura()/4);
+
 
     Imagen imagenJugador = Pantalla_ImagenLee("pelota.bmp",255);
     Imagen imagenEnemigo = Pantalla_ImagenLee("apple.bmp",255);
@@ -92,17 +96,20 @@ int main( int argc, char *argv[] ){
             //jugando = 0;
         }
 
+        colisiones_plataforma(plataforma, player);
 
         //Dibujamos
 
         //Fondo
         Pantalla_DibujaRellenoFondo(255,255,255, 255);
 
+        dibuja_plataforma(plataforma);
+
         //Jugador
         Pantalla_DibujaImagenTransformada(imagenJugador, get_player_x(player), get_player_y(player), get_player_w(player), get_player_h(player), get_player_animacion_angulo(player), SDL_FLIP_HORIZONTAL);
 
         //Enemigo
-        Pantalla_DibujaImagen(imagenEnemigo, get_enemy_x(enemy) , get_enemy_y(enemy), get_enemy_w(enemy), get_enemy_h(enemy));
+        //Pantalla_DibujaImagen(imagenEnemigo, get_enemy_x(enemy) , get_enemy_y(enemy), get_enemy_w(enemy), get_enemy_h(enemy));
 
 
         //Rafaga de balas
@@ -136,7 +143,7 @@ int main( int argc, char *argv[] ){
                 
                 double modulo_flecha = sqrt(pow(x_flecha, 2) + pow(y_flecha,2));
 
-                double MAX_FUERZA = 200;
+                double MAX_FUERZA = 500; //200 EN PRODUCCION
                 double MN_FUERZA = 50;
 
                 fuerza_disparo =  modulo_flecha*MAX_FUERZA/1000;
