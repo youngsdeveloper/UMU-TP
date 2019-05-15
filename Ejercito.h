@@ -20,6 +20,13 @@ void dibuja_ejercito(Ejercito e);
 void mueve_ejercito(Ejercito e);
 double genera_aleatorio(int n, int m);
 void colision_ejercito(Ejercito e, Player player);
+
+void genera_ejercito(Ejercito e, int n);
+
+void suprime_enemy(Ejercito e, int pos);
+
+
+
 #endif
 
 

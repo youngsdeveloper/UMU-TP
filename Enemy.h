@@ -4,15 +4,17 @@
 
 #include "Bala.h"
 #include "Player.h"
+
 #include <stdlib.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
 
+
 typedef struct EnemyRep * Enemy;
 
-Enemy crea_enemy(double x, double y);
+Enemy crea_enemy(double x, double y, Imagen * imagenes);
 
 double get_enemy_x(Enemy Enemy);
 double get_enemy_y(Enemy Enemy);
@@ -27,9 +29,11 @@ void dibuja_enemy(Enemy Enemy);
 void set_enemy_x(Enemy Enemy, double x);
 void set_enemy_y(Enemy Enemy, double y);
 
-void mueve_enemy(Enemy Enemy);
+int mueve_enemy(Enemy Enemy); 
 
 void colision_enemy_player(Enemy Enemy, Player player);
+
+void libera_enemy(Enemy Enemy);
 
 
 

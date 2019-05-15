@@ -8,9 +8,7 @@ struct EnemyRep{
     double vy;
     int w;
     int h;
-    Imagen imagenEnemigo1;
-    Imagen imagenEnemigo2;
-    Imagen imagenEnemigo3;
+    Imagen * imagenes; 
 
     int animacionP;
 
@@ -19,7 +17,7 @@ struct EnemyRep{
 
 };
 
-Enemy crea_enemy(double x, double y){
+Enemy crea_enemy(double x, double y, Imagen * imagenes){
     Enemy enemy = malloc(sizeof(struct EnemyRep));
     enemy -> x = x;
     enemy -> y = y;
@@ -27,13 +25,22 @@ Enemy crea_enemy(double x, double y){
     enemy -> vy = 0;
     enemy -> w = 50;
     enemy -> h = 50;
-    enemy -> imagenEnemigo1 = Pantalla_ImagenLee("pajaro1.bmp",255);
-    enemy -> imagenEnemigo2 = Pantalla_ImagenLee("pajaro2.bmp",255);
-    enemy -> imagenEnemigo3 = Pantalla_ImagenLee("pajaro3.bmp",255);
+
+
     enemy -> exp = 0;
     enemy -> animacionP = 1;
+
+    /*
+        Imagenes
+    */
+
+    enemy -> imagenes = imagenes;
+
     return enemy;
 }
+
+
+
 
 double get_enemy_x(Enemy enemy){
     return enemy->x;
@@ -69,18 +76,22 @@ void set_enemy_y(Enemy enemy, double y){
 
 void dibuja_enemy(Enemy enemy){
     Imagen imagenEnemigo;
+    
+    imagenEnemigo = enemy -> imagenes[0];
+
+    /*
     switch (enemy -> animacionP)
     {
     case 1:
-        imagenEnemigo = enemy -> imagenEnemigo1;
+        imagenEnemigo = enemy -> imagenes[0];
         break;
 
     case 2:
-        imagenEnemigo = enemy -> imagenEnemigo2;
+        imagenEnemigo = enemy -> imagenes[1];
         break;
 
     case 3:
-        imagenEnemigo = enemy -> imagenEnemigo3;
+        imagenEnemigo = enemy -> imagenes[2];
         break;
     
     default:
@@ -88,8 +99,8 @@ void dibuja_enemy(Enemy enemy){
     }
 
     if(enemy->exp==1){
-        imagenEnemigo = Pantalla_ImagenLee("pajaro_exp.bmp",255);
-    }
+        imagenEnemigo = enemy -> imagenes[3];
+    }*/
 
     Pantalla_DibujaImagen(imagenEnemigo, enemy -> x, enemy -> y, enemy -> w, enemy -> h);
 
@@ -108,7 +119,13 @@ void colision_enemy_player(Enemy enemy, Player player){
     }
 }
 
-void mueve_enemy(Enemy enemy){
+void libera_enemy(Enemy enemy){
+    free(enemy);
+}
+
+int mueve_enemy(Enemy enemy){
+
+    //Devuelve 1 si hay que eliminar, 0 si no
 
     enemy->x += enemy->vx;
     enemy->y += enemy->vy;
@@ -116,6 +133,13 @@ void mueve_enemy(Enemy enemy){
     if(enemy->exp==1){
         enemy -> vy = enemy -> vy + 10;
     }
+
+    if(enemy -> y + enemy -> h > Pantalla_Altura() || enemy -> x + enemy -> w < 0){
+        //Eliminamos el enemigo 
+        return 1; 
+    }
+
+    return 0;
 
     //Movimiento del enemigo
 

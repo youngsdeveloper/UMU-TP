@@ -174,7 +174,7 @@ int juego(){
 
 
    
-    genera_ejercito(ejercito, 200);
+    genera_ejercito(ejercito, 5);
 
 
     NodoPtr cabecera = nuevo_nodo(NULL);
@@ -215,8 +215,6 @@ int juego(){
         mueve_ejercito(ejercito);
 
         //impactaBalaEnemigo(cabecera, enemy);
-
-        //mueve_enemy(enemy,player);
 
         colision_ejercito(ejercito, player);
 
@@ -304,7 +302,6 @@ int juego(){
                 pressed = 0;
             }
         }
-
 
         //Siguiente Frame
         Pantalla_Actualiza();
