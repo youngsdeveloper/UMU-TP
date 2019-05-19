@@ -17,7 +17,7 @@ int MAX_PANTALLA = 500;
 int jugando = 1;
 
 
-#define M_PI 3.14159265358979323846264338327
+//#define M_PI 3.14159265358979323846264338327
 
 
 double x_mouse;
@@ -153,7 +153,7 @@ void ayuda(){
 
 }
 
-int juego(){
+void juego(){
 
     Player player = crea_player();
     Ejercito ejercito = crea_ejercito();
@@ -166,15 +166,17 @@ int juego(){
 
 
     Imagen imagenJugador = Pantalla_ImagenLee("pelota.bmp",255);
-    Imagen imagenEnemigo = Pantalla_ImagenLee("apple.bmp",255);
+
     Imagen imagenBala = Pantalla_ImagenLee("bala.bmp",255);
     Imagen imagenSuelo = Pantalla_ImagenLee("ground.bmp",255);
     Imagen imagenFlecha = Pantalla_ImagenLee("flecha.bmp",255);
     Imagen imagenPower = Pantalla_ImagenLee("power.bmp",255);
+    Imagen imagenCielo = Pantalla_ImagenLee("cielo.bmp",255);
+    Imagen imagenBomba = Pantalla_ImagenLee("bomba.bmp",255);
 
 
    
-    genera_ejercito(ejercito, 5);
+    genera_ejercito(ejercito, 200);
 
 
     NodoPtr cabecera = nuevo_nodo(NULL);
@@ -223,12 +225,12 @@ int juego(){
         //Dibujamos
 
         //Fondo
-        Pantalla_DibujaRellenoFondo(255,255,255, 255);
+        Pantalla_DibujaRellenoFondo(73,168,228,255);
+        Pantalla_DibujaImagen(imagenCielo, 0, 0, Pantalla_Anchura(), Pantalla_Altura() - ground_height/2);
 
 
-        //Jugador
-        Pantalla_DibujaImagenTransformada(imagenJugador, get_player_x(player), get_player_y(player), get_player_w(player), get_player_h(player), get_player_animacion_angulo(player), SDL_FLIP_HORIZONTAL);
 
+        
         //Enemigo
 
         dibuja_ejercito(ejercito);
@@ -240,6 +242,14 @@ int juego(){
         //Dibujar escenario
         Pantalla_DibujaImagen(imagenSuelo, 0, MAX_PANTALLA-ground_height, Pantalla_Anchura(), ground_height);
 
+        //Jugador
+        Pantalla_DibujaImagenTransformada(imagenJugador, get_player_x(player), get_player_y(player), get_player_w(player), get_player_h(player), get_player_animacion_angulo(player), SDL_FLIP_HORIZONTAL);
+        
+        
+        //ONLY TEST
+        //Pantalla_DibujaCirculo(get_player_x(player) + get_player_w(player)/2, get_player_y(player)+ get_player_w(player)/2, get_player_w(player)/2);
+        
+        
         Pantalla_ColorRelleno(0,0,0,255);
         Pantalla_DibujaRectangulo(Pantalla_Anchura()-20-150,20,150,20);
         Pantalla_DibujaImagen(imagenPower, Pantalla_Anchura()-20-150-20, 20, 20, 20);

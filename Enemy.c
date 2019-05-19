@@ -8,7 +8,7 @@ struct EnemyRep{
     double vy;
     int w;
     int h;
-    Imagen * imagenes; 
+    Imagen imagenes[4]; 
 
     int animacionP;
 
@@ -34,7 +34,10 @@ Enemy crea_enemy(double x, double y, Imagen * imagenes){
         Imagenes
     */
 
-    enemy -> imagenes = imagenes;
+    enemy -> imagenes[0] = imagenes[0];
+    enemy -> imagenes[1] = imagenes[1];
+    enemy -> imagenes[2] = imagenes[2];
+    enemy -> imagenes[3] = imagenes[3];
 
     return enemy;
 }
@@ -77,9 +80,7 @@ void set_enemy_y(Enemy enemy, double y){
 void dibuja_enemy(Enemy enemy){
     Imagen imagenEnemigo;
     
-    imagenEnemigo = enemy -> imagenes[0];
-
-    /*
+    
     switch (enemy -> animacionP)
     {
     case 1:
@@ -100,7 +101,7 @@ void dibuja_enemy(Enemy enemy){
 
     if(enemy->exp==1){
         imagenEnemigo = enemy -> imagenes[3];
-    }*/
+    }
 
     Pantalla_DibujaImagen(imagenEnemigo, enemy -> x, enemy -> y, enemy -> w, enemy -> h);
 
@@ -109,23 +110,31 @@ void dibuja_enemy(Enemy enemy){
     }else{
         enemy -> animacionP = 1;
     }
+
+    //Pantalla_DibujaRectangulo(enemy->x,enemy->y,enemy->w, enemy->h); test Colisiones
+
 }
 
 
 void colision_enemy_player(Enemy enemy, Player player){
-    if(solape_rectangulos(enemy->x, enemy->y, enemy->w, enemy->h, get_player_x(player), get_player_y(player),
-    get_player_w(player), get_player_h(player))==1){
+
+    double cx = get_player_x(player)+get_player_w(player)/2;
+    double cy = get_player_y(player)+get_player_h(player)/2;
+    double rx = get_player_h(player)/2;
+
+
+    if(solape_circuferencia_rectangulo(cx,cy,rx,enemy->x,enemy->y,enemy->w,enemy->h)==1){
         enemy -> exp = 1;
     }
 }
+
+
 
 void libera_enemy(Enemy enemy){
     free(enemy);
 }
 
-int mueve_enemy(Enemy enemy){
-
-    //Devuelve 1 si hay que eliminar, 0 si no
+void mueve_enemy(Enemy enemy){
 
     enemy->x += enemy->vx;
     enemy->y += enemy->vy;
@@ -134,37 +143,7 @@ int mueve_enemy(Enemy enemy){
         enemy -> vy = enemy -> vy + 10;
     }
 
-    if(enemy -> y + enemy -> h > Pantalla_Altura() || enemy -> x + enemy -> w < 0){
-        //Eliminamos el enemigo 
-        return 1; 
-    }
-
-    return 0;
-
-    //Movimiento del enemigo
-
-
-    /*
-        enemy->vx = get_player_x(player) - enemy->x;
-        enemy->vy = get_player_y(player) - enemy->y;
-
-
-
-        double m = sqrt( enemy->vx*enemy->vx + enemy->vy*enemy->vy );
-
-        if ( m > 0 ) {
-          enemy->vx = enemy->vx / m;
-          enemy->vy = enemy->vy / m;
-        }
-
-
-        enemy->vx = enemy->vx * 6;
-        enemy->vy = enemy->vy * 6;
-
-
-        enemy->x += enemy->vx;
-        enemy->y += enemy->vy;
-        */
+    
 
 }
 

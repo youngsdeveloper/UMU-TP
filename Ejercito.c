@@ -2,7 +2,7 @@
 
 
 struct EjercitoRep{
-    Enemy enemigos[5];
+    Enemy enemigos[200];
     int n;
 };
 
@@ -60,7 +60,18 @@ void suprime_enemy(Ejercito e, int pos){
 }
 
 
-
+int	colision_ejercito_objeto( Ejercito e,	double	x,	double	y,	double	w,	double h ){
+    int colisionDetectada = 0;
+    int j=0;
+    while(j< e->n && colisionDetectada == 0){
+        Enemy ene = e->enemigos[j];
+        if(solape_rectangulos(get_enemy_x(ene),get_enemy_y(ene),get_enemy_w(ene), get_enemy_h(ene),x,y,w,h)==1){
+            colisionDetectada = 1;
+        }
+        j++;
+    }
+    return colisionDetectada;
+}
 
 void dibuja_ejercito(Ejercito e){
     for(int j=0; j < e->n ;j++){ 
@@ -71,10 +82,18 @@ void dibuja_ejercito(Ejercito e){
 void mueve_ejercito(Ejercito e){
 
     int j = 0;
-    while(j < (e->n - 1)){
-        if(mueve_enemy(e->enemigos[j])==1){
-            suprime_enemy(e, j);
+    while(j < e->n){
+
+        Enemy enemy = e->enemigos[j];
+
+        
+        mueve_enemy(enemy);
+
+        if(get_enemy_y(enemy) + get_enemy_h(enemy) > Pantalla_Altura() || get_enemy_x(enemy) + get_enemy_w(enemy) < 0){
+            suprime_enemy(e,j);
         }
+
+
         j++;
     }
 }

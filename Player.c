@@ -83,6 +83,7 @@ void mueve_player(Player player){
 
 
         colision_player(player);
+        
 }
 
 void colision_player(Player player){
@@ -108,11 +109,7 @@ void colision_player(Player player){
         player -> y = 0;
         player -> vy = player -> vy * (-1) * 0.7;
     }
-
-
-
-
-
+    
 }
 
 double get_player_x(Player player){
@@ -123,8 +120,8 @@ double get_player_animacion_angulo(Player player){
     return player->animacion_angulo;
 }
 
-double set_player_animacion_angulo(Player player, double anim_angulo){
-    player->animacion_angulo = anim_angulo;
+void set_player_animacion_angulo(Player player, double anim_angulo){
+    player->animacion_angulo = anim_angulo; 
 }
 
 double get_player_y(Player player){
@@ -141,18 +138,22 @@ double get_player_vy(Player player){
 
 void set_player_vx(Player player, double vx){
     player->vx = vx;
+    
 }
 
 void set_player_vy(Player player, double vy){
     player->vy = vy;
+    
 }
 
 void togglePlayerVx(Player player, double percent){
     player -> vx = player -> vx * (-1) * percent; 
+    
 }
 
 void togglePlayerVy(Player player, double percent){
     player -> vy = player -> vy * (-1) * percent;
+    
 }
 
 

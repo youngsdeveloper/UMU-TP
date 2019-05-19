@@ -25,7 +25,7 @@ void genera_ejercito(Ejercito e, int n);
 
 void suprime_enemy(Ejercito e, int pos);
 
-
+int	colision_ejercito_objeto( Ejercito e,	double	x,	double	y,	double	w,	double h );
 
 #endif
 

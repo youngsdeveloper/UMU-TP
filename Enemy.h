@@ -29,7 +29,7 @@ void dibuja_enemy(Enemy Enemy);
 void set_enemy_x(Enemy Enemy, double x);
 void set_enemy_y(Enemy Enemy, double y);
 
-int mueve_enemy(Enemy Enemy); 
+void mueve_enemy(Enemy Enemy); 
 
 void colision_enemy_player(Enemy Enemy, Player player);
 

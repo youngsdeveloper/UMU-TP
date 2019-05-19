@@ -22,4 +22,31 @@ int solape_rectangulos(double x1, double y1, double w1, double h1, double x2, do
     return !(x1> x2+w2) && !(x1+w1 < x2) && !(y1 > y2 + h2) && !(y1+h1 < y2);
 }
 
+int solape_circuferencia_rectangulo(double cx, double cy,double rx,double x,double y,double w,double h){
+
+
+    //Calculamos el punto del perimetro del rectangulo más cercano
+    double px,py;
+
+    px = cx; 
+    if(px < x){
+        px = x;
+    }
+    if(px > x + w){
+        px = x + w;
+    } 
+
+    py= cy; 
+    if(py < y){
+        py = y;
+    }
+    if(py > y + h){
+        py = y + h;
+    } 
+
+
+    return distancia_punto_punto(cx,cy,px,py) < rx;
+}
+
+
 
