@@ -13,20 +13,30 @@ Ejercito crea_ejercito(){
     return ejercito;
 }
 
-void genera_ejercito(Ejercito e, int n){
+void genera_ejercito(Ejercito e, int n, int puntos){
 
     for(int j=0; j < n ;j++){
 
         double sep_horizontal = genera_aleatorio(100,200);   // Separacion entre 100 y 200
-        double y = genera_aleatorio(100,200);  // Separacion entre 100 y 200
+
+        double y = genera_aleatorio(130,180);  // Eje vertical entre 80 y 150
         double x = Pantalla_Anchura()+ 500 + j*sep_horizontal;
 
-        double vx = genera_aleatorio(-15,-15);
+        int max_puntos = 100;
+        int max_add = (int)puntos*(10/max_puntos);
+        if(max_add<1){
+            max_add = 1;
+        }
+
+        double vx = (-1)*genera_aleatorio(10, 15 + genera_aleatorio(1,max_add));
+
+
+        // vx minimo -15 vx maximo -25
+
         double vy = 0.5;
 
         Imagen imagenes[4];
         
-    
         imagenes[0] = Pantalla_ImagenLee("pajaro1.bmp",255);
         imagenes[1] = Pantalla_ImagenLee("pajaro2.bmp",255);
         imagenes[2] = Pantalla_ImagenLee("pajaro3.bmp",255);

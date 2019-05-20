@@ -1,0 +1,642 @@
+\hypertarget{_player_8h}{}\section{Player.\+h File Reference}
+\label{_player_8h}\index{Player.h@{Player.h}}
+
+
+Fichero de cabecera para poder usar las funciones del Player.  
+
+
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}Pantalla.\+h\char`\"{}}\newline
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{struct_player_rep}{Player\+Rep}} $\ast$ \mbox{\hyperlink{_player_8h_a2f7cd97bf1bb760d427047b2fdead13d}{Player}}
+\begin{DoxyCompactList}\small\item\em T\+DA Jugador. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_player_8h_a2f7cd97bf1bb760d427047b2fdead13d}{Player}} \mbox{\hyperlink{_player_8h_a32d09780490775c6edfc74c1bd1132d5}{crea\+\_\+player}} ()
+\begin{DoxyCompactList}\small\item\em Crea e inicializa un jugador. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{_player_8h_a42ff9f87bbbaece9bde89ba4818c29f9}{get\+\_\+player\+\_\+x}} (\mbox{\hyperlink{_player_8h_a2f7cd97bf1bb760d427047b2fdead13d}{Player}} player)
+\begin{DoxyCompactList}\small\item\em Obtiene la coordenada x de un jugador. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{_player_8h_a74d610f6461e6af5f64b7c4ec982160b}{get\+\_\+player\+\_\+y}} (\mbox{\hyperlink{_player_8h_a2f7cd97bf1bb760d427047b2fdead13d}{Player}} player)
+\begin{DoxyCompactList}\small\item\em Obtiene la coordenada y de un jugador. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{_player_8h_a7953a0352de08008b4f47f70b7550d0f}{get\+\_\+player\+\_\+vx}} (\mbox{\hyperlink{_player_8h_a2f7cd97bf1bb760d427047b2fdead13d}{Player}} player)
+\begin{DoxyCompactList}\small\item\em Obtiene la velocidad de la cordenada x de un jugador. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{_player_8h_a211d0eab2d752ba268b8a79ceb079558}{get\+\_\+player\+\_\+vy}} (\mbox{\hyperlink{_player_8h_a2f7cd97bf1bb760d427047b2fdead13d}{Player}} player)
+\begin{DoxyCompactList}\small\item\em Obtiene la velocidad de la cordenada y de un jugador. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_player_8h_ab020fdb8e5b0b1058079b0fce2796acb}{toggle\+Player\+Vx}} (\mbox{\hyperlink{_player_8h_a2f7cd97bf1bb760d427047b2fdead13d}{Player}} player, double percent)
+\begin{DoxyCompactList}\small\item\em Cambia el signo de la velocidad x, aplicandole un porcentaje de perdida de velocidad. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_player_8h_aafaad893466fc8a80d64a6ecb319cede}{toggle\+Player\+Vy}} (\mbox{\hyperlink{_player_8h_a2f7cd97bf1bb760d427047b2fdead13d}{Player}} player, double percent)
+\begin{DoxyCompactList}\small\item\em Cambia el signo de la velocidad y, aplicandole un porcentaje de perdida de velocidad. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_player_8h_aece53bae6252b7f7823b407d05bd2d80}{get\+\_\+player\+\_\+w}} (\mbox{\hyperlink{_player_8h_a2f7cd97bf1bb760d427047b2fdead13d}{Player}} player)
+\begin{DoxyCompactList}\small\item\em Obtiene la anchura de Player. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_player_8h_a7635175c1345c5161081e39812d802d5}{get\+\_\+player\+\_\+h}} (\mbox{\hyperlink{_player_8h_a2f7cd97bf1bb760d427047b2fdead13d}{Player}} player)
+\begin{DoxyCompactList}\small\item\em Obtiene la altura de Player. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_player_8h_aae65d146b47f5b0a463f587dcd58e440}{libera\+\_\+player}} (\mbox{\hyperlink{_player_8h_a2f7cd97bf1bb760d427047b2fdead13d}{Player}} player)
+\begin{DoxyCompactList}\small\item\em Libera la memoria de Player. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{_player_8h_a0008752148bb5075dc9a5299cc5faa12}{get\+\_\+player\+\_\+animacion\+\_\+angulo}} (\mbox{\hyperlink{_player_8h_a2f7cd97bf1bb760d427047b2fdead13d}{Player}} player)
+\begin{DoxyCompactList}\small\item\em Obtiene el angulo de rotacion horizontal de la pelota. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_player_8h_a5d95011dffd02c540a4841d15833ca9b}{set\+\_\+player\+\_\+animacion\+\_\+angulo}} (\mbox{\hyperlink{_player_8h_a2f7cd97bf1bb760d427047b2fdead13d}{Player}} player, double angulo)
+\begin{DoxyCompactList}\small\item\em Establece el angulo de rotacion horizontal de la pelota. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_player_8h_a3a6130fe19d994048fa925b147791dbd}{set\+\_\+player\+\_\+x}} (\mbox{\hyperlink{_player_8h_a2f7cd97bf1bb760d427047b2fdead13d}{Player}} player, double x)
+\begin{DoxyCompactList}\small\item\em Establece la coordenada x del jugador. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_player_8h_a7209573d5e58202f8a658960a710f6ba}{set\+\_\+player\+\_\+y}} (\mbox{\hyperlink{_player_8h_a2f7cd97bf1bb760d427047b2fdead13d}{Player}} player, double y)
+\begin{DoxyCompactList}\small\item\em Establece la coordenada y del jugador. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_player_8h_a2bb726c221fb58671eaff00d551d4db4}{set\+\_\+player\+\_\+vx}} (\mbox{\hyperlink{_player_8h_a2f7cd97bf1bb760d427047b2fdead13d}{Player}} player, double vx)
+\begin{DoxyCompactList}\small\item\em Establece la velocidad x del jugador. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_player_8h_aae7fe65297953b16d77fe785cd275628}{set\+\_\+player\+\_\+vy}} (\mbox{\hyperlink{_player_8h_a2f7cd97bf1bb760d427047b2fdead13d}{Player}} player, double vy)
+\begin{DoxyCompactList}\small\item\em Establece la velocidad y del jugador. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_player_8h_aef5d4593144cc4200011b645e318ffbc}{iniciar\+Disparo}} (\mbox{\hyperlink{_player_8h_a2f7cd97bf1bb760d427047b2fdead13d}{Player}} player, double angulo, double fuerza\+\_\+disparo)
+\begin{DoxyCompactList}\small\item\em Inicia la animacion del lanzamiento parabolico de jugador. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_player_8h_a0ca2f9de37aebab159f33bba15c45acd}{mueve\+\_\+player}} (\mbox{\hyperlink{_player_8h_a2f7cd97bf1bb760d427047b2fdead13d}{Player}} player)
+\begin{DoxyCompactList}\small\item\em Mueve el jugador, dependiendo de su velocidad. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_player_8h_aa3f19c2f045a49590f254c029ea81b1e}{colision\+\_\+player}} (\mbox{\hyperlink{_player_8h_a2f7cd97bf1bb760d427047b2fdead13d}{Player}} player)
+\begin{DoxyCompactList}\small\item\em Detecta colisiones con los limites del mapa, si ha detectado una colision hace un rebote. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_player_8h_a5c69eab69983e7427ec84a0faebfc452}{dibuja\+\_\+player}} (\mbox{\hyperlink{_player_8h_a2f7cd97bf1bb760d427047b2fdead13d}{Player}} player)
+\begin{DoxyCompactList}\small\item\em Dibuja el jugador en la pantallla. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_player_8h_a40170261676281f8e517fd1d72b0c942}{is\+Disparando}} (\mbox{\hyperlink{_player_8h_a2f7cd97bf1bb760d427047b2fdead13d}{Player}} player)
+\begin{DoxyCompactList}\small\item\em Devuelve si se está realizando un lanzamiento parabolico en ese momento o no. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_player_8h_a5333b69c70726d7f7d26ac24a8e1235f}{añade\+Punto}} (\mbox{\hyperlink{_player_8h_a2f7cd97bf1bb760d427047b2fdead13d}{Player}} player, int puntos)
+\begin{DoxyCompactList}\small\item\em Suma puntos al jugador. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_player_8h_a8ec1dcae671a079dd357e8a4c88bc15f}{get\+Puntos}} (\mbox{\hyperlink{_player_8h_a2f7cd97bf1bb760d427047b2fdead13d}{Player}} player)
+\begin{DoxyCompactList}\small\item\em Devuelve el numero de puntos de un jugador. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_player_8h_a8d93dc8d4cda3b7923b67314191394fa}{añade\+Vidas}} (\mbox{\hyperlink{_player_8h_a2f7cd97bf1bb760d427047b2fdead13d}{Player}} player, int vidas)
+\begin{DoxyCompactList}\small\item\em Suma vidas al jugador. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_player_8h_afc31c04c6e3233ca4b04413510c58816}{get\+Vidas}} (\mbox{\hyperlink{_player_8h_a2f7cd97bf1bb760d427047b2fdead13d}{Player}} player)
+\begin{DoxyCompactList}\small\item\em Devuelve el numero de vidas de un jugador. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_player_8h_ace1afa09621e3867a82c2f11c5e8a1ab}{get\+Exp\+\_\+player}} (\mbox{\hyperlink{_player_8h_a2f7cd97bf1bb760d427047b2fdead13d}{Player}} player)
+\begin{DoxyCompactList}\small\item\em Devuelve si un jugador esta en estado de explosión o no. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_player_8h_a2f0cdea86b00d77398197df1dffdba30}{set\+Exp\+\_\+player}} (\mbox{\hyperlink{_player_8h_a2f7cd97bf1bb760d427047b2fdead13d}{Player}} player, int exp)
+\begin{DoxyCompactList}\small\item\em Establece el estado de explosión de un jugador. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Fichero de cabecera para poder usar las funciones del Player. 
+
+\begin{DoxyAuthor}{Author}
+Enrique 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2019-\/05-\/21
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2019 
+\end{DoxyCopyright}
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{_player_8h_a2f7cd97bf1bb760d427047b2fdead13d}\label{_player_8h_a2f7cd97bf1bb760d427047b2fdead13d}} 
+\index{Player.h@{Player.h}!Player@{Player}}
+\index{Player@{Player}!Player.h@{Player.h}}
+\subsubsection{\texorpdfstring{Player}{Player}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct_player_rep}{Player\+Rep}}$\ast$ \mbox{\hyperlink{_player_8h_a2f7cd97bf1bb760d427047b2fdead13d}{Player}}}
+
+
+
+T\+DA Jugador. 
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{_player_8h_a5333b69c70726d7f7d26ac24a8e1235f}\label{_player_8h_a5333b69c70726d7f7d26ac24a8e1235f}} 
+\index{Player.h@{Player.h}!añadePunto@{añadePunto}}
+\index{añadePunto@{añadePunto}!Player.h@{Player.h}}
+\subsubsection{\texorpdfstring{añadePunto()}{añadePunto()}}
+{\footnotesize\ttfamily void añade\+Punto (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_player_8h_a2f7cd97bf1bb760d427047b2fdead13d}{Player}}}]{player,  }\item[{int}]{puntos }\end{DoxyParamCaption})}
+
+
+
+Suma puntos al jugador. 
+
+\begin{DoxyPrecond}{Precondition}
+El player debe ser distinto de N\+U\+LL 
+\end{DoxyPrecond}
+
+\begin{DoxyParams}{Parameters}
+{\em player} & Puntero a estructura tipo jugador \\
+\hline
+{\em puntos} & Numero de puntos a sumar, si es negativa, en vez de sumar, resta. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_player_8h_a8d93dc8d4cda3b7923b67314191394fa}\label{_player_8h_a8d93dc8d4cda3b7923b67314191394fa}} 
+\index{Player.h@{Player.h}!añadeVidas@{añadeVidas}}
+\index{añadeVidas@{añadeVidas}!Player.h@{Player.h}}
+\subsubsection{\texorpdfstring{añadeVidas()}{añadeVidas()}}
+{\footnotesize\ttfamily void añade\+Vidas (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_player_8h_a2f7cd97bf1bb760d427047b2fdead13d}{Player}}}]{player,  }\item[{int}]{vidas }\end{DoxyParamCaption})}
+
+
+
+Suma vidas al jugador. 
+
+\begin{DoxyPrecond}{Precondition}
+El player debe ser distinto de N\+U\+LL 
+\end{DoxyPrecond}
+
+\begin{DoxyParams}{Parameters}
+{\em player} & Puntero a estructura tipo jugador \\
+\hline
+{\em vidas} & Numero de vidas a sumar, si es negativa, en vez de sumar, resta. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_player_8h_aa3f19c2f045a49590f254c029ea81b1e}\label{_player_8h_aa3f19c2f045a49590f254c029ea81b1e}} 
+\index{Player.h@{Player.h}!colision\_player@{colision\_player}}
+\index{colision\_player@{colision\_player}!Player.h@{Player.h}}
+\subsubsection{\texorpdfstring{colision\_player()}{colision\_player()}}
+{\footnotesize\ttfamily void colision\+\_\+player (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_player_8h_a2f7cd97bf1bb760d427047b2fdead13d}{Player}}}]{player }\end{DoxyParamCaption})}
+
+
+
+Detecta colisiones con los limites del mapa, si ha detectado una colision hace un rebote. 
+
+\begin{DoxyPrecond}{Precondition}
+El player debe ser distinto de N\+U\+LL 
+\end{DoxyPrecond}
+
+\begin{DoxyParams}{Parameters}
+{\em player} & Puntero a estructura tipo jugador \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_player_8h_a32d09780490775c6edfc74c1bd1132d5}\label{_player_8h_a32d09780490775c6edfc74c1bd1132d5}} 
+\index{Player.h@{Player.h}!crea\_player@{crea\_player}}
+\index{crea\_player@{crea\_player}!Player.h@{Player.h}}
+\subsubsection{\texorpdfstring{crea\_player()}{crea\_player()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_player_8h_a2f7cd97bf1bb760d427047b2fdead13d}{Player}} crea\+\_\+player (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Crea e inicializa un jugador. 
+
+\begin{DoxyReturn}{Returns}
+Player 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_player_8h_a5c69eab69983e7427ec84a0faebfc452}\label{_player_8h_a5c69eab69983e7427ec84a0faebfc452}} 
+\index{Player.h@{Player.h}!dibuja\_player@{dibuja\_player}}
+\index{dibuja\_player@{dibuja\_player}!Player.h@{Player.h}}
+\subsubsection{\texorpdfstring{dibuja\_player()}{dibuja\_player()}}
+{\footnotesize\ttfamily void dibuja\+\_\+player (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_player_8h_a2f7cd97bf1bb760d427047b2fdead13d}{Player}}}]{player }\end{DoxyParamCaption})}
+
+
+
+Dibuja el jugador en la pantallla. 
+
+\begin{DoxyPrecond}{Precondition}
+El player debe ser distinto de N\+U\+LL 
+\end{DoxyPrecond}
+
+\begin{DoxyParams}{Parameters}
+{\em player} & Puntero a estructura tipo jugador \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_player_8h_a0008752148bb5075dc9a5299cc5faa12}\label{_player_8h_a0008752148bb5075dc9a5299cc5faa12}} 
+\index{Player.h@{Player.h}!get\_player\_animacion\_angulo@{get\_player\_animacion\_angulo}}
+\index{get\_player\_animacion\_angulo@{get\_player\_animacion\_angulo}!Player.h@{Player.h}}
+\subsubsection{\texorpdfstring{get\_player\_animacion\_angulo()}{get\_player\_animacion\_angulo()}}
+{\footnotesize\ttfamily double get\+\_\+player\+\_\+animacion\+\_\+angulo (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_player_8h_a2f7cd97bf1bb760d427047b2fdead13d}{Player}}}]{player }\end{DoxyParamCaption})}
+
+
+
+Obtiene el angulo de rotacion horizontal de la pelota. 
+
+\begin{DoxyPrecond}{Precondition}
+El player debe ser distinto de N\+U\+LL 
+\end{DoxyPrecond}
+
+\begin{DoxyParams}{Parameters}
+{\em player} & Puntero a estructura tipo jugador \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double Angulo de rotacion horizontal 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_player_8h_a7635175c1345c5161081e39812d802d5}\label{_player_8h_a7635175c1345c5161081e39812d802d5}} 
+\index{Player.h@{Player.h}!get\_player\_h@{get\_player\_h}}
+\index{get\_player\_h@{get\_player\_h}!Player.h@{Player.h}}
+\subsubsection{\texorpdfstring{get\_player\_h()}{get\_player\_h()}}
+{\footnotesize\ttfamily int get\+\_\+player\+\_\+h (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_player_8h_a2f7cd97bf1bb760d427047b2fdead13d}{Player}}}]{player }\end{DoxyParamCaption})}
+
+
+
+Obtiene la altura de Player. 
+
+\begin{DoxyPrecond}{Precondition}
+El player debe ser distinto de N\+U\+LL 
+\end{DoxyPrecond}
+
+\begin{DoxyParams}{Parameters}
+{\em player} & Puntero a estructura tipo jugador \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int Altura de Player 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_player_8h_a7953a0352de08008b4f47f70b7550d0f}\label{_player_8h_a7953a0352de08008b4f47f70b7550d0f}} 
+\index{Player.h@{Player.h}!get\_player\_vx@{get\_player\_vx}}
+\index{get\_player\_vx@{get\_player\_vx}!Player.h@{Player.h}}
+\subsubsection{\texorpdfstring{get\_player\_vx()}{get\_player\_vx()}}
+{\footnotesize\ttfamily double get\+\_\+player\+\_\+vx (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_player_8h_a2f7cd97bf1bb760d427047b2fdead13d}{Player}}}]{player }\end{DoxyParamCaption})}
+
+
+
+Obtiene la velocidad de la cordenada x de un jugador. 
+
+\begin{DoxyPrecond}{Precondition}
+El player debe ser distinto de N\+U\+LL 
+\end{DoxyPrecond}
+
+\begin{DoxyParams}{Parameters}
+{\em player} & Puntero a estructura tipo jugador \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double Velocidad en el eje x 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_player_8h_a211d0eab2d752ba268b8a79ceb079558}\label{_player_8h_a211d0eab2d752ba268b8a79ceb079558}} 
+\index{Player.h@{Player.h}!get\_player\_vy@{get\_player\_vy}}
+\index{get\_player\_vy@{get\_player\_vy}!Player.h@{Player.h}}
+\subsubsection{\texorpdfstring{get\_player\_vy()}{get\_player\_vy()}}
+{\footnotesize\ttfamily double get\+\_\+player\+\_\+vy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_player_8h_a2f7cd97bf1bb760d427047b2fdead13d}{Player}}}]{player }\end{DoxyParamCaption})}
+
+
+
+Obtiene la velocidad de la cordenada y de un jugador. 
+
+\begin{DoxyPrecond}{Precondition}
+El player debe ser distinto de N\+U\+LL 
+\end{DoxyPrecond}
+
+\begin{DoxyParams}{Parameters}
+{\em player} & Puntero a estructura tipo jugador \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double Velocidad en el eje y 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_player_8h_aece53bae6252b7f7823b407d05bd2d80}\label{_player_8h_aece53bae6252b7f7823b407d05bd2d80}} 
+\index{Player.h@{Player.h}!get\_player\_w@{get\_player\_w}}
+\index{get\_player\_w@{get\_player\_w}!Player.h@{Player.h}}
+\subsubsection{\texorpdfstring{get\_player\_w()}{get\_player\_w()}}
+{\footnotesize\ttfamily int get\+\_\+player\+\_\+w (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_player_8h_a2f7cd97bf1bb760d427047b2fdead13d}{Player}}}]{player }\end{DoxyParamCaption})}
+
+
+
+Obtiene la anchura de Player. 
+
+\begin{DoxyPrecond}{Precondition}
+El player debe ser distinto de N\+U\+LL 
+\end{DoxyPrecond}
+
+\begin{DoxyParams}{Parameters}
+{\em player} & Puntero a estructura tipo jugador \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int Anchura de Player 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_player_8h_a42ff9f87bbbaece9bde89ba4818c29f9}\label{_player_8h_a42ff9f87bbbaece9bde89ba4818c29f9}} 
+\index{Player.h@{Player.h}!get\_player\_x@{get\_player\_x}}
+\index{get\_player\_x@{get\_player\_x}!Player.h@{Player.h}}
+\subsubsection{\texorpdfstring{get\_player\_x()}{get\_player\_x()}}
+{\footnotesize\ttfamily double get\+\_\+player\+\_\+x (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_player_8h_a2f7cd97bf1bb760d427047b2fdead13d}{Player}}}]{player }\end{DoxyParamCaption})}
+
+
+
+Obtiene la coordenada x de un jugador. 
+
+\begin{DoxyPrecond}{Precondition}
+El player debe ser distinto de N\+U\+LL 
+\end{DoxyPrecond}
+
+\begin{DoxyParams}{Parameters}
+{\em player} & Puntero a estructura tipo jugador \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double Coordenada x 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_player_8h_a74d610f6461e6af5f64b7c4ec982160b}\label{_player_8h_a74d610f6461e6af5f64b7c4ec982160b}} 
+\index{Player.h@{Player.h}!get\_player\_y@{get\_player\_y}}
+\index{get\_player\_y@{get\_player\_y}!Player.h@{Player.h}}
+\subsubsection{\texorpdfstring{get\_player\_y()}{get\_player\_y()}}
+{\footnotesize\ttfamily double get\+\_\+player\+\_\+y (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_player_8h_a2f7cd97bf1bb760d427047b2fdead13d}{Player}}}]{player }\end{DoxyParamCaption})}
+
+
+
+Obtiene la coordenada y de un jugador. 
+
+\begin{DoxyPrecond}{Precondition}
+El player debe ser distinto de N\+U\+LL 
+\end{DoxyPrecond}
+
+\begin{DoxyParams}{Parameters}
+{\em player} & Puntero a estructura tipo jugador \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double Coordenada y 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_player_8h_ace1afa09621e3867a82c2f11c5e8a1ab}\label{_player_8h_ace1afa09621e3867a82c2f11c5e8a1ab}} 
+\index{Player.h@{Player.h}!getExp\_player@{getExp\_player}}
+\index{getExp\_player@{getExp\_player}!Player.h@{Player.h}}
+\subsubsection{\texorpdfstring{getExp\_player()}{getExp\_player()}}
+{\footnotesize\ttfamily int get\+Exp\+\_\+player (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_player_8h_a2f7cd97bf1bb760d427047b2fdead13d}{Player}}}]{player }\end{DoxyParamCaption})}
+
+
+
+Devuelve si un jugador esta en estado de explosión o no. 
+
+\begin{DoxyPrecond}{Precondition}
+El player debe ser distinto de N\+U\+LL 
+\end{DoxyPrecond}
+
+\begin{DoxyParams}{Parameters}
+{\em player} & Puntero a estructura tipo jugador \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Estado de explosión de un jugador \mbox{[}1 ha explotado, 0 si no\mbox{]} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_player_8h_a8ec1dcae671a079dd357e8a4c88bc15f}\label{_player_8h_a8ec1dcae671a079dd357e8a4c88bc15f}} 
+\index{Player.h@{Player.h}!getPuntos@{getPuntos}}
+\index{getPuntos@{getPuntos}!Player.h@{Player.h}}
+\subsubsection{\texorpdfstring{getPuntos()}{getPuntos()}}
+{\footnotesize\ttfamily int get\+Puntos (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_player_8h_a2f7cd97bf1bb760d427047b2fdead13d}{Player}}}]{player }\end{DoxyParamCaption})}
+
+
+
+Devuelve el numero de puntos de un jugador. 
+
+\begin{DoxyPrecond}{Precondition}
+El player debe ser distinto de N\+U\+LL 
+\end{DoxyPrecond}
+
+\begin{DoxyParams}{Parameters}
+{\em player} & Puntero a estructura tipo jugador \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Puntos de un jugador en la partida 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_player_8h_afc31c04c6e3233ca4b04413510c58816}\label{_player_8h_afc31c04c6e3233ca4b04413510c58816}} 
+\index{Player.h@{Player.h}!getVidas@{getVidas}}
+\index{getVidas@{getVidas}!Player.h@{Player.h}}
+\subsubsection{\texorpdfstring{getVidas()}{getVidas()}}
+{\footnotesize\ttfamily int get\+Vidas (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_player_8h_a2f7cd97bf1bb760d427047b2fdead13d}{Player}}}]{player }\end{DoxyParamCaption})}
+
+
+
+Devuelve el numero de vidas de un jugador. 
+
+\begin{DoxyPrecond}{Precondition}
+El player debe ser distinto de N\+U\+LL 
+\end{DoxyPrecond}
+
+\begin{DoxyParams}{Parameters}
+{\em player} & Puntero a estructura tipo jugador \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vidas de un jugador en la partida 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_player_8h_aef5d4593144cc4200011b645e318ffbc}\label{_player_8h_aef5d4593144cc4200011b645e318ffbc}} 
+\index{Player.h@{Player.h}!iniciarDisparo@{iniciarDisparo}}
+\index{iniciarDisparo@{iniciarDisparo}!Player.h@{Player.h}}
+\subsubsection{\texorpdfstring{iniciarDisparo()}{iniciarDisparo()}}
+{\footnotesize\ttfamily void iniciar\+Disparo (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_player_8h_a2f7cd97bf1bb760d427047b2fdead13d}{Player}}}]{player,  }\item[{double}]{angulo,  }\item[{double}]{fuerza\+\_\+disparo }\end{DoxyParamCaption})}
+
+
+
+Inicia la animacion del lanzamiento parabolico de jugador. 
+
+\begin{DoxyPrecond}{Precondition}
+El player debe ser distinto de N\+U\+LL, no puede iniciarse un disparo si ya hay un disparo en proceso 
+\end{DoxyPrecond}
+
+\begin{DoxyParams}{Parameters}
+{\em player} & Puntero a estructura tipo jugador \\
+\hline
+{\em angulo} & Angulo en radianes con el que se va a realizar el disparo \\
+\hline
+{\em fuerza\+\_\+disparo} & Fuerza con la que se realiza el disparo \mbox{[}Minimo\+: 50\mbox{]} \mbox{[}Maximo\+:250\mbox{]} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_player_8h_a40170261676281f8e517fd1d72b0c942}\label{_player_8h_a40170261676281f8e517fd1d72b0c942}} 
+\index{Player.h@{Player.h}!isDisparando@{isDisparando}}
+\index{isDisparando@{isDisparando}!Player.h@{Player.h}}
+\subsubsection{\texorpdfstring{isDisparando()}{isDisparando()}}
+{\footnotesize\ttfamily int is\+Disparando (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_player_8h_a2f7cd97bf1bb760d427047b2fdead13d}{Player}}}]{player }\end{DoxyParamCaption})}
+
+
+
+Devuelve si se está realizando un lanzamiento parabolico en ese momento o no. 
+
+\begin{DoxyPrecond}{Precondition}
+El player debe ser distinto de N\+U\+LL 
+\end{DoxyPrecond}
+
+\begin{DoxyParams}{Parameters}
+{\em player} & Puntero a estructura tipo jugador \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Devuelve si se está realizando un lanzamiento parabolico en ese momento o no 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_player_8h_aae65d146b47f5b0a463f587dcd58e440}\label{_player_8h_aae65d146b47f5b0a463f587dcd58e440}} 
+\index{Player.h@{Player.h}!libera\_player@{libera\_player}}
+\index{libera\_player@{libera\_player}!Player.h@{Player.h}}
+\subsubsection{\texorpdfstring{libera\_player()}{libera\_player()}}
+{\footnotesize\ttfamily void libera\+\_\+player (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_player_8h_a2f7cd97bf1bb760d427047b2fdead13d}{Player}}}]{player }\end{DoxyParamCaption})}
+
+
+
+Libera la memoria de Player. 
+
+\begin{DoxyPrecond}{Precondition}
+El player debe ser distinto de N\+U\+LL 
+\end{DoxyPrecond}
+
+\begin{DoxyParams}{Parameters}
+{\em player} & Puntero a estructura tipo jugador \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_player_8h_a0ca2f9de37aebab159f33bba15c45acd}\label{_player_8h_a0ca2f9de37aebab159f33bba15c45acd}} 
+\index{Player.h@{Player.h}!mueve\_player@{mueve\_player}}
+\index{mueve\_player@{mueve\_player}!Player.h@{Player.h}}
+\subsubsection{\texorpdfstring{mueve\_player()}{mueve\_player()}}
+{\footnotesize\ttfamily void mueve\+\_\+player (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_player_8h_a2f7cd97bf1bb760d427047b2fdead13d}{Player}}}]{player }\end{DoxyParamCaption})}
+
+
+
+Mueve el jugador, dependiendo de su velocidad. 
+
+\begin{DoxyPrecond}{Precondition}
+El player debe ser distinto de N\+U\+LL 
+\end{DoxyPrecond}
+
+\begin{DoxyParams}{Parameters}
+{\em player} & Puntero a estructura tipo jugador \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_player_8h_a5d95011dffd02c540a4841d15833ca9b}\label{_player_8h_a5d95011dffd02c540a4841d15833ca9b}} 
+\index{Player.h@{Player.h}!set\_player\_animacion\_angulo@{set\_player\_animacion\_angulo}}
+\index{set\_player\_animacion\_angulo@{set\_player\_animacion\_angulo}!Player.h@{Player.h}}
+\subsubsection{\texorpdfstring{set\_player\_animacion\_angulo()}{set\_player\_animacion\_angulo()}}
+{\footnotesize\ttfamily void set\+\_\+player\+\_\+animacion\+\_\+angulo (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_player_8h_a2f7cd97bf1bb760d427047b2fdead13d}{Player}}}]{player,  }\item[{double}]{angulo }\end{DoxyParamCaption})}
+
+
+
+Establece el angulo de rotacion horizontal de la pelota. 
+
+\begin{DoxyPrecond}{Precondition}
+El player debe ser distinto de N\+U\+LL 
+\end{DoxyPrecond}
+
+\begin{DoxyParams}{Parameters}
+{\em player} & Puntero a estructura tipo jugador \\
+\hline
+{\em angulo} & Angulo de rotacion horizontal de la pelota \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_player_8h_a2bb726c221fb58671eaff00d551d4db4}\label{_player_8h_a2bb726c221fb58671eaff00d551d4db4}} 
+\index{Player.h@{Player.h}!set\_player\_vx@{set\_player\_vx}}
+\index{set\_player\_vx@{set\_player\_vx}!Player.h@{Player.h}}
+\subsubsection{\texorpdfstring{set\_player\_vx()}{set\_player\_vx()}}
+{\footnotesize\ttfamily void set\+\_\+player\+\_\+vx (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_player_8h_a2f7cd97bf1bb760d427047b2fdead13d}{Player}}}]{player,  }\item[{double}]{vx }\end{DoxyParamCaption})}
+
+
+
+Establece la velocidad x del jugador. 
+
+\begin{DoxyPrecond}{Precondition}
+El player debe ser distinto de N\+U\+LL 
+\end{DoxyPrecond}
+
+\begin{DoxyParams}{Parameters}
+{\em player} & Puntero a estructura tipo jugador \\
+\hline
+{\em vx} & Velocidad en el eje x \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_player_8h_aae7fe65297953b16d77fe785cd275628}\label{_player_8h_aae7fe65297953b16d77fe785cd275628}} 
+\index{Player.h@{Player.h}!set\_player\_vy@{set\_player\_vy}}
+\index{set\_player\_vy@{set\_player\_vy}!Player.h@{Player.h}}
+\subsubsection{\texorpdfstring{set\_player\_vy()}{set\_player\_vy()}}
+{\footnotesize\ttfamily void set\+\_\+player\+\_\+vy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_player_8h_a2f7cd97bf1bb760d427047b2fdead13d}{Player}}}]{player,  }\item[{double}]{vy }\end{DoxyParamCaption})}
+
+
+
+Establece la velocidad y del jugador. 
+
+\begin{DoxyPrecond}{Precondition}
+El player debe ser distinto de N\+U\+LL 
+\end{DoxyPrecond}
+
+\begin{DoxyParams}{Parameters}
+{\em player} & Puntero a estructura tipo jugador \\
+\hline
+{\em vy} & Velocidad en el eje y \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_player_8h_a3a6130fe19d994048fa925b147791dbd}\label{_player_8h_a3a6130fe19d994048fa925b147791dbd}} 
+\index{Player.h@{Player.h}!set\_player\_x@{set\_player\_x}}
+\index{set\_player\_x@{set\_player\_x}!Player.h@{Player.h}}
+\subsubsection{\texorpdfstring{set\_player\_x()}{set\_player\_x()}}
+{\footnotesize\ttfamily void set\+\_\+player\+\_\+x (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_player_8h_a2f7cd97bf1bb760d427047b2fdead13d}{Player}}}]{player,  }\item[{double}]{x }\end{DoxyParamCaption})}
+
+
+
+Establece la coordenada x del jugador. 
+
+\begin{DoxyPrecond}{Precondition}
+El player debe ser distinto de N\+U\+LL 
+\end{DoxyPrecond}
+
+\begin{DoxyParams}{Parameters}
+{\em player} & Puntero a estructura tipo jugador \\
+\hline
+{\em x} & Coordenada x \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_player_8h_a7209573d5e58202f8a658960a710f6ba}\label{_player_8h_a7209573d5e58202f8a658960a710f6ba}} 
+\index{Player.h@{Player.h}!set\_player\_y@{set\_player\_y}}
+\index{set\_player\_y@{set\_player\_y}!Player.h@{Player.h}}
+\subsubsection{\texorpdfstring{set\_player\_y()}{set\_player\_y()}}
+{\footnotesize\ttfamily void set\+\_\+player\+\_\+y (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_player_8h_a2f7cd97bf1bb760d427047b2fdead13d}{Player}}}]{player,  }\item[{double}]{y }\end{DoxyParamCaption})}
+
+
+
+Establece la coordenada y del jugador. 
+
+\begin{DoxyPrecond}{Precondition}
+El player debe ser distinto de N\+U\+LL 
+\end{DoxyPrecond}
+
+\begin{DoxyParams}{Parameters}
+{\em player} & Puntero a estructura tipo jugador \\
+\hline
+{\em y} & Coordenada y \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_player_8h_a2f0cdea86b00d77398197df1dffdba30}\label{_player_8h_a2f0cdea86b00d77398197df1dffdba30}} 
+\index{Player.h@{Player.h}!setExp\_player@{setExp\_player}}
+\index{setExp\_player@{setExp\_player}!Player.h@{Player.h}}
+\subsubsection{\texorpdfstring{setExp\_player()}{setExp\_player()}}
+{\footnotesize\ttfamily void set\+Exp\+\_\+player (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_player_8h_a2f7cd97bf1bb760d427047b2fdead13d}{Player}}}]{player,  }\item[{int}]{exp }\end{DoxyParamCaption})}
+
+
+
+Establece el estado de explosión de un jugador. 
+
+\begin{DoxyPrecond}{Precondition}
+El player debe ser distinto de N\+U\+LL 
+\end{DoxyPrecond}
+
+\begin{DoxyParams}{Parameters}
+{\em player} & Puntero a estructura tipo jugador \\
+\hline
+{\em Estado} & de explosión de un jugador \mbox{[}1 ha explotado, 0 si no\mbox{]} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_player_8h_ab020fdb8e5b0b1058079b0fce2796acb}\label{_player_8h_ab020fdb8e5b0b1058079b0fce2796acb}} 
+\index{Player.h@{Player.h}!togglePlayerVx@{togglePlayerVx}}
+\index{togglePlayerVx@{togglePlayerVx}!Player.h@{Player.h}}
+\subsubsection{\texorpdfstring{togglePlayerVx()}{togglePlayerVx()}}
+{\footnotesize\ttfamily void toggle\+Player\+Vx (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_player_8h_a2f7cd97bf1bb760d427047b2fdead13d}{Player}}}]{player,  }\item[{double}]{percent }\end{DoxyParamCaption})}
+
+
+
+Cambia el signo de la velocidad x, aplicandole un porcentaje de perdida de velocidad. 
+
+\begin{DoxyPrecond}{Precondition}
+El player debe ser distinto de N\+U\+LL y el porcentaje debe estar entre 0 y 1 
+\end{DoxyPrecond}
+
+\begin{DoxyParams}{Parameters}
+{\em player} & Puntero a estructura tipo jugador \\
+\hline
+{\em percent} & Porcentaje de perdidad de velocidad \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_player_8h_aafaad893466fc8a80d64a6ecb319cede}\label{_player_8h_aafaad893466fc8a80d64a6ecb319cede}} 
+\index{Player.h@{Player.h}!togglePlayerVy@{togglePlayerVy}}
+\index{togglePlayerVy@{togglePlayerVy}!Player.h@{Player.h}}
+\subsubsection{\texorpdfstring{togglePlayerVy()}{togglePlayerVy()}}
+{\footnotesize\ttfamily void toggle\+Player\+Vy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_player_8h_a2f7cd97bf1bb760d427047b2fdead13d}{Player}}}]{player,  }\item[{double}]{percent }\end{DoxyParamCaption})}
+
+
+
+Cambia el signo de la velocidad y, aplicandole un porcentaje de perdida de velocidad. 
+
+\begin{DoxyPrecond}{Precondition}
+El player debe ser distinto de N\+U\+LL y el porcentaje debe estar entre 0 y 1 
+\end{DoxyPrecond}
+
+\begin{DoxyParams}{Parameters}
+{\em player} & Puntero a estructura tipo jugador \\
+\hline
+{\em percent} & Porcentaje de perdidad de velocidad \\
+\hline
+\end{DoxyParams}

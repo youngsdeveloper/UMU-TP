@@ -1,3 +1,14 @@
+/**
+ * @file main.c
+ * @author Enrique Rodríguez Lopez
+ * @brief Funcion principal del videojuego
+ * @version 0.1
+ * @mainpage "MalditoPajaro" es un videojuego de habilidad en 2D en el que mediante una pelota y movimientos parabolicos tienes que derribar a unos pajaros que se mueven en la pantalla.
+ * @date 2019-05-21
+ * 
+ * @copyright Copyright (c) 2019
+ * 
+ */
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
@@ -14,9 +25,17 @@
 
 
 
-int MAX_PANTALLA = 500;
 
-int HIGH_SCORE;
+/**
+ * @brief Guarda la puntuacion más alta
+ * 
+ */
+int HIGH_SCORE; 
+
+/**
+ * @brief Vale 1 si se ha registrado una nueva puntuacion más alta
+ * 
+ */
 int NEW_HIGH_SCORE = 0;
 
 
@@ -34,19 +53,35 @@ int pressed = 0;
 double angulo;
 double fuerza_disparo;
 
-/*
-    1. Menu
+
+
+/**
+ * @brief Gestion la pantalla activa del juego
+ * 
+ *  1. Menu
     2. Juego
     3. Ayuda
     4. Pantalla POST-JUEGO
-*/
-
+ * 
+ */
 int GAME_PANTALLA = 1;
+
+/**
+ * @brief Altura del suelo
+ * 
+ */
 int ground_height = 40;
 
-int exitGame = 0; //Si es 1, sale del juego
+/**
+ * @brief Si vale 1, el juego termina
+ * 
+ */
+int exitGame = 0; 
 
-
+/**
+ * @brief Carga la pantalla menu
+ * 
+ */
 void menu(){
 
     double anim_menu_x = Pantalla_Anchura()-50-10;
@@ -115,7 +150,7 @@ void menu(){
 
         Pantalla_DibujaImagen(btnSalir, btnSalir_x, btnSalir_y, btnSalir_w, btnSalir_h); 
 
-        Pantalla_DibujaImagen(imagenSuelo, 0, MAX_PANTALLA-ground_height, Pantalla_Anchura(), ground_height);
+        Pantalla_DibujaImagen(imagenSuelo, 0, Pantalla_Altura()-ground_height, Pantalla_Anchura(), ground_height);
 
         anim_menu_x = anim_menu_x + anim_menu_vx;
         anim_menu_y = anim_menu_y + anim_menu_vy;
@@ -184,6 +219,11 @@ void menu(){
 }
 
 
+/**
+ * @brief Carga la pantalla post-juego
+ * 
+ * @param player Informacion del jugador para mostrarla en pantalla
+ */
 void pantallaPostJuego(Player player){
 
     Imagen logo = Pantalla_ImagenLee("logo1.bmp", 255);
@@ -253,6 +293,10 @@ void pantallaPostJuego(Player player){
     menu();
 }
 
+/**
+ * @brief Carga la pantalla de ayuda
+ * 
+ */
 void ayuda(){
     
 
@@ -354,6 +398,10 @@ void ayuda(){
 
 int pausa = 0;
 
+/**
+ * @brief Inicia un nuevo juego y carga la pantalla para jugar
+ * 
+ */
 void juego(){
 
     Player player = crea_player();
@@ -373,7 +421,7 @@ void juego(){
     Imagen imagenBomba = Pantalla_ImagenLee("bomba.bmp",255);
     Imagen imagenBombaExp = Pantalla_ImagenLee("explosion.bmp",255);
 
-    genera_ejercito(ejercito, 10);
+    genera_ejercito(ejercito, 10,0);
 
 
 
@@ -388,7 +436,7 @@ void juego(){
 
         if(cuenta_ejercito(ejercito)<=1){
             
-            genera_ejercito(ejercito, 10);
+            genera_ejercito(ejercito, 10, getPuntos(player));
                 
             
             Imagen imagenes[2];
@@ -398,6 +446,7 @@ void juego(){
 
             Imagen * ptrImages = imagenes;
             double x_bomba = genera_aleatorio(0,400);
+            
             Bomba bomba = crea_bomba(x_bomba,0,ptrImages);
             inserta_bomba(cabeceraBombas, bomba);
         }
@@ -455,7 +504,7 @@ void juego(){
             
         
         //Dibujar escenario
-        Pantalla_DibujaImagen(imagenSuelo, 0, MAX_PANTALLA-ground_height, Pantalla_Anchura(), ground_height);
+        Pantalla_DibujaImagen(imagenSuelo, 0, Pantalla_Altura()-ground_height, Pantalla_Anchura(), ground_height);
 
         //Jugador
         dibuja_player(player);
@@ -523,7 +572,7 @@ void juego(){
                 
                 double modulo_flecha = sqrt(pow(x_flecha, 2) + pow(y_flecha,2));
 
-                double MAX_FUERZA = 250; //250 EN PRODUCCION
+                double MAX_FUERZA = 250;
                 double MN_FUERZA = 50;
 
                 fuerza_disparo =  modulo_flecha*MAX_FUERZA/1000;
@@ -616,7 +665,7 @@ int main( int argc, char *argv[] ){
 
     
 
-    Pantalla_Crea("MalditoPajaro", 1000, MAX_PANTALLA);
+    Pantalla_Crea("MalditoPajaro", 1000, 500);
     
     while ( Pantalla_Activa() && exitGame == 0) {
     

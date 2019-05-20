@@ -1,0 +1,182 @@
+\hypertarget{_rafaga_bomba_8h}{}\section{Rafaga\+Bomba.\+h File Reference}
+\label{_rafaga_bomba_8h}\index{RafagaBomba.h@{RafagaBomba.h}}
+
+
+Fichero de cabecera para poder usar las funciones de la Rafaga\+Bomba.  
+
+
+{\ttfamily \#include \char`\"{}Pantalla.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Colisiones.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Bomba.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{struct_nodo_bomba}{Nodo\+Bomba}} $\ast$ \mbox{\hyperlink{_rafaga_bomba_8h_ad70b22de681941042ab951ab760df8d6}{Nodo\+Bomba\+Ptr}}
+\begin{DoxyCompactList}\small\item\em T\+DA Rafaga Bomba. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_rafaga_bomba_8h_ad70b22de681941042ab951ab760df8d6}{Nodo\+Bomba\+Ptr}} \mbox{\hyperlink{_rafaga_bomba_8h_ab42a3af184df4de46f0f77906b7a8a75}{nuevo\+\_\+nodo\+\_\+bomba}} (\mbox{\hyperlink{_bomba_8h_aa7502670a5779cfa4126e95d52b1ce8b}{Bomba}} bomba)
+\begin{DoxyCompactList}\small\item\em Crea un nuevo nodo para la lista dinamica Bomba. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_rafaga_bomba_8h_ad19cf96a38ac80a494167dc7c7b5a5db}{inserta\+\_\+bomba}} (\mbox{\hyperlink{_rafaga_bomba_8h_ad70b22de681941042ab951ab760df8d6}{Nodo\+Bomba\+Ptr}} cabecera, \mbox{\hyperlink{_bomba_8h_aa7502670a5779cfa4126e95d52b1ce8b}{Bomba}} bomba)
+\begin{DoxyCompactList}\small\item\em Añade una bomba a la Rafaga de Bombas. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_rafaga_bomba_8h_abf80507cd52a5ae49e01eb1451005b62}{mueve\+\_\+rafaga\+\_\+bomba}} (\mbox{\hyperlink{_rafaga_bomba_8h_ad70b22de681941042ab951ab760df8d6}{Nodo\+Bomba\+Ptr}} cabecera, \mbox{\hyperlink{_player_8h_a2f7cd97bf1bb760d427047b2fdead13d}{Player}} player)
+\begin{DoxyCompactList}\small\item\em Gestion el movimiento de una rafaga de bombas. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_rafaga_bomba_8h_afd997965bf509aafc64ed8ca219f0604}{dibuja\+\_\+rafaga\+\_\+bomba}} (\mbox{\hyperlink{_rafaga_bomba_8h_ad70b22de681941042ab951ab760df8d6}{Nodo\+Bomba\+Ptr}} cabecera)
+\begin{DoxyCompactList}\small\item\em Dibuja una rafaga de bombas. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_rafaga_bomba_8h_add0bef0b48104929cd592f8dbcf9d25c}{colision\+\_\+rafaga\+\_\+bomba}} (\mbox{\hyperlink{_rafaga_bomba_8h_ad70b22de681941042ab951ab760df8d6}{Nodo\+Bomba\+Ptr}} cabecera, \mbox{\hyperlink{_player_8h_a2f7cd97bf1bb760d427047b2fdead13d}{Player}} player, \mbox{\hyperlink{_ejercito_8h_a10180dd7b9b6f8179b6be972176e7885}{Ejercito}} ejercito)
+\begin{DoxyCompactList}\small\item\em Gestiona la colision de una rafaga de bombas con un player y un ejercito. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_rafaga_bomba_8h_afcb7565d4197eef960a4a1ee85fab0fa}{libera\+\_\+rafaga\+\_\+bomba}} (\mbox{\hyperlink{_rafaga_bomba_8h_ad70b22de681941042ab951ab760df8d6}{Nodo\+Bomba\+Ptr}} cabecera)
+\begin{DoxyCompactList}\small\item\em Libera la memoria de una rafaga de bombas. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Fichero de cabecera para poder usar las funciones de la Rafaga\+Bomba. 
+
+\begin{DoxyAuthor}{Author}
+Enrique 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2019-\/05-\/21
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2019 
+\end{DoxyCopyright}
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{_rafaga_bomba_8h_ad70b22de681941042ab951ab760df8d6}\label{_rafaga_bomba_8h_ad70b22de681941042ab951ab760df8d6}} 
+\index{RafagaBomba.h@{RafagaBomba.h}!NodoBombaPtr@{NodoBombaPtr}}
+\index{NodoBombaPtr@{NodoBombaPtr}!RafagaBomba.h@{RafagaBomba.h}}
+\subsubsection{\texorpdfstring{NodoBombaPtr}{NodoBombaPtr}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct_nodo_bomba}{Nodo\+Bomba}}$\ast$ \mbox{\hyperlink{_rafaga_bomba_8h_ad70b22de681941042ab951ab760df8d6}{Nodo\+Bomba\+Ptr}}}
+
+
+
+T\+DA Rafaga Bomba. 
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{_rafaga_bomba_8h_add0bef0b48104929cd592f8dbcf9d25c}\label{_rafaga_bomba_8h_add0bef0b48104929cd592f8dbcf9d25c}} 
+\index{RafagaBomba.h@{RafagaBomba.h}!colision\_rafaga\_bomba@{colision\_rafaga\_bomba}}
+\index{colision\_rafaga\_bomba@{colision\_rafaga\_bomba}!RafagaBomba.h@{RafagaBomba.h}}
+\subsubsection{\texorpdfstring{colision\_rafaga\_bomba()}{colision\_rafaga\_bomba()}}
+{\footnotesize\ttfamily void colision\+\_\+rafaga\+\_\+bomba (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_rafaga_bomba_8h_ad70b22de681941042ab951ab760df8d6}{Nodo\+Bomba\+Ptr}}}]{cabecera,  }\item[{\mbox{\hyperlink{_player_8h_a2f7cd97bf1bb760d427047b2fdead13d}{Player}}}]{player,  }\item[{\mbox{\hyperlink{_ejercito_8h_a10180dd7b9b6f8179b6be972176e7885}{Ejercito}}}]{ejercito }\end{DoxyParamCaption})}
+
+
+
+Gestiona la colision de una rafaga de bombas con un player y un ejercito. 
+
+\begin{DoxyPrecond}{Precondition}
+\mbox{\hyperlink{struct_nodo_bomba}{Nodo\+Bomba}}, Ejercito y Player deben estar inicializados 
+\end{DoxyPrecond}
+
+\begin{DoxyParams}{Parameters}
+{\em cabecera} & Puntero a estructura tipo \mbox{\hyperlink{struct_nodo_bomba}{Nodo\+Bomba}} \\
+\hline
+{\em player} & Puntero a estructura tipo Player \\
+\hline
+{\em ejercito} & Puntero a estructura tipo Ejercito \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_rafaga_bomba_8h_afd997965bf509aafc64ed8ca219f0604}\label{_rafaga_bomba_8h_afd997965bf509aafc64ed8ca219f0604}} 
+\index{RafagaBomba.h@{RafagaBomba.h}!dibuja\_rafaga\_bomba@{dibuja\_rafaga\_bomba}}
+\index{dibuja\_rafaga\_bomba@{dibuja\_rafaga\_bomba}!RafagaBomba.h@{RafagaBomba.h}}
+\subsubsection{\texorpdfstring{dibuja\_rafaga\_bomba()}{dibuja\_rafaga\_bomba()}}
+{\footnotesize\ttfamily void dibuja\+\_\+rafaga\+\_\+bomba (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_rafaga_bomba_8h_ad70b22de681941042ab951ab760df8d6}{Nodo\+Bomba\+Ptr}}}]{cabecera }\end{DoxyParamCaption})}
+
+
+
+Dibuja una rafaga de bombas. 
+
+\begin{DoxyPrecond}{Precondition}
+\mbox{\hyperlink{struct_nodo_bomba}{Nodo\+Bomba}} debe estar inicializado 
+\end{DoxyPrecond}
+
+\begin{DoxyParams}{Parameters}
+{\em cabecera} & Puntero a estructura tipo \mbox{\hyperlink{struct_nodo_bomba}{Nodo\+Bomba}} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_rafaga_bomba_8h_ad19cf96a38ac80a494167dc7c7b5a5db}\label{_rafaga_bomba_8h_ad19cf96a38ac80a494167dc7c7b5a5db}} 
+\index{RafagaBomba.h@{RafagaBomba.h}!inserta\_bomba@{inserta\_bomba}}
+\index{inserta\_bomba@{inserta\_bomba}!RafagaBomba.h@{RafagaBomba.h}}
+\subsubsection{\texorpdfstring{inserta\_bomba()}{inserta\_bomba()}}
+{\footnotesize\ttfamily void inserta\+\_\+bomba (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_rafaga_bomba_8h_ad70b22de681941042ab951ab760df8d6}{Nodo\+Bomba\+Ptr}}}]{cabecera,  }\item[{\mbox{\hyperlink{_bomba_8h_aa7502670a5779cfa4126e95d52b1ce8b}{Bomba}}}]{bomba }\end{DoxyParamCaption})}
+
+
+
+Añade una bomba a la Rafaga de Bombas. 
+
+\begin{DoxyPrecond}{Precondition}
+\mbox{\hyperlink{struct_nodo_bomba}{Nodo\+Bomba}} y Bomba deben estar inicializados 
+\end{DoxyPrecond}
+
+\begin{DoxyParams}{Parameters}
+{\em cabecera} & Puntero a estructura tipo \mbox{\hyperlink{struct_nodo_bomba}{Nodo\+Bomba}} \\
+\hline
+{\em bomba} & Puntero a estructura tipo bomba \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_rafaga_bomba_8h_afcb7565d4197eef960a4a1ee85fab0fa}\label{_rafaga_bomba_8h_afcb7565d4197eef960a4a1ee85fab0fa}} 
+\index{RafagaBomba.h@{RafagaBomba.h}!libera\_rafaga\_bomba@{libera\_rafaga\_bomba}}
+\index{libera\_rafaga\_bomba@{libera\_rafaga\_bomba}!RafagaBomba.h@{RafagaBomba.h}}
+\subsubsection{\texorpdfstring{libera\_rafaga\_bomba()}{libera\_rafaga\_bomba()}}
+{\footnotesize\ttfamily void libera\+\_\+rafaga\+\_\+bomba (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_rafaga_bomba_8h_ad70b22de681941042ab951ab760df8d6}{Nodo\+Bomba\+Ptr}}}]{cabecera }\end{DoxyParamCaption})}
+
+
+
+Libera la memoria de una rafaga de bombas. 
+
+\begin{DoxyPrecond}{Precondition}
+\mbox{\hyperlink{struct_nodo_bomba}{Nodo\+Bomba}} debe estar inicializado 
+\end{DoxyPrecond}
+
+\begin{DoxyParams}{Parameters}
+{\em cabecera} & Puntero a estructura tipo \mbox{\hyperlink{struct_nodo_bomba}{Nodo\+Bomba}} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_rafaga_bomba_8h_abf80507cd52a5ae49e01eb1451005b62}\label{_rafaga_bomba_8h_abf80507cd52a5ae49e01eb1451005b62}} 
+\index{RafagaBomba.h@{RafagaBomba.h}!mueve\_rafaga\_bomba@{mueve\_rafaga\_bomba}}
+\index{mueve\_rafaga\_bomba@{mueve\_rafaga\_bomba}!RafagaBomba.h@{RafagaBomba.h}}
+\subsubsection{\texorpdfstring{mueve\_rafaga\_bomba()}{mueve\_rafaga\_bomba()}}
+{\footnotesize\ttfamily void mueve\+\_\+rafaga\+\_\+bomba (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_rafaga_bomba_8h_ad70b22de681941042ab951ab760df8d6}{Nodo\+Bomba\+Ptr}}}]{cabecera,  }\item[{\mbox{\hyperlink{_player_8h_a2f7cd97bf1bb760d427047b2fdead13d}{Player}}}]{player }\end{DoxyParamCaption})}
+
+
+
+Gestion el movimiento de una rafaga de bombas. 
+
+\begin{DoxyPrecond}{Precondition}
+\mbox{\hyperlink{struct_nodo_bomba}{Nodo\+Bomba}} y Player deben estar inicializados 
+\end{DoxyPrecond}
+
+\begin{DoxyParams}{Parameters}
+{\em cabecera} & Puntero a estructura tipo \mbox{\hyperlink{struct_nodo_bomba}{Nodo\+Bomba}} \\
+\hline
+{\em player} & Puntero a estructura tipo player \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_rafaga_bomba_8h_ab42a3af184df4de46f0f77906b7a8a75}\label{_rafaga_bomba_8h_ab42a3af184df4de46f0f77906b7a8a75}} 
+\index{RafagaBomba.h@{RafagaBomba.h}!nuevo\_nodo\_bomba@{nuevo\_nodo\_bomba}}
+\index{nuevo\_nodo\_bomba@{nuevo\_nodo\_bomba}!RafagaBomba.h@{RafagaBomba.h}}
+\subsubsection{\texorpdfstring{nuevo\_nodo\_bomba()}{nuevo\_nodo\_bomba()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_rafaga_bomba_8h_ad70b22de681941042ab951ab760df8d6}{Nodo\+Bomba\+Ptr}} nuevo\+\_\+nodo\+\_\+bomba (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_bomba_8h_aa7502670a5779cfa4126e95d52b1ce8b}{Bomba}}}]{bomba }\end{DoxyParamCaption})}
+
+
+
+Crea un nuevo nodo para la lista dinamica Bomba. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bomba} & Puntero a estructura tipo bomba \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nodo\+Bomba\+Ptr Puntero a estructura tipo \mbox{\hyperlink{struct_nodo_bomba}{Nodo\+Bomba}} 
+\end{DoxyReturn}

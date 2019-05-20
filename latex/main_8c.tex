@@ -1,0 +1,180 @@
+\hypertarget{main_8c}{}\section{main.\+c File Reference}
+\label{main_8c}\index{main.c@{main.c}}
+
+
+Funcion principal del videojuego.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}Pantalla.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Colisiones.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Player.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Enemy.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Ejercito.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Rafaga\+Bomba.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Game\+Utils.\+h\char`\"{}}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{main_8c_a2a0e843767aeea4f433a28b9c54f573a}{menu}} ()
+\begin{DoxyCompactList}\small\item\em Carga la pantalla menu. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8c_a15204b30b3b7fae525944046bff7aff0}{pantalla\+Post\+Juego}} (\mbox{\hyperlink{_player_8h_a2f7cd97bf1bb760d427047b2fdead13d}{Player}} player)
+\begin{DoxyCompactList}\small\item\em Carga la pantalla post-\/juego. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8c_a175c86f6344de24bf92052a3f57d9547}{ayuda}} ()
+\begin{DoxyCompactList}\small\item\em Carga la pantalla de ayuda. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8c_a9c5875d703eb0c284cc42232698789d6}{juego}} ()
+\begin{DoxyCompactList}\small\item\em Inicia un nuevo juego y carga la pantalla para jugar. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{main_8c_a0ddf1224851353fc92bfbff6f499fa97}\label{main_8c_a0ddf1224851353fc92bfbff6f499fa97}} 
+int {\bfseries main} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{main_8c_a50bfe9fd4e747e1a06dd41bfcd8fd65e}{H\+I\+G\+H\+\_\+\+S\+C\+O\+RE}}
+\begin{DoxyCompactList}\small\item\em Guarda la puntuacion más alta. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{main_8c_a1240305418412de6c4a17f8233e2a4db}{N\+E\+W\+\_\+\+H\+I\+G\+H\+\_\+\+S\+C\+O\+RE}} = 0
+\begin{DoxyCompactList}\small\item\em Vale 1 si se ha registrado una nueva puntuacion más alta. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{main_8c_a976b3255a6a93ce4753593285a5185f9}\label{main_8c_a976b3255a6a93ce4753593285a5185f9}} 
+double {\bfseries x\+\_\+mouse}
+\item 
+\mbox{\Hypertarget{main_8c_ae37b017d16f47be8c966133b60efd486}\label{main_8c_ae37b017d16f47be8c966133b60efd486}} 
+double {\bfseries y\+\_\+mouse}
+\item 
+\mbox{\Hypertarget{main_8c_a9a8271834e4fd4341e41a0e182d6cdff}\label{main_8c_a9a8271834e4fd4341e41a0e182d6cdff}} 
+int {\bfseries pressed} = 0
+\item 
+\mbox{\Hypertarget{main_8c_ac6451432496df97b510013ce13866b01}\label{main_8c_ac6451432496df97b510013ce13866b01}} 
+double {\bfseries angulo}
+\item 
+\mbox{\Hypertarget{main_8c_a7fae1b8ed15edbadfef79c6f6259ff22}\label{main_8c_a7fae1b8ed15edbadfef79c6f6259ff22}} 
+double {\bfseries fuerza\+\_\+disparo}
+\item 
+int \mbox{\hyperlink{main_8c_a5203b416d7577328ae7812164a1a2802}{G\+A\+M\+E\+\_\+\+P\+A\+N\+T\+A\+L\+LA}} = 1
+\begin{DoxyCompactList}\small\item\em Gestion la pantalla activa del juego. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{main_8c_a104d86ef8cfd8e4896f4bcf0b6a9c0e5}{ground\+\_\+height}} = 40
+\begin{DoxyCompactList}\small\item\em Altura del suelo. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{main_8c_a66d66844956fef94c49778235b949f2b}{exit\+Game}} = 0
+\begin{DoxyCompactList}\small\item\em Si vale 1, el juego termina. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{main_8c_a03feb6ea10486f54aac1fc14626702f1}\label{main_8c_a03feb6ea10486f54aac1fc14626702f1}} 
+int {\bfseries pausa} = 0
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Funcion principal del videojuego. 
+
+\begin{DoxyAuthor}{Author}
+Enrique Rodríguez Lopez 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{main_8c_a175c86f6344de24bf92052a3f57d9547}\label{main_8c_a175c86f6344de24bf92052a3f57d9547}} 
+\index{main.c@{main.c}!ayuda@{ayuda}}
+\index{ayuda@{ayuda}!main.c@{main.c}}
+\subsubsection{\texorpdfstring{ayuda()}{ayuda()}}
+{\footnotesize\ttfamily void ayuda (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Carga la pantalla de ayuda. 
+
+\mbox{\Hypertarget{main_8c_a9c5875d703eb0c284cc42232698789d6}\label{main_8c_a9c5875d703eb0c284cc42232698789d6}} 
+\index{main.c@{main.c}!juego@{juego}}
+\index{juego@{juego}!main.c@{main.c}}
+\subsubsection{\texorpdfstring{juego()}{juego()}}
+{\footnotesize\ttfamily void juego (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Inicia un nuevo juego y carga la pantalla para jugar. 
+
+\mbox{\Hypertarget{main_8c_a2a0e843767aeea4f433a28b9c54f573a}\label{main_8c_a2a0e843767aeea4f433a28b9c54f573a}} 
+\index{main.c@{main.c}!menu@{menu}}
+\index{menu@{menu}!main.c@{main.c}}
+\subsubsection{\texorpdfstring{menu()}{menu()}}
+{\footnotesize\ttfamily void menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Carga la pantalla menu. 
+
+\mbox{\Hypertarget{main_8c_a15204b30b3b7fae525944046bff7aff0}\label{main_8c_a15204b30b3b7fae525944046bff7aff0}} 
+\index{main.c@{main.c}!pantallaPostJuego@{pantallaPostJuego}}
+\index{pantallaPostJuego@{pantallaPostJuego}!main.c@{main.c}}
+\subsubsection{\texorpdfstring{pantallaPostJuego()}{pantallaPostJuego()}}
+{\footnotesize\ttfamily void pantalla\+Post\+Juego (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_player_8h_a2f7cd97bf1bb760d427047b2fdead13d}{Player}}}]{player }\end{DoxyParamCaption})}
+
+
+
+Carga la pantalla post-\/juego. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & Informacion del jugador para mostrarla en pantalla \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{main_8c_a66d66844956fef94c49778235b949f2b}\label{main_8c_a66d66844956fef94c49778235b949f2b}} 
+\index{main.c@{main.c}!exitGame@{exitGame}}
+\index{exitGame@{exitGame}!main.c@{main.c}}
+\subsubsection{\texorpdfstring{exitGame}{exitGame}}
+{\footnotesize\ttfamily int exit\+Game = 0}
+
+
+
+Si vale 1, el juego termina. 
+
+\mbox{\Hypertarget{main_8c_a5203b416d7577328ae7812164a1a2802}\label{main_8c_a5203b416d7577328ae7812164a1a2802}} 
+\index{main.c@{main.c}!GAME\_PANTALLA@{GAME\_PANTALLA}}
+\index{GAME\_PANTALLA@{GAME\_PANTALLA}!main.c@{main.c}}
+\subsubsection{\texorpdfstring{GAME\_PANTALLA}{GAME\_PANTALLA}}
+{\footnotesize\ttfamily int G\+A\+M\+E\+\_\+\+P\+A\+N\+T\+A\+L\+LA = 1}
+
+
+
+Gestion la pantalla activa del juego. 
+
+
+\begin{DoxyEnumerate}
+\item Menu
+\item Juego
+\item Ayuda
+\item \mbox{\hyperlink{struct_pantalla}{Pantalla}} P\+O\+S\+T-\/\+J\+U\+E\+GO 
+\end{DoxyEnumerate}\mbox{\Hypertarget{main_8c_a104d86ef8cfd8e4896f4bcf0b6a9c0e5}\label{main_8c_a104d86ef8cfd8e4896f4bcf0b6a9c0e5}} 
+\index{main.c@{main.c}!ground\_height@{ground\_height}}
+\index{ground\_height@{ground\_height}!main.c@{main.c}}
+\subsubsection{\texorpdfstring{ground\_height}{ground\_height}}
+{\footnotesize\ttfamily int ground\+\_\+height = 40}
+
+
+
+Altura del suelo. 
+
+\mbox{\Hypertarget{main_8c_a50bfe9fd4e747e1a06dd41bfcd8fd65e}\label{main_8c_a50bfe9fd4e747e1a06dd41bfcd8fd65e}} 
+\index{main.c@{main.c}!HIGH\_SCORE@{HIGH\_SCORE}}
+\index{HIGH\_SCORE@{HIGH\_SCORE}!main.c@{main.c}}
+\subsubsection{\texorpdfstring{HIGH\_SCORE}{HIGH\_SCORE}}
+{\footnotesize\ttfamily int H\+I\+G\+H\+\_\+\+S\+C\+O\+RE}
+
+
+
+Guarda la puntuacion más alta. 
+
+\mbox{\Hypertarget{main_8c_a1240305418412de6c4a17f8233e2a4db}\label{main_8c_a1240305418412de6c4a17f8233e2a4db}} 
+\index{main.c@{main.c}!NEW\_HIGH\_SCORE@{NEW\_HIGH\_SCORE}}
+\index{NEW\_HIGH\_SCORE@{NEW\_HIGH\_SCORE}!main.c@{main.c}}
+\subsubsection{\texorpdfstring{NEW\_HIGH\_SCORE}{NEW\_HIGH\_SCORE}}
+{\footnotesize\ttfamily int N\+E\+W\+\_\+\+H\+I\+G\+H\+\_\+\+S\+C\+O\+RE = 0}
+
+
+
+Vale 1 si se ha registrado una nueva puntuacion más alta. 
+

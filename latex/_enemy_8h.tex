@@ -1,0 +1,384 @@
+\hypertarget{_enemy_8h}{}\section{Enemy.\+h File Reference}
+\label{_enemy_8h}\index{Enemy.h@{Enemy.h}}
+
+
+Fichero de cabecera para poder usar las funciones del Enemigo.  
+
+
+{\ttfamily \#include \char`\"{}Player.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Colisiones.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{struct_enemy_rep}{Enemy\+Rep}} $\ast$ \mbox{\hyperlink{_enemy_8h_a79aeea8a42dc103d27442b64a43d513d}{Enemy}}
+\begin{DoxyCompactList}\small\item\em T\+DA Enemigo. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_enemy_8h_a79aeea8a42dc103d27442b64a43d513d}{Enemy}} \mbox{\hyperlink{_enemy_8h_adab0408e16a36471518c9bb6cb8a77c0}{crea\+\_\+enemy}} (double x, double y, double vx, double vy, \mbox{\hyperlink{_pantalla_8h_a768e3409329f2389c63495f1a1684379}{Imagen}} $\ast$imagenes)
+\begin{DoxyCompactList}\small\item\em Crear e inicializa un enemigo. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{_enemy_8h_aa15f3909b7f59361266b8c582d6402ed}{get\+\_\+enemy\+\_\+x}} (\mbox{\hyperlink{_enemy_8h_a79aeea8a42dc103d27442b64a43d513d}{Enemy}} \mbox{\hyperlink{_enemy_8h_a79aeea8a42dc103d27442b64a43d513d}{Enemy}})
+\begin{DoxyCompactList}\small\item\em Obtiene la coordenada x del enemigo. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{_enemy_8h_a25f10709152ce7fcb6bb8f8a138db2d5}{get\+\_\+enemy\+\_\+y}} (\mbox{\hyperlink{_enemy_8h_a79aeea8a42dc103d27442b64a43d513d}{Enemy}} \mbox{\hyperlink{_enemy_8h_a79aeea8a42dc103d27442b64a43d513d}{Enemy}})
+\begin{DoxyCompactList}\small\item\em Obtiene la coordenada y del enemigo. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{_enemy_8h_a7782063f4e9a2e46ce93451468ca817d}{get\+\_\+enemy\+\_\+vx}} (\mbox{\hyperlink{_enemy_8h_a79aeea8a42dc103d27442b64a43d513d}{Enemy}} \mbox{\hyperlink{_enemy_8h_a79aeea8a42dc103d27442b64a43d513d}{Enemy}})
+\begin{DoxyCompactList}\small\item\em Obtiene la velocidad x del enemigo. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{_enemy_8h_a2807cbceb2f322f2c9785f84d925ce1e}{get\+\_\+enemy\+\_\+vy}} (\mbox{\hyperlink{_enemy_8h_a79aeea8a42dc103d27442b64a43d513d}{Enemy}} \mbox{\hyperlink{_enemy_8h_a79aeea8a42dc103d27442b64a43d513d}{Enemy}})
+\begin{DoxyCompactList}\small\item\em Obtiene la velocidad y del enemigo. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_enemy_8h_ae4103e4781618ecf5fd663d085eb5043}{get\+\_\+enemy\+\_\+exp}} (\mbox{\hyperlink{_enemy_8h_a79aeea8a42dc103d27442b64a43d513d}{Enemy}} \mbox{\hyperlink{_enemy_8h_a79aeea8a42dc103d27442b64a43d513d}{Enemy}})
+\begin{DoxyCompactList}\small\item\em Obtiene si el enemigo está en estado de explosión o no. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_enemy_8h_a9a4dadaa96be9dbd63228819b8ca2af8}{get\+\_\+enemy\+\_\+w}} (\mbox{\hyperlink{_enemy_8h_a79aeea8a42dc103d27442b64a43d513d}{Enemy}} \mbox{\hyperlink{_enemy_8h_a79aeea8a42dc103d27442b64a43d513d}{Enemy}})
+\begin{DoxyCompactList}\small\item\em Obtiene la anchura del enemigo. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_enemy_8h_aec69b5db1c0b85e7ab859dbc6e8145fb}{get\+\_\+enemy\+\_\+h}} (\mbox{\hyperlink{_enemy_8h_a79aeea8a42dc103d27442b64a43d513d}{Enemy}} \mbox{\hyperlink{_enemy_8h_a79aeea8a42dc103d27442b64a43d513d}{Enemy}})
+\begin{DoxyCompactList}\small\item\em Obtiene la altura del enemigo. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_enemy_8h_ae6a9925280c51c956e25bc15947ecc69}{dibuja\+\_\+enemy}} (\mbox{\hyperlink{_enemy_8h_a79aeea8a42dc103d27442b64a43d513d}{Enemy}} \mbox{\hyperlink{_enemy_8h_a79aeea8a42dc103d27442b64a43d513d}{Enemy}})
+\begin{DoxyCompactList}\small\item\em Dibuja el enemigo. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_enemy_8h_a291b1e177b064500d4f236bf99441381}{set\+\_\+enemy\+\_\+x}} (\mbox{\hyperlink{_enemy_8h_a79aeea8a42dc103d27442b64a43d513d}{Enemy}} \mbox{\hyperlink{_enemy_8h_a79aeea8a42dc103d27442b64a43d513d}{Enemy}}, double x)
+\begin{DoxyCompactList}\small\item\em Establece la coordenada x del enemigo. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_enemy_8h_a1d46e43192d803647b78f23abe1185bc}{set\+\_\+enemy\+\_\+y}} (\mbox{\hyperlink{_enemy_8h_a79aeea8a42dc103d27442b64a43d513d}{Enemy}} \mbox{\hyperlink{_enemy_8h_a79aeea8a42dc103d27442b64a43d513d}{Enemy}}, double y)
+\begin{DoxyCompactList}\small\item\em Establece la coordenada y del enemigo. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_enemy_8h_a6642d37c976abaa400835c9327ab2ab1}{set\+\_\+enemy\+\_\+exp}} (\mbox{\hyperlink{_enemy_8h_a79aeea8a42dc103d27442b64a43d513d}{Enemy}} enemy, int exp)
+\begin{DoxyCompactList}\small\item\em Establece el estado de explosion del enemigo. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_enemy_8h_a9a420c8db0de3b3c86db3048c268e6b7}{mueve\+\_\+enemy}} (\mbox{\hyperlink{_enemy_8h_a79aeea8a42dc103d27442b64a43d513d}{Enemy}} \mbox{\hyperlink{_enemy_8h_a79aeea8a42dc103d27442b64a43d513d}{Enemy}})
+\begin{DoxyCompactList}\small\item\em Mueve el enemigo y gestiona las animaciones del vuelo del pajaro. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_enemy_8h_a180ddb064c03302478cf3fd92f31c37a}{colision\+\_\+enemy\+\_\+player}} (\mbox{\hyperlink{_enemy_8h_a79aeea8a42dc103d27442b64a43d513d}{Enemy}} \mbox{\hyperlink{_enemy_8h_a79aeea8a42dc103d27442b64a43d513d}{Enemy}}, \mbox{\hyperlink{_player_8h_a2f7cd97bf1bb760d427047b2fdead13d}{Player}} player)
+\begin{DoxyCompactList}\small\item\em Gestiona las colisiones de un enemigo con un jugador, si colision el jugador y un enemigo, se le añade un punto al jugador y el enemigo entra en estado de explosión. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_enemy_8h_a9f4d49a5d0205a7bbff543d7d8dcc657}{libera\+\_\+enemy}} (\mbox{\hyperlink{_enemy_8h_a79aeea8a42dc103d27442b64a43d513d}{Enemy}} \mbox{\hyperlink{_enemy_8h_a79aeea8a42dc103d27442b64a43d513d}{Enemy}})
+\begin{DoxyCompactList}\small\item\em Libera la memoria de un enemigo. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Fichero de cabecera para poder usar las funciones del Enemigo. 
+
+\begin{DoxyAuthor}{Author}
+Enrique 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2019-\/05-\/21
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2019 
+\end{DoxyCopyright}
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{_enemy_8h_a79aeea8a42dc103d27442b64a43d513d}\label{_enemy_8h_a79aeea8a42dc103d27442b64a43d513d}} 
+\index{Enemy.h@{Enemy.h}!Enemy@{Enemy}}
+\index{Enemy@{Enemy}!Enemy.h@{Enemy.h}}
+\subsubsection{\texorpdfstring{Enemy}{Enemy}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct_enemy_rep}{Enemy\+Rep}}$\ast$ \mbox{\hyperlink{_enemy_8h_a79aeea8a42dc103d27442b64a43d513d}{Enemy}}}
+
+
+
+T\+DA Enemigo. 
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{_enemy_8h_a180ddb064c03302478cf3fd92f31c37a}\label{_enemy_8h_a180ddb064c03302478cf3fd92f31c37a}} 
+\index{Enemy.h@{Enemy.h}!colision\_enemy\_player@{colision\_enemy\_player}}
+\index{colision\_enemy\_player@{colision\_enemy\_player}!Enemy.h@{Enemy.h}}
+\subsubsection{\texorpdfstring{colision\_enemy\_player()}{colision\_enemy\_player()}}
+{\footnotesize\ttfamily void colision\+\_\+enemy\+\_\+player (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_enemy_8h_a79aeea8a42dc103d27442b64a43d513d}{Enemy}}}]{Enemy,  }\item[{\mbox{\hyperlink{_player_8h_a2f7cd97bf1bb760d427047b2fdead13d}{Player}}}]{player }\end{DoxyParamCaption})}
+
+
+
+Gestiona las colisiones de un enemigo con un jugador, si colision el jugador y un enemigo, se le añade un punto al jugador y el enemigo entra en estado de explosión. 
+
+\begin{DoxyPrecond}{Precondition}
+El enemigo debe ser distinto de N\+U\+LL y el player tambien 
+\end{DoxyPrecond}
+
+\begin{DoxyParams}{Parameters}
+{\em Enemy} & Puntero a estructura tipo enemigo \\
+\hline
+{\em Player} & Puntero a estructura tipo player \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_enemy_8h_adab0408e16a36471518c9bb6cb8a77c0}\label{_enemy_8h_adab0408e16a36471518c9bb6cb8a77c0}} 
+\index{Enemy.h@{Enemy.h}!crea\_enemy@{crea\_enemy}}
+\index{crea\_enemy@{crea\_enemy}!Enemy.h@{Enemy.h}}
+\subsubsection{\texorpdfstring{crea\_enemy()}{crea\_enemy()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_enemy_8h_a79aeea8a42dc103d27442b64a43d513d}{Enemy}} crea\+\_\+enemy (\begin{DoxyParamCaption}\item[{double}]{x,  }\item[{double}]{y,  }\item[{double}]{vx,  }\item[{double}]{vy,  }\item[{\mbox{\hyperlink{_pantalla_8h_a768e3409329f2389c63495f1a1684379}{Imagen}} $\ast$}]{imagenes }\end{DoxyParamCaption})}
+
+
+
+Crear e inicializa un enemigo. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & Coordenada x del enemigo \\
+\hline
+{\em y} & Coordenada y del enemigo \\
+\hline
+{\em vx} & Velocidad x del enemigo \\
+\hline
+{\em vy} & Velocidad y del enemigo \\
+\hline
+{\em imagenes} & Array de imagenes precargas para realizar las animaciones \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Enemy 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_enemy_8h_ae6a9925280c51c956e25bc15947ecc69}\label{_enemy_8h_ae6a9925280c51c956e25bc15947ecc69}} 
+\index{Enemy.h@{Enemy.h}!dibuja\_enemy@{dibuja\_enemy}}
+\index{dibuja\_enemy@{dibuja\_enemy}!Enemy.h@{Enemy.h}}
+\subsubsection{\texorpdfstring{dibuja\_enemy()}{dibuja\_enemy()}}
+{\footnotesize\ttfamily void dibuja\+\_\+enemy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_enemy_8h_a79aeea8a42dc103d27442b64a43d513d}{Enemy}}}]{Enemy }\end{DoxyParamCaption})}
+
+
+
+Dibuja el enemigo. 
+
+\begin{DoxyPrecond}{Precondition}
+El enemigo debe ser distinto de N\+U\+LL 
+\end{DoxyPrecond}
+
+\begin{DoxyParams}{Parameters}
+{\em Enemy} & Puntero a estructura tipo enemigo \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_enemy_8h_ae4103e4781618ecf5fd663d085eb5043}\label{_enemy_8h_ae4103e4781618ecf5fd663d085eb5043}} 
+\index{Enemy.h@{Enemy.h}!get\_enemy\_exp@{get\_enemy\_exp}}
+\index{get\_enemy\_exp@{get\_enemy\_exp}!Enemy.h@{Enemy.h}}
+\subsubsection{\texorpdfstring{get\_enemy\_exp()}{get\_enemy\_exp()}}
+{\footnotesize\ttfamily int get\+\_\+enemy\+\_\+exp (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_enemy_8h_a79aeea8a42dc103d27442b64a43d513d}{Enemy}}}]{Enemy }\end{DoxyParamCaption})}
+
+
+
+Obtiene si el enemigo está en estado de explosión o no. 
+
+\begin{DoxyPrecond}{Precondition}
+El enemigo debe ser distinto de N\+U\+LL 
+\end{DoxyPrecond}
+
+\begin{DoxyParams}{Parameters}
+{\em Enemy} & Puntero a estructura tipo enemigo \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int Estado de explosion del enemigo 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_enemy_8h_aec69b5db1c0b85e7ab859dbc6e8145fb}\label{_enemy_8h_aec69b5db1c0b85e7ab859dbc6e8145fb}} 
+\index{Enemy.h@{Enemy.h}!get\_enemy\_h@{get\_enemy\_h}}
+\index{get\_enemy\_h@{get\_enemy\_h}!Enemy.h@{Enemy.h}}
+\subsubsection{\texorpdfstring{get\_enemy\_h()}{get\_enemy\_h()}}
+{\footnotesize\ttfamily int get\+\_\+enemy\+\_\+h (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_enemy_8h_a79aeea8a42dc103d27442b64a43d513d}{Enemy}}}]{Enemy }\end{DoxyParamCaption})}
+
+
+
+Obtiene la altura del enemigo. 
+
+\begin{DoxyPrecond}{Precondition}
+El enemigo debe ser distinto de N\+U\+LL 
+\end{DoxyPrecond}
+
+\begin{DoxyParams}{Parameters}
+{\em Enemy} & Puntero a estructura tipo enemigo \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double Altura del enemigo 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_enemy_8h_a7782063f4e9a2e46ce93451468ca817d}\label{_enemy_8h_a7782063f4e9a2e46ce93451468ca817d}} 
+\index{Enemy.h@{Enemy.h}!get\_enemy\_vx@{get\_enemy\_vx}}
+\index{get\_enemy\_vx@{get\_enemy\_vx}!Enemy.h@{Enemy.h}}
+\subsubsection{\texorpdfstring{get\_enemy\_vx()}{get\_enemy\_vx()}}
+{\footnotesize\ttfamily double get\+\_\+enemy\+\_\+vx (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_enemy_8h_a79aeea8a42dc103d27442b64a43d513d}{Enemy}}}]{Enemy }\end{DoxyParamCaption})}
+
+
+
+Obtiene la velocidad x del enemigo. 
+
+\begin{DoxyPrecond}{Precondition}
+El enemigo debe ser distinto de N\+U\+LL 
+\end{DoxyPrecond}
+
+\begin{DoxyParams}{Parameters}
+{\em Enemy} & Puntero a estructura tipo enemigo \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double Velocidad x del enemigo 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_enemy_8h_a2807cbceb2f322f2c9785f84d925ce1e}\label{_enemy_8h_a2807cbceb2f322f2c9785f84d925ce1e}} 
+\index{Enemy.h@{Enemy.h}!get\_enemy\_vy@{get\_enemy\_vy}}
+\index{get\_enemy\_vy@{get\_enemy\_vy}!Enemy.h@{Enemy.h}}
+\subsubsection{\texorpdfstring{get\_enemy\_vy()}{get\_enemy\_vy()}}
+{\footnotesize\ttfamily double get\+\_\+enemy\+\_\+vy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_enemy_8h_a79aeea8a42dc103d27442b64a43d513d}{Enemy}}}]{Enemy }\end{DoxyParamCaption})}
+
+
+
+Obtiene la velocidad y del enemigo. 
+
+\begin{DoxyPrecond}{Precondition}
+El enemigo debe ser distinto de N\+U\+LL 
+\end{DoxyPrecond}
+
+\begin{DoxyParams}{Parameters}
+{\em Enemy} & Puntero a estructura tipo enemigo \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double Velocidad y del enemigo 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_enemy_8h_a9a4dadaa96be9dbd63228819b8ca2af8}\label{_enemy_8h_a9a4dadaa96be9dbd63228819b8ca2af8}} 
+\index{Enemy.h@{Enemy.h}!get\_enemy\_w@{get\_enemy\_w}}
+\index{get\_enemy\_w@{get\_enemy\_w}!Enemy.h@{Enemy.h}}
+\subsubsection{\texorpdfstring{get\_enemy\_w()}{get\_enemy\_w()}}
+{\footnotesize\ttfamily int get\+\_\+enemy\+\_\+w (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_enemy_8h_a79aeea8a42dc103d27442b64a43d513d}{Enemy}}}]{Enemy }\end{DoxyParamCaption})}
+
+
+
+Obtiene la anchura del enemigo. 
+
+\begin{DoxyPrecond}{Precondition}
+El enemigo debe ser distinto de N\+U\+LL 
+\end{DoxyPrecond}
+
+\begin{DoxyParams}{Parameters}
+{\em Enemy} & Puntero a estructura tipo enemigo \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double Anchura del enemigo 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_enemy_8h_aa15f3909b7f59361266b8c582d6402ed}\label{_enemy_8h_aa15f3909b7f59361266b8c582d6402ed}} 
+\index{Enemy.h@{Enemy.h}!get\_enemy\_x@{get\_enemy\_x}}
+\index{get\_enemy\_x@{get\_enemy\_x}!Enemy.h@{Enemy.h}}
+\subsubsection{\texorpdfstring{get\_enemy\_x()}{get\_enemy\_x()}}
+{\footnotesize\ttfamily double get\+\_\+enemy\+\_\+x (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_enemy_8h_a79aeea8a42dc103d27442b64a43d513d}{Enemy}}}]{Enemy }\end{DoxyParamCaption})}
+
+
+
+Obtiene la coordenada x del enemigo. 
+
+\begin{DoxyPrecond}{Precondition}
+El enemigo debe ser distinto de N\+U\+LL 
+\end{DoxyPrecond}
+
+\begin{DoxyParams}{Parameters}
+{\em Enemy} & Puntero a estructura tipo enemigo \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double Coordenada x del enemigo 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_enemy_8h_a25f10709152ce7fcb6bb8f8a138db2d5}\label{_enemy_8h_a25f10709152ce7fcb6bb8f8a138db2d5}} 
+\index{Enemy.h@{Enemy.h}!get\_enemy\_y@{get\_enemy\_y}}
+\index{get\_enemy\_y@{get\_enemy\_y}!Enemy.h@{Enemy.h}}
+\subsubsection{\texorpdfstring{get\_enemy\_y()}{get\_enemy\_y()}}
+{\footnotesize\ttfamily double get\+\_\+enemy\+\_\+y (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_enemy_8h_a79aeea8a42dc103d27442b64a43d513d}{Enemy}}}]{Enemy }\end{DoxyParamCaption})}
+
+
+
+Obtiene la coordenada y del enemigo. 
+
+\begin{DoxyPrecond}{Precondition}
+El enemigo debe ser distinto de N\+U\+LL 
+\end{DoxyPrecond}
+
+\begin{DoxyParams}{Parameters}
+{\em Enemy} & Puntero a estructura tipo enemigo \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double Coordenada y del enemigo 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_enemy_8h_a9f4d49a5d0205a7bbff543d7d8dcc657}\label{_enemy_8h_a9f4d49a5d0205a7bbff543d7d8dcc657}} 
+\index{Enemy.h@{Enemy.h}!libera\_enemy@{libera\_enemy}}
+\index{libera\_enemy@{libera\_enemy}!Enemy.h@{Enemy.h}}
+\subsubsection{\texorpdfstring{libera\_enemy()}{libera\_enemy()}}
+{\footnotesize\ttfamily void libera\+\_\+enemy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_enemy_8h_a79aeea8a42dc103d27442b64a43d513d}{Enemy}}}]{Enemy }\end{DoxyParamCaption})}
+
+
+
+Libera la memoria de un enemigo. 
+
+\begin{DoxyPrecond}{Precondition}
+El enemigo debe ser distinto de N\+U\+LL 
+\end{DoxyPrecond}
+
+\begin{DoxyParams}{Parameters}
+{\em Enemy} & Puntero a estructura tipo enemigo \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_enemy_8h_a9a420c8db0de3b3c86db3048c268e6b7}\label{_enemy_8h_a9a420c8db0de3b3c86db3048c268e6b7}} 
+\index{Enemy.h@{Enemy.h}!mueve\_enemy@{mueve\_enemy}}
+\index{mueve\_enemy@{mueve\_enemy}!Enemy.h@{Enemy.h}}
+\subsubsection{\texorpdfstring{mueve\_enemy()}{mueve\_enemy()}}
+{\footnotesize\ttfamily void mueve\+\_\+enemy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_enemy_8h_a79aeea8a42dc103d27442b64a43d513d}{Enemy}}}]{Enemy }\end{DoxyParamCaption})}
+
+
+
+Mueve el enemigo y gestiona las animaciones del vuelo del pajaro. 
+
+\begin{DoxyPrecond}{Precondition}
+El enemigo debe ser distinto de N\+U\+LL 
+\end{DoxyPrecond}
+
+\begin{DoxyParams}{Parameters}
+{\em Enemy} & Puntero a estructura tipo enemigo \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_enemy_8h_a6642d37c976abaa400835c9327ab2ab1}\label{_enemy_8h_a6642d37c976abaa400835c9327ab2ab1}} 
+\index{Enemy.h@{Enemy.h}!set\_enemy\_exp@{set\_enemy\_exp}}
+\index{set\_enemy\_exp@{set\_enemy\_exp}!Enemy.h@{Enemy.h}}
+\subsubsection{\texorpdfstring{set\_enemy\_exp()}{set\_enemy\_exp()}}
+{\footnotesize\ttfamily void set\+\_\+enemy\+\_\+exp (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_enemy_8h_a79aeea8a42dc103d27442b64a43d513d}{Enemy}}}]{enemy,  }\item[{int}]{exp }\end{DoxyParamCaption})}
+
+
+
+Establece el estado de explosion del enemigo. 
+
+\begin{DoxyPrecond}{Precondition}
+El enemigo debe ser distinto de N\+U\+LL 
+\end{DoxyPrecond}
+
+\begin{DoxyParams}{Parameters}
+{\em Enemy} & Puntero a estructura tipo enemigo \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_enemy_8h_a291b1e177b064500d4f236bf99441381}\label{_enemy_8h_a291b1e177b064500d4f236bf99441381}} 
+\index{Enemy.h@{Enemy.h}!set\_enemy\_x@{set\_enemy\_x}}
+\index{set\_enemy\_x@{set\_enemy\_x}!Enemy.h@{Enemy.h}}
+\subsubsection{\texorpdfstring{set\_enemy\_x()}{set\_enemy\_x()}}
+{\footnotesize\ttfamily void set\+\_\+enemy\+\_\+x (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_enemy_8h_a79aeea8a42dc103d27442b64a43d513d}{Enemy}}}]{Enemy,  }\item[{double}]{x }\end{DoxyParamCaption})}
+
+
+
+Establece la coordenada x del enemigo. 
+
+\begin{DoxyPrecond}{Precondition}
+El enemigo debe ser distinto de N\+U\+LL 
+\end{DoxyPrecond}
+
+\begin{DoxyParams}{Parameters}
+{\em Enemy} & Puntero a estructura tipo enemigo \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_enemy_8h_a1d46e43192d803647b78f23abe1185bc}\label{_enemy_8h_a1d46e43192d803647b78f23abe1185bc}} 
+\index{Enemy.h@{Enemy.h}!set\_enemy\_y@{set\_enemy\_y}}
+\index{set\_enemy\_y@{set\_enemy\_y}!Enemy.h@{Enemy.h}}
+\subsubsection{\texorpdfstring{set\_enemy\_y()}{set\_enemy\_y()}}
+{\footnotesize\ttfamily void set\+\_\+enemy\+\_\+y (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_enemy_8h_a79aeea8a42dc103d27442b64a43d513d}{Enemy}}}]{Enemy,  }\item[{double}]{y }\end{DoxyParamCaption})}
+
+
+
+Establece la coordenada y del enemigo. 
+
+\begin{DoxyPrecond}{Precondition}
+El enemigo debe ser distinto de N\+U\+LL 
+\end{DoxyPrecond}
+
+\begin{DoxyParams}{Parameters}
+{\em Enemy} & Puntero a estructura tipo enemigo \\
+\hline
+\end{DoxyParams}

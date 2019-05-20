@@ -1,0 +1,296 @@
+\hypertarget{_ejercito_8h}{}\section{Ejercito.\+h File Reference}
+\label{_ejercito_8h}\index{Ejercito.h@{Ejercito.h}}
+
+
+Fichero de cabecera para poder usar las funciones del Ejercito (Grupo de enemigos)  
+
+
+{\ttfamily \#include \char`\"{}Enemy.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Pantalla.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Colisiones.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Game\+Utils.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{struct_ejercito_rep}{Ejercito\+Rep}} $\ast$ \mbox{\hyperlink{_ejercito_8h_a10180dd7b9b6f8179b6be972176e7885}{Ejercito}}
+\begin{DoxyCompactList}\small\item\em T\+DA Ejercito. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_ejercito_8h_a10180dd7b9b6f8179b6be972176e7885}{Ejercito}} \mbox{\hyperlink{_ejercito_8h_aaafa676c862eff3d4d10f4f541166d0e}{crea\+\_\+ejercito}} ()
+\begin{DoxyCompactList}\small\item\em Crea e inicializa un ejercito. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_ejercito_8h_ac50cc17a13f2e10907310b728829c1f9}{inserta\+\_\+enemigo}} (\mbox{\hyperlink{_ejercito_8h_a10180dd7b9b6f8179b6be972176e7885}{Ejercito}} e, \mbox{\hyperlink{_enemy_8h_a79aeea8a42dc103d27442b64a43d513d}{Enemy}} enemy)
+\begin{DoxyCompactList}\small\item\em Inserta un enemigo dentro de un ejercito. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_ejercito_8h_af7ce79c458f61b83090d276f6b3f1927}{dibuja\+\_\+ejercito}} (\mbox{\hyperlink{_ejercito_8h_a10180dd7b9b6f8179b6be972176e7885}{Ejercito}} e)
+\begin{DoxyCompactList}\small\item\em Dibuja un ejercito. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_ejercito_8h_aef5b1640c9d408a747db7a1b6d5a793b}{mueve\+\_\+ejercito}} (\mbox{\hyperlink{_ejercito_8h_a10180dd7b9b6f8179b6be972176e7885}{Ejercito}} e, \mbox{\hyperlink{_player_8h_a2f7cd97bf1bb760d427047b2fdead13d}{Player}} player)
+\begin{DoxyCompactList}\small\item\em Mueve un ejercito, tambien elimina los enemigos que se salen fuera de los limites. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_ejercito_8h_ad9d8c0d79d3c0b4fb689365961124b71}{colision\+\_\+ejercito}} (\mbox{\hyperlink{_ejercito_8h_a10180dd7b9b6f8179b6be972176e7885}{Ejercito}} e, \mbox{\hyperlink{_player_8h_a2f7cd97bf1bb760d427047b2fdead13d}{Player}} player)
+\begin{DoxyCompactList}\small\item\em Gestiona las colisiones de un ejercito con un jugador. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_ejercito_8h_a70e2633311a66a196ce129aa2275f72d}{genera\+\_\+ejercito}} (\mbox{\hyperlink{_ejercito_8h_a10180dd7b9b6f8179b6be972176e7885}{Ejercito}} e, int n, int puntos)
+\begin{DoxyCompactList}\small\item\em Inserta n enemigos a un ejercito. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_ejercito_8h_ad46af1f134a88b98b3f7bd37808f8b20}{suprime\+\_\+enemy}} (\mbox{\hyperlink{_ejercito_8h_a10180dd7b9b6f8179b6be972176e7885}{Ejercito}} e, int pos)
+\begin{DoxyCompactList}\small\item\em Suprime un enemigo de un ejercito. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_ejercito_8h_aa68bba83b57ba688874d4031ffcdb1f3}{colision\+\_\+ejercito\+\_\+bomba}} (\mbox{\hyperlink{_ejercito_8h_a10180dd7b9b6f8179b6be972176e7885}{Ejercito}} e, double x, double y, double w, double h)
+\begin{DoxyCompactList}\small\item\em Gestiona la colision de un ejercito con una bomba. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_ejercito_8h_a80b90efe9aec896168cc5a77746af68b}{cuenta\+\_\+ejercito}} (\mbox{\hyperlink{_ejercito_8h_a10180dd7b9b6f8179b6be972176e7885}{Ejercito}} e)
+\begin{DoxyCompactList}\small\item\em Devuelve el numero de enemigos activos de un ejercito. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_ejercito_8h_a982baca5c936f0aba7c3b7578a9963a8}{reset\+\_\+ejercito}} (\mbox{\hyperlink{_ejercito_8h_a10180dd7b9b6f8179b6be972176e7885}{Ejercito}} e)
+\begin{DoxyCompactList}\small\item\em Elimina todos los enemigos de un ejercito. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_ejercito_8h_ada6b8bb5a7796d0f798e15e8f3a7f98a}{libera\+\_\+ejercito}} (\mbox{\hyperlink{_ejercito_8h_a10180dd7b9b6f8179b6be972176e7885}{Ejercito}} e)
+\begin{DoxyCompactList}\small\item\em Libera la memoria de un ejercito. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Fichero de cabecera para poder usar las funciones del Ejercito (Grupo de enemigos) 
+
+\begin{DoxyAuthor}{Author}
+Ejercito 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2019-\/05-\/21
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2019 
+\end{DoxyCopyright}
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{_ejercito_8h_a10180dd7b9b6f8179b6be972176e7885}\label{_ejercito_8h_a10180dd7b9b6f8179b6be972176e7885}} 
+\index{Ejercito.h@{Ejercito.h}!Ejercito@{Ejercito}}
+\index{Ejercito@{Ejercito}!Ejercito.h@{Ejercito.h}}
+\subsubsection{\texorpdfstring{Ejercito}{Ejercito}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct_ejercito_rep}{Ejercito\+Rep}}$\ast$ \mbox{\hyperlink{_ejercito_8h_a10180dd7b9b6f8179b6be972176e7885}{Ejercito}}}
+
+
+
+T\+DA Ejercito. 
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{_ejercito_8h_ad9d8c0d79d3c0b4fb689365961124b71}\label{_ejercito_8h_ad9d8c0d79d3c0b4fb689365961124b71}} 
+\index{Ejercito.h@{Ejercito.h}!colision\_ejercito@{colision\_ejercito}}
+\index{colision\_ejercito@{colision\_ejercito}!Ejercito.h@{Ejercito.h}}
+\subsubsection{\texorpdfstring{colision\_ejercito()}{colision\_ejercito()}}
+{\footnotesize\ttfamily void colision\+\_\+ejercito (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_ejercito_8h_a10180dd7b9b6f8179b6be972176e7885}{Ejercito}}}]{e,  }\item[{\mbox{\hyperlink{_player_8h_a2f7cd97bf1bb760d427047b2fdead13d}{Player}}}]{player }\end{DoxyParamCaption})}
+
+
+
+Gestiona las colisiones de un ejercito con un jugador. 
+
+\begin{DoxyPrecond}{Precondition}
+El ejercito y el jugador deben estar inicializados 
+\end{DoxyPrecond}
+
+\begin{DoxyParams}{Parameters}
+{\em e} & Puntero a estructura tipo ejecito \\
+\hline
+{\em player} & Puntero a estructura tipo player \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_ejercito_8h_aa68bba83b57ba688874d4031ffcdb1f3}\label{_ejercito_8h_aa68bba83b57ba688874d4031ffcdb1f3}} 
+\index{Ejercito.h@{Ejercito.h}!colision\_ejercito\_bomba@{colision\_ejercito\_bomba}}
+\index{colision\_ejercito\_bomba@{colision\_ejercito\_bomba}!Ejercito.h@{Ejercito.h}}
+\subsubsection{\texorpdfstring{colision\_ejercito\_bomba()}{colision\_ejercito\_bomba()}}
+{\footnotesize\ttfamily int colision\+\_\+ejercito\+\_\+bomba (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_ejercito_8h_a10180dd7b9b6f8179b6be972176e7885}{Ejercito}}}]{e,  }\item[{double}]{x,  }\item[{double}]{y,  }\item[{double}]{w,  }\item[{double}]{h }\end{DoxyParamCaption})}
+
+
+
+Gestiona la colision de un ejercito con una bomba. 
+
+\begin{DoxyPrecond}{Precondition}
+El ejercito debe estar inicializados
+\end{DoxyPrecond}
+
+\begin{DoxyParams}{Parameters}
+{\em e} & Puntero a estructura tipo ejecito \\
+\hline
+{\em x} & Coordenada x de la bomba \\
+\hline
+{\em y} & Coordenada y de la bomba \\
+\hline
+{\em w} & Anchura de la bomba \\
+\hline
+{\em h} & Altura de la bomba \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int Devuelve 1 si se ha producido alguna colision del ejercito con una bomba 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_ejercito_8h_aaafa676c862eff3d4d10f4f541166d0e}\label{_ejercito_8h_aaafa676c862eff3d4d10f4f541166d0e}} 
+\index{Ejercito.h@{Ejercito.h}!crea\_ejercito@{crea\_ejercito}}
+\index{crea\_ejercito@{crea\_ejercito}!Ejercito.h@{Ejercito.h}}
+\subsubsection{\texorpdfstring{crea\_ejercito()}{crea\_ejercito()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_ejercito_8h_a10180dd7b9b6f8179b6be972176e7885}{Ejercito}} crea\+\_\+ejercito (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Crea e inicializa un ejercito. 
+
+\begin{DoxyReturn}{Returns}
+Ejercito 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_ejercito_8h_a80b90efe9aec896168cc5a77746af68b}\label{_ejercito_8h_a80b90efe9aec896168cc5a77746af68b}} 
+\index{Ejercito.h@{Ejercito.h}!cuenta\_ejercito@{cuenta\_ejercito}}
+\index{cuenta\_ejercito@{cuenta\_ejercito}!Ejercito.h@{Ejercito.h}}
+\subsubsection{\texorpdfstring{cuenta\_ejercito()}{cuenta\_ejercito()}}
+{\footnotesize\ttfamily int cuenta\+\_\+ejercito (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_ejercito_8h_a10180dd7b9b6f8179b6be972176e7885}{Ejercito}}}]{e }\end{DoxyParamCaption})}
+
+
+
+Devuelve el numero de enemigos activos de un ejercito. 
+
+\begin{DoxyPrecond}{Precondition}
+El ejercito debe estar inicializados
+\end{DoxyPrecond}
+
+\begin{DoxyParams}{Parameters}
+{\em e} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int Numero de enemigos de un ejercito 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_ejercito_8h_af7ce79c458f61b83090d276f6b3f1927}\label{_ejercito_8h_af7ce79c458f61b83090d276f6b3f1927}} 
+\index{Ejercito.h@{Ejercito.h}!dibuja\_ejercito@{dibuja\_ejercito}}
+\index{dibuja\_ejercito@{dibuja\_ejercito}!Ejercito.h@{Ejercito.h}}
+\subsubsection{\texorpdfstring{dibuja\_ejercito()}{dibuja\_ejercito()}}
+{\footnotesize\ttfamily void dibuja\+\_\+ejercito (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_ejercito_8h_a10180dd7b9b6f8179b6be972176e7885}{Ejercito}}}]{e }\end{DoxyParamCaption})}
+
+
+
+Dibuja un ejercito. 
+
+\begin{DoxyPrecond}{Precondition}
+El ejercito debe estar inicializados 
+\end{DoxyPrecond}
+
+\begin{DoxyParams}{Parameters}
+{\em e} & Puntero a estructura tipo ejecito \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_ejercito_8h_a70e2633311a66a196ce129aa2275f72d}\label{_ejercito_8h_a70e2633311a66a196ce129aa2275f72d}} 
+\index{Ejercito.h@{Ejercito.h}!genera\_ejercito@{genera\_ejercito}}
+\index{genera\_ejercito@{genera\_ejercito}!Ejercito.h@{Ejercito.h}}
+\subsubsection{\texorpdfstring{genera\_ejercito()}{genera\_ejercito()}}
+{\footnotesize\ttfamily void genera\+\_\+ejercito (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_ejercito_8h_a10180dd7b9b6f8179b6be972176e7885}{Ejercito}}}]{e,  }\item[{int}]{n,  }\item[{int}]{puntos }\end{DoxyParamCaption})}
+
+
+
+Inserta n enemigos a un ejercito. 
+
+\begin{DoxyPrecond}{Precondition}
+El ejercito debe estar inicializados
+\end{DoxyPrecond}
+
+\begin{DoxyParams}{Parameters}
+{\em e} & Puntero a estructura tipo ejecito \\
+\hline
+{\em n} & Numero de enemigos a crear \\
+\hline
+{\em puntos} & Puntos del jugador en ese momento, se utiliza para generar la dificultad de los enemigos en función a su puntuación. A más puntuación, se generan enemigos más complicados de eliminar. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_ejercito_8h_ac50cc17a13f2e10907310b728829c1f9}\label{_ejercito_8h_ac50cc17a13f2e10907310b728829c1f9}} 
+\index{Ejercito.h@{Ejercito.h}!inserta\_enemigo@{inserta\_enemigo}}
+\index{inserta\_enemigo@{inserta\_enemigo}!Ejercito.h@{Ejercito.h}}
+\subsubsection{\texorpdfstring{inserta\_enemigo()}{inserta\_enemigo()}}
+{\footnotesize\ttfamily void inserta\+\_\+enemigo (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_ejercito_8h_a10180dd7b9b6f8179b6be972176e7885}{Ejercito}}}]{e,  }\item[{\mbox{\hyperlink{_enemy_8h_a79aeea8a42dc103d27442b64a43d513d}{Enemy}}}]{enemy }\end{DoxyParamCaption})}
+
+
+
+Inserta un enemigo dentro de un ejercito. 
+
+\begin{DoxyPrecond}{Precondition}
+El enemigo y el ejercito deben estar inicializados 
+\end{DoxyPrecond}
+
+\begin{DoxyParams}{Parameters}
+{\em e} & Puntero a estructura tipo ejecito \\
+\hline
+{\em enemy} & Puntero a estructura tipo enemigo \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_ejercito_8h_ada6b8bb5a7796d0f798e15e8f3a7f98a}\label{_ejercito_8h_ada6b8bb5a7796d0f798e15e8f3a7f98a}} 
+\index{Ejercito.h@{Ejercito.h}!libera\_ejercito@{libera\_ejercito}}
+\index{libera\_ejercito@{libera\_ejercito}!Ejercito.h@{Ejercito.h}}
+\subsubsection{\texorpdfstring{libera\_ejercito()}{libera\_ejercito()}}
+{\footnotesize\ttfamily void libera\+\_\+ejercito (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_ejercito_8h_a10180dd7b9b6f8179b6be972176e7885}{Ejercito}}}]{e }\end{DoxyParamCaption})}
+
+
+
+Libera la memoria de un ejercito. 
+
+\begin{DoxyPrecond}{Precondition}
+El ejercito debe estar inicializados
+\end{DoxyPrecond}
+
+\begin{DoxyParams}{Parameters}
+{\em e} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_ejercito_8h_aef5b1640c9d408a747db7a1b6d5a793b}\label{_ejercito_8h_aef5b1640c9d408a747db7a1b6d5a793b}} 
+\index{Ejercito.h@{Ejercito.h}!mueve\_ejercito@{mueve\_ejercito}}
+\index{mueve\_ejercito@{mueve\_ejercito}!Ejercito.h@{Ejercito.h}}
+\subsubsection{\texorpdfstring{mueve\_ejercito()}{mueve\_ejercito()}}
+{\footnotesize\ttfamily void mueve\+\_\+ejercito (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_ejercito_8h_a10180dd7b9b6f8179b6be972176e7885}{Ejercito}}}]{e,  }\item[{\mbox{\hyperlink{_player_8h_a2f7cd97bf1bb760d427047b2fdead13d}{Player}}}]{player }\end{DoxyParamCaption})}
+
+
+
+Mueve un ejercito, tambien elimina los enemigos que se salen fuera de los limites. 
+
+\begin{DoxyPrecond}{Precondition}
+El ejercito y el jugador deben estar inicializados 
+\end{DoxyPrecond}
+
+\begin{DoxyParams}{Parameters}
+{\em e} & Puntero a estructura tipo ejecito \\
+\hline
+{\em player} & Puntero a estructura tipo player \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_ejercito_8h_a982baca5c936f0aba7c3b7578a9963a8}\label{_ejercito_8h_a982baca5c936f0aba7c3b7578a9963a8}} 
+\index{Ejercito.h@{Ejercito.h}!reset\_ejercito@{reset\_ejercito}}
+\index{reset\_ejercito@{reset\_ejercito}!Ejercito.h@{Ejercito.h}}
+\subsubsection{\texorpdfstring{reset\_ejercito()}{reset\_ejercito()}}
+{\footnotesize\ttfamily void reset\+\_\+ejercito (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_ejercito_8h_a10180dd7b9b6f8179b6be972176e7885}{Ejercito}}}]{e }\end{DoxyParamCaption})}
+
+
+
+Elimina todos los enemigos de un ejercito. 
+
+\begin{DoxyPrecond}{Precondition}
+El ejercito debe estar inicializados
+\end{DoxyPrecond}
+
+\begin{DoxyParams}{Parameters}
+{\em e} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_ejercito_8h_ad46af1f134a88b98b3f7bd37808f8b20}\label{_ejercito_8h_ad46af1f134a88b98b3f7bd37808f8b20}} 
+\index{Ejercito.h@{Ejercito.h}!suprime\_enemy@{suprime\_enemy}}
+\index{suprime\_enemy@{suprime\_enemy}!Ejercito.h@{Ejercito.h}}
+\subsubsection{\texorpdfstring{suprime\_enemy()}{suprime\_enemy()}}
+{\footnotesize\ttfamily void suprime\+\_\+enemy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_ejercito_8h_a10180dd7b9b6f8179b6be972176e7885}{Ejercito}}}]{e,  }\item[{int}]{pos }\end{DoxyParamCaption})}
+
+
+
+Suprime un enemigo de un ejercito. 
+
+\begin{DoxyPrecond}{Precondition}
+El ejercito debe estar inicializados, pos $>$= 0
+\end{DoxyPrecond}
+
+\begin{DoxyParams}{Parameters}
+{\em e} & Puntero a estructura tipo ejecito \\
+\hline
+{\em pos} & Posicion del enemigo en el ejercito \\
+\hline
+\end{DoxyParams}

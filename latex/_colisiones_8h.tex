@@ -1,0 +1,167 @@
+\hypertarget{_colisiones_8h}{}\section{Colisiones.\+h File Reference}
+\label{_colisiones_8h}\index{Colisiones.h@{Colisiones.h}}
+
+
+Fichero de cabecera para funciones auxiliares para las colisiones.  
+
+
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{_colisiones_8h_afa5de7fe528ffae697025ef25d00e803}{dentro\+\_\+rectangulo}} (int x, int y, int w, int h, int px, int py)
+\begin{DoxyCompactList}\small\item\em Devuelve 1 si el punto (px,py) estan dentros del rectangulo(x,y,w,h) \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{_colisiones_8h_add5cb400d0b0039b2d5535394e42171a}{distancia\+\_\+punto\+\_\+punto}} (double x1, double y1, double x2, double y2)
+\begin{DoxyCompactList}\small\item\em Calcula la distancia de dos puntos. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_colisiones_8h_a1f33570f2f380d8aba06503ebb95c6f7}{solape\+\_\+circunferencias}} (int x1, int y1, int r1, int x2, int y2, int r2)
+\begin{DoxyCompactList}\small\item\em Devuelve 1 si se solapan las circunferencias (x1,y1,r1) y (x2,y2,r2) \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_colisiones_8h_a544b92914ea291ac6cb43bd255d584d7}{solape\+\_\+rectangulos}} (double x1, double y1, double w1, double h1, double x2, double y2, double w2, double h2)
+\begin{DoxyCompactList}\small\item\em Devuelve 1 si se solapan los rectangulos (x1,y1,w1,h1) y (x2,y2,w2,h2) \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_colisiones_8h_a3ac80955c1493cd53f1fe88e7985dd2a}{solape\+\_\+circuferencia\+\_\+rectangulo}} (double cx, double cy, double r, double x, double y, double w, double h)
+\begin{DoxyCompactList}\small\item\em Devulve 1 si se solapa la circunferencia (cx,cy,r) y el rectangulo (x,y,w,h) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Fichero de cabecera para funciones auxiliares para las colisiones. 
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{_colisiones_8h_afa5de7fe528ffae697025ef25d00e803}\label{_colisiones_8h_afa5de7fe528ffae697025ef25d00e803}} 
+\index{Colisiones.h@{Colisiones.h}!dentro\_rectangulo@{dentro\_rectangulo}}
+\index{dentro\_rectangulo@{dentro\_rectangulo}!Colisiones.h@{Colisiones.h}}
+\subsubsection{\texorpdfstring{dentro\_rectangulo()}{dentro\_rectangulo()}}
+{\footnotesize\ttfamily int dentro\+\_\+rectangulo (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{w,  }\item[{int}]{h,  }\item[{int}]{px,  }\item[{int}]{py }\end{DoxyParamCaption})}
+
+
+
+Devuelve 1 si el punto (px,py) estan dentros del rectangulo(x,y,w,h) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & Coordenada x del rectangulo \\
+\hline
+{\em y} & Coordenada y del rectangulo \\
+\hline
+{\em w} & Anchura del rectangulo \\
+\hline
+{\em h} & Altura del rectangulo \\
+\hline
+{\em px} & Coordenada x del punto \\
+\hline
+{\em py} & Coordenada y del punto \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int Devuelve 1 si el punto esta dentro del rectangulo, 0 en caso contrario 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_colisiones_8h_add5cb400d0b0039b2d5535394e42171a}\label{_colisiones_8h_add5cb400d0b0039b2d5535394e42171a}} 
+\index{Colisiones.h@{Colisiones.h}!distancia\_punto\_punto@{distancia\_punto\_punto}}
+\index{distancia\_punto\_punto@{distancia\_punto\_punto}!Colisiones.h@{Colisiones.h}}
+\subsubsection{\texorpdfstring{distancia\_punto\_punto()}{distancia\_punto\_punto()}}
+{\footnotesize\ttfamily double distancia\+\_\+punto\+\_\+punto (\begin{DoxyParamCaption}\item[{double}]{x1,  }\item[{double}]{y1,  }\item[{double}]{x2,  }\item[{double}]{y2 }\end{DoxyParamCaption})}
+
+
+
+Calcula la distancia de dos puntos. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x1} & Coordenada x del punto 1 \\
+\hline
+{\em y1} & Coordenada y del punto 1 \\
+\hline
+{\em x2} & Coordenada x del punto 2 \\
+\hline
+{\em y2} & Coordenada y del punto 2 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double Distancia de (x1,y1) y (x2,y2) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_colisiones_8h_a3ac80955c1493cd53f1fe88e7985dd2a}\label{_colisiones_8h_a3ac80955c1493cd53f1fe88e7985dd2a}} 
+\index{Colisiones.h@{Colisiones.h}!solape\_circuferencia\_rectangulo@{solape\_circuferencia\_rectangulo}}
+\index{solape\_circuferencia\_rectangulo@{solape\_circuferencia\_rectangulo}!Colisiones.h@{Colisiones.h}}
+\subsubsection{\texorpdfstring{solape\_circuferencia\_rectangulo()}{solape\_circuferencia\_rectangulo()}}
+{\footnotesize\ttfamily int solape\+\_\+circuferencia\+\_\+rectangulo (\begin{DoxyParamCaption}\item[{double}]{cx,  }\item[{double}]{cy,  }\item[{double}]{r,  }\item[{double}]{x,  }\item[{double}]{y,  }\item[{double}]{w,  }\item[{double}]{h }\end{DoxyParamCaption})}
+
+
+
+Devulve 1 si se solapa la circunferencia (cx,cy,r) y el rectangulo (x,y,w,h) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cx} & Coordenada x de la circunferencia \\
+\hline
+{\em cy} & Coordenada y de la circunferencia \\
+\hline
+{\em r} & Radio de la circunferencia\\
+\hline
+{\em x} & Coordenada x del rectangulo \\
+\hline
+{\em y} & Coordenada y del rectangulo \\
+\hline
+{\em w} & Anchura del rectangulo \\
+\hline
+{\em h} & Altura del rectangulo \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_colisiones_8h_a1f33570f2f380d8aba06503ebb95c6f7}\label{_colisiones_8h_a1f33570f2f380d8aba06503ebb95c6f7}} 
+\index{Colisiones.h@{Colisiones.h}!solape\_circunferencias@{solape\_circunferencias}}
+\index{solape\_circunferencias@{solape\_circunferencias}!Colisiones.h@{Colisiones.h}}
+\subsubsection{\texorpdfstring{solape\_circunferencias()}{solape\_circunferencias()}}
+{\footnotesize\ttfamily int solape\+\_\+circunferencias (\begin{DoxyParamCaption}\item[{int}]{x1,  }\item[{int}]{y1,  }\item[{int}]{r1,  }\item[{int}]{x2,  }\item[{int}]{y2,  }\item[{int}]{r2 }\end{DoxyParamCaption})}
+
+
+
+Devuelve 1 si se solapan las circunferencias (x1,y1,r1) y (x2,y2,r2) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x1} & Coordenada x de la circunferencia 1 \\
+\hline
+{\em y1} & Coordenada y de la circunferencia 1 \\
+\hline
+{\em r1} & Radio de la circunferencia 1 \\
+\hline
+{\em x2} & Coordenada x de la circunferencia 2 \\
+\hline
+{\em y2} & Coordenada y de la circunferencia 2 \\
+\hline
+{\em r2} & Radio de la circunferencia 2 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int Devuelve 1 si se solapan las circunferencias (x1,y1,r1) y (x2,y2,r2) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_colisiones_8h_a544b92914ea291ac6cb43bd255d584d7}\label{_colisiones_8h_a544b92914ea291ac6cb43bd255d584d7}} 
+\index{Colisiones.h@{Colisiones.h}!solape\_rectangulos@{solape\_rectangulos}}
+\index{solape\_rectangulos@{solape\_rectangulos}!Colisiones.h@{Colisiones.h}}
+\subsubsection{\texorpdfstring{solape\_rectangulos()}{solape\_rectangulos()}}
+{\footnotesize\ttfamily int solape\+\_\+rectangulos (\begin{DoxyParamCaption}\item[{double}]{x1,  }\item[{double}]{y1,  }\item[{double}]{w1,  }\item[{double}]{h1,  }\item[{double}]{x2,  }\item[{double}]{y2,  }\item[{double}]{w2,  }\item[{double}]{h2 }\end{DoxyParamCaption})}
+
+
+
+Devuelve 1 si se solapan los rectangulos (x1,y1,w1,h1) y (x2,y2,w2,h2) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x1} & Coordenada x del rectangulo 1 \\
+\hline
+{\em y1} & Coordenada y del rectangulo 1 \\
+\hline
+{\em w1} & Anchura del rectangulo 1 \\
+\hline
+{\em h1} & Altura del rectangulo 1 \\
+\hline
+{\em x2} & Coordenada x del rectangulo 2 \\
+\hline
+{\em y2} & Coordenada y del rectangulo 2 \\
+\hline
+{\em w2} & Anchura del rectangulo 2 \\
+\hline
+{\em h2} & Altura del rectangulo 2\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int Devuelve 1 si se solapan los rectangulos (x1,y1,w1,h1) y (x2,y2,w2,h2) 
+\end{DoxyReturn}
