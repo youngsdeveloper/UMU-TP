@@ -24,7 +24,6 @@ double get_w_bomba(Bomba bomba);
 double get_h_bomba(Bomba bomba);
 void colision_bomba(Bomba bomba, Player player, Ejercito ejercito);
 
-//int colision_bomba(Bomba b, double x, double y, double w, double h );
 
 #endif
 

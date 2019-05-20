@@ -1,7 +1,6 @@
 #ifndef __Ejercito_H__
 #define __Ejercito_H__
 
-#include "Bala.h"
 #include "Enemy.h"
 
 #include "Pantalla.h"

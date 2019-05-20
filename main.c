@@ -5,8 +5,7 @@
 
 #include "Pantalla.h"
 #include "Colisiones.h"
-#include "Bala.h"
-#include "Rafaga.h"
+
 #include "Player.h"
 #include "Enemy.h"
 #include "Ejercito.h"
@@ -378,7 +377,6 @@ void juego(){
 
 
 
-    NodoPtr cabecera = nuevo_nodo(NULL);
     int jugando = 1;
 
     NEW_HIGH_SCORE = 0;
@@ -431,8 +429,6 @@ void juego(){
     
         if(pausa==0){ //Movimiento si no está pausado
             mueve_player(player);
-            mueve_rafaga(cabecera);
-
             mueve_ejercito(ejercito, player);
             mueve_rafaga_bomba(cabeceraBombas, player);
         }
@@ -457,10 +453,6 @@ void juego(){
         //Bombas
         dibuja_rafaga_bomba(cabeceraBombas);
             
-
-        //Rafaga de balas
-        dibuja_rafaga(cabecera);
-
         
         //Dibujar escenario
         Pantalla_DibujaImagen(imagenSuelo, 0, MAX_PANTALLA-ground_height, Pantalla_Anchura(), ground_height);

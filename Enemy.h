@@ -2,8 +2,8 @@
 #ifndef __Enemy_H__
 #define __Enemy_H__
 
-#include "Bala.h"
 #include "Player.h"
+#include "Colisiones.h"
 
 #include <stdlib.h>
 #include <stdio.h>
