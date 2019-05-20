@@ -6,6 +6,7 @@
 
 #include "Pantalla.h"
 #include "Colisiones.h"
+#include "GameUtils.h"
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -17,7 +18,7 @@ typedef struct EjercitoRep * Ejercito;
 Ejercito crea_ejercito();
 void inserta_enemigo(Ejercito e, Enemy enemy);
 void dibuja_ejercito(Ejercito e);
-void mueve_ejercito(Ejercito e);
+void mueve_ejercito(Ejercito e, Player player);
 double genera_aleatorio(int n, int m);
 void colision_ejercito(Ejercito e, Player player);
 
@@ -25,7 +26,12 @@ void genera_ejercito(Ejercito e, int n);
 
 void suprime_enemy(Ejercito e, int pos);
 
-int	colision_ejercito_objeto( Ejercito e,	double	x,	double	y,	double	w,	double h );
+int	colision_ejercito_bomba( Ejercito e, double x, double y, double w, double h); 
+
+int cuenta_ejercito(Ejercito e);
+
+void reset_ejercito(Ejercito e);
+void libera_ejercito(Ejercito e);
 
 #endif
 

@@ -2,7 +2,7 @@
 
 
 struct EjercitoRep{
-    Enemy enemigos[200];
+    Enemy enemigos[15];
     int n;
 };
 
@@ -14,14 +14,15 @@ Ejercito crea_ejercito(){
 }
 
 void genera_ejercito(Ejercito e, int n){
-        srand (time(NULL));
 
     for(int j=0; j < n ;j++){
 
         double sep_horizontal = genera_aleatorio(100,200);   // Separacion entre 100 y 200
         double y = genera_aleatorio(100,200);  // Separacion entre 100 y 200
-        double x = Pantalla_Anchura()-100 + j*sep_horizontal;
+        double x = Pantalla_Anchura()+ 500 + j*sep_horizontal;
 
+        double vx = genera_aleatorio(-15,-15);
+        double vy = 0.5;
 
         Imagen imagenes[4];
         
@@ -34,13 +35,11 @@ void genera_ejercito(Ejercito e, int n){
         Imagen * ptrImages = imagenes;
         
 
-        inserta_enemigo(e, crea_enemy(x,y, ptrImages)); 
+        inserta_enemigo(e, crea_enemy(x,y, vx, vy, ptrImages)); 
     }
 }
 
-double genera_aleatorio(int n, int m){
-    return m + rand()%(n + 1 - m);
-}
+
 
 void inserta_enemigo(Ejercito e, Enemy enemigo){
     e -> enemigos[e -> n] = enemigo;
@@ -48,25 +47,26 @@ void inserta_enemigo(Ejercito e, Enemy enemigo){
 }
 
 void suprime_enemy(Ejercito e, int pos){
-
-
     libera_enemy(e->enemigos[pos]);
-    int i;
-
-    for(i= pos; i <(e->n-1); i++){
+    for(int i= pos; i <(e->n-1); i++){
         e->enemigos[i]= e->enemigos[i+1];
     }
-    e->n-=1;
+
+    e->n = e->n - 1;
+
 }
 
 
-int	colision_ejercito_objeto( Ejercito e,	double	x,	double	y,	double	w,	double h ){
+int	colision_ejercito_bomba( Ejercito e, double x, double y, double w, double h){
     int colisionDetectada = 0;
     int j=0;
+   
+
     while(j< e->n && colisionDetectada == 0){
         Enemy ene = e->enemigos[j];
         if(solape_rectangulos(get_enemy_x(ene),get_enemy_y(ene),get_enemy_w(ene), get_enemy_h(ene),x,y,w,h)==1){
             colisionDetectada = 1;
+            set_enemy_exp(ene, 1);
         }
         j++;
     }
@@ -79,7 +79,11 @@ void dibuja_ejercito(Ejercito e){
     }
 }
 
-void mueve_ejercito(Ejercito e){
+int cuenta_ejercito(Ejercito e){
+    return e->n;
+}
+
+void mueve_ejercito(Ejercito e, Player player){
 
     int j = 0;
     while(j < e->n){
@@ -90,6 +94,9 @@ void mueve_ejercito(Ejercito e){
         mueve_enemy(enemy);
 
         if(get_enemy_y(enemy) + get_enemy_h(enemy) > Pantalla_Altura() || get_enemy_x(enemy) + get_enemy_w(enemy) < 0){
+            if(get_enemy_exp(enemy)==0){
+                añadePunto(player, -1);
+            }
             suprime_enemy(e,j);
         }
 
@@ -104,3 +111,15 @@ void colision_ejercito(Ejercito e, Player player){
     }
 }
 
+void reset_ejercito(Ejercito e){
+    int j=0;
+    while(e->n<=0){
+        suprime_enemy(e,j);
+        j++;
+    }
+}
+
+void libera_ejercito(Ejercito e){
+    reset_ejercito(e);
+    free(e);
+}

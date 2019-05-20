@@ -24,21 +24,15 @@ void inserta_rafaga( NodoPtr cabecera, Bala b ){
 }
 
 void libera_rafaga( NodoPtr cabecera ){
-
-
     while ( cabecera->sig != NULL ) {
         NodoPtr borrar = cabecera->sig;
         cabecera->sig = borrar->sig;
         free( borrar );
     }
-
 }
 
 
 void mueve_rafaga( NodoPtr cabecera){
-
-
-
     NodoPtr aux = cabecera;
 
     while ( aux->sig != NULL) {
@@ -53,8 +47,6 @@ void mueve_rafaga( NodoPtr cabecera){
         }else{
             aux = aux -> sig;
         }
-
-
     }
 }
 

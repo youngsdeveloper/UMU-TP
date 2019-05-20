@@ -11,12 +11,21 @@ struct PlayerRep{
     int disparando;
     int block_ground;
 
+    int vida_aviso;
 
     double disparando_angulo;
 
     double animacion_angulo;
 
     double t;
+
+    int puntos;
+    int vidas;
+
+    Imagen imagenes[2]; 
+
+    int exp;
+
 };
 
 
@@ -42,16 +51,74 @@ Player crea_player(){
     player -> disparando = 0;
     player -> disparando_angulo = 0;
     player -> animacion_angulo = 0;
+    player -> vida_aviso = 0;
 
 
     player -> block_ground = 0;
 
     player -> t = 0;
+    player -> puntos = 0;
+    player -> vidas = 3;
+
+    player -> imagenes[0] = Pantalla_ImagenLee("pelota.bmp",255);
+    player -> imagenes[1] = Pantalla_ImagenLee("player_exp.bmp",255);
+
+    player -> exp = 0;
+
     return player;
+}
+
+void libera_player(Player player){
+
+    Pantalla_ImagenLibera(player -> imagenes[0]);
+    Pantalla_ImagenLibera(player -> imagenes[1]);
+
+    free(player); 
+}
+
+int getExp_player(Player player){
+    return player -> exp;
+}
+
+void setExp_player(Player player, int exp){
+    player -> exp = exp;
 }
 
 int isDisparando(Player player){
     return (player -> y < Pantalla_Altura()-40-player->h) && fabs(player -> vx) > 0.1;
+}
+
+void añadePunto(Player player, int puntos){
+    player -> puntos+=puntos;
+    if(player->puntos<0){
+        player -> puntos = 0; //Minimo 0 puntos 
+    }
+}
+
+int getPuntos(Player player){
+    return player -> puntos;
+}
+
+void añadeVidas(Player player, int vidas){
+    player -> vidas+=vidas;
+
+    if(vidas==-1){
+        player -> vida_aviso = 200;
+    }
+
+    if(player->vidas<0){
+        player -> vidas = 0; //Minimo 0 puntos 
+    }
+}
+
+int getVidasAviso(Player player){
+    return player -> vida_aviso;
+}
+
+
+
+int getVidas(Player player){
+    return player -> vidas;
 }
 
 
@@ -171,4 +238,8 @@ void set_player_x(Player player, double x){
 
 void set_player_y(Player player, double y){
     player -> y = y;
+}
+
+void dibuja_player(Player player){
+    Pantalla_DibujaImagenTransformada(player->imagenes[player->exp], get_player_x(player), get_player_y(player), get_player_w(player), get_player_h(player), get_player_animacion_angulo(player), SDL_FLIP_HORIZONTAL);
 }

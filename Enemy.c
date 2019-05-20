@@ -4,8 +4,10 @@
 struct EnemyRep{
     double x;
     double y;
+    
     double vx;
     double vy;
+    
     int w;
     int h;
     Imagen imagenes[4]; 
@@ -17,12 +19,14 @@ struct EnemyRep{
 
 };
 
-Enemy crea_enemy(double x, double y, Imagen * imagenes){
+Enemy crea_enemy(double x, double y, double vx, double vy, Imagen * imagenes){
     Enemy enemy = malloc(sizeof(struct EnemyRep));
     enemy -> x = x;
     enemy -> y = y;
-    enemy -> vx = -10;
-    enemy -> vy = 0;
+
+    enemy -> vx = vx;
+    enemy -> vy = vy;
+
     enemy -> w = 50;
     enemy -> h = 50;
 
@@ -41,6 +45,7 @@ Enemy crea_enemy(double x, double y, Imagen * imagenes){
 
     return enemy;
 }
+
 
 
 
@@ -71,6 +76,10 @@ int get_enemy_h(Enemy enemy){
 
 void set_enemy_x(Enemy enemy, double x){
     enemy -> x = x;
+}
+
+void set_enemy_exp(Enemy enemy, int exp){
+    enemy -> exp = exp;
 }
 
 void set_enemy_y(Enemy enemy, double y){
@@ -105,15 +114,17 @@ void dibuja_enemy(Enemy enemy){
 
     Pantalla_DibujaImagen(imagenEnemigo, enemy -> x, enemy -> y, enemy -> w, enemy -> h);
 
-    if(enemy -> animacionP<3){
-        enemy -> animacionP = enemy -> animacionP + 1;
-    }else{
-        enemy -> animacionP = 1;
-    }
+    
+    
 
     //Pantalla_DibujaRectangulo(enemy->x,enemy->y,enemy->w, enemy->h); test Colisiones
 
 }
+
+int get_enemy_exp(Enemy enemy){
+    return enemy -> exp;
+}
+
 
 
 void colision_enemy_player(Enemy enemy, Player player){
@@ -124,6 +135,9 @@ void colision_enemy_player(Enemy enemy, Player player){
 
 
     if(solape_circuferencia_rectangulo(cx,cy,rx,enemy->x,enemy->y,enemy->w,enemy->h)==1){
+        if(enemy -> exp == 0){
+            añadePunto(player, 1);
+        }
         enemy -> exp = 1;
     }
 }
@@ -142,6 +156,13 @@ void mueve_enemy(Enemy enemy){
     if(enemy->exp==1){
         enemy -> vy = enemy -> vy + 10;
     }
+
+    //Animacion del pajaro
+    if(enemy -> animacionP<3){
+            enemy -> animacionP = enemy -> animacionP + 1;
+        }else{
+            enemy -> animacionP = 1;
+        } 
 
     
 

@@ -32,6 +32,8 @@ void togglePlayerVy(Player player, double percent);
 int get_player_w(Player player);
 int get_player_h(Player player);
 
+void libera_player(Player player);
+
 double get_player_animacion_angulo(Player player);
 void set_player_animacion_angulo(Player player, double angulo);
 
@@ -49,7 +51,21 @@ void mueve_player(Player player);
 
 void colision_player(Player player);
 
+void dibuja_player(Player player);
+
 int isDisparando(Player player);
+
+void añadePunto(Player player, int puntos);
+int getPuntos(Player player);
+
+
+void añadeVidas(Player player, int vidas);
+int getVidas(Player player);
+
+int getVidasAviso(Player player);
+
+int getExp_player(Player player);
+void setExp_player(Player player, int exp);
 
 
 #endif

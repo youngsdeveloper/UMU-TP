@@ -3,6 +3,9 @@
         "plataforma.h": "c",
         "player.h": "c",
         "listaplataformas.h": "c",
-        "ejercito.h": "c"
+        "ejercito.h": "c",
+        "bomba.h": "c",
+        "gameutils.h": "c",
+        "rafagabomba.h": "c"
     }
 }
