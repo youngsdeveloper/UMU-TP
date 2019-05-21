@@ -40,7 +40,7 @@ int NEW_HIGH_SCORE = 0;
 
 
 
-//#define M_PI 3.14159265358979323846264338327
+#define PI 3.14159265358979323846264338327
 
 
 double x_mouse;
@@ -427,6 +427,8 @@ void juego(){
 
     int jugando = 1;
 
+    int block_pausa = 0;
+
     NEW_HIGH_SCORE = 0;
 
 
@@ -464,15 +466,22 @@ void juego(){
             }   
         }
 
-        if(Pantalla_TeclaPulsada(SDL_SCANCODE_SPACE) ){
+        if(Pantalla_TeclaPulsada(SDL_SCANCODE_SPACE)){
             
-            //Pausa
-            if(pausa == 0){
-                pausa = 1;
-            }else{
-                pausa = 0;
+            if( block_pausa == 0){
+                block_pausa == 1;
+
+                //Pausa
+                if(pausa == 0){
+                    pausa = 1;
+                }else{
+                    pausa = 0;
+                }
             }
             
+            
+        }else{
+            block_pausa = 0;
         }
 
     
@@ -586,11 +595,11 @@ void juego(){
                 int longitud_flecha = 30;
 
 
-                double x_flecha_1 = x_mouse +  longitud_flecha*cos(angulo - (M_PI + M_PI/6));
-                double y_flecha_1 = y_mouse +  longitud_flecha*sin(angulo - (M_PI + M_PI/6));
+                double x_flecha_1 = x_mouse +  longitud_flecha*cos(angulo - (PI + PI/6));
+                double y_flecha_1 = y_mouse +  longitud_flecha*sin(angulo - (PI + PI/6));
 
-                double x_flecha_2 = x_mouse +  longitud_flecha*cos(angulo - (M_PI - M_PI/6));
-                double y_flecha_2 = y_mouse +  longitud_flecha*sin(angulo - (M_PI - M_PI/6));
+                double x_flecha_2 = x_mouse +  longitud_flecha*cos(angulo - (PI - PI/6));
+                double y_flecha_2 = y_mouse +  longitud_flecha*sin(angulo - (PI - PI/6));
 
                 Pantalla_DibujaTriangulo(x_mouse, y_mouse, x_flecha_1, y_flecha_1, x_flecha_2, y_flecha_2);
 

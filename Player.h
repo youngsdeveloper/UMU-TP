@@ -203,7 +203,7 @@ int isDisparando(Player player);
  * @param player Puntero a estructura tipo jugador
  * @param puntos Numero de puntos a sumar, si es negativa, en vez de sumar, resta.
  */
-void añadePunto(Player player, int puntos);
+void sumaPuntos(Player player, int puntos);
 
 /**
  * @brief Devuelve el numero de puntos de un jugador
@@ -219,7 +219,7 @@ int getPuntos(Player player);
  * @param player Puntero a estructura tipo jugador
  * @param vidas Numero de vidas a sumar, si es negativa, en vez de sumar, resta.
  */
-void añadeVidas(Player player, int vidas);
+void sumaVidas(Player player, int vidas);
 
 /**
  * @brief Devuelve el numero de vidas de un jugador

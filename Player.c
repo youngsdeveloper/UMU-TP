@@ -88,7 +88,7 @@ int isDisparando(Player player){
     return (player -> y < Pantalla_Altura()-40-player->h) && fabs(player -> vx) > 0.1;
 }
 
-void añadePunto(Player player, int puntos){
+void sumaPuntos(Player player, int puntos){
     player -> puntos+=puntos;
     if(player->puntos<0){
         player -> puntos = 0; //Minimo 0 puntos 
@@ -99,7 +99,7 @@ int getPuntos(Player player){
     return player -> puntos;
 }
 
-void añadeVidas(Player player, int vidas){
+void sumaVidas(Player player, int vidas){
     player -> vidas+=vidas;
 
     if(vidas==-1){

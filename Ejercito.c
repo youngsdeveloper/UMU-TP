@@ -105,7 +105,7 @@ void mueve_ejercito(Ejercito e, Player player){
 
         if(get_enemy_y(enemy) + get_enemy_h(enemy) > Pantalla_Altura() || get_enemy_x(enemy) + get_enemy_w(enemy) < 0){
             if(get_enemy_exp(enemy)==0){
-                añadePunto(player, -1);
+                sumaPuntos(player, -1);
             }
             suprime_enemy(e,j);
         }

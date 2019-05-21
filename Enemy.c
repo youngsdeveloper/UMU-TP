@@ -136,7 +136,7 @@ void colision_enemy_player(Enemy enemy, Player player){
 
     if(solape_circuferencia_rectangulo(cx,cy,rx,enemy->x,enemy->y,enemy->w,enemy->h)==1){
         if(enemy -> exp == 0){
-            añadePunto(player, 1);
+            sumaPuntos(player, 1);
         }
         enemy -> exp = 1;
     }

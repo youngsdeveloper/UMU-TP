@@ -85,7 +85,7 @@ void colision_bomba(Bomba bomba, Player player, Ejercito ejercito){
     }else{
         if(solape_circuferencia_rectangulo(cx,cy,rx,bomba->x -bomba -> w/2 ,bomba->y - bomba -> h/2,bomba->w,bomba->h)==1){
             if(bomba -> vidaEliminada == 0){
-                añadeVidas(player, -1);
+                sumaVidas(player, -1);
                 reset_ejercito(ejercito);
                 bomba -> vidaEliminada = 1;
             }
