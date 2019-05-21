@@ -469,7 +469,7 @@ void juego(){
         if(Pantalla_TeclaPulsada(SDL_SCANCODE_SPACE)){
             
             if( block_pausa == 0){
-                block_pausa == 1;
+                block_pausa = 1;
 
                 //Pausa
                 if(pausa == 0){
