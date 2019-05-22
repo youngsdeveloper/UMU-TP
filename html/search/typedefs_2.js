@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['imagen',['Imagen',['../_pantalla_8h.html#a768e3409329f2389c63495f1a1684379',1,'Pantalla.h']]]
+  ['nodobombaptr',['NodoBombaPtr',['../_rafaga_bomba_8h.html#ad70b22de681941042ab951ab760df8d6',1,'RafagaBomba.h']]]
 ];

@@ -1,4 +1,4 @@
-\hypertarget{_player_8h}{}\section{Player.\+h File Reference}
+\hypertarget{_player_8h}{}\section{Referencia del Archivo Player.\+h}
 \label{_player_8h}\index{Player.h@{Player.h}}
 
 
@@ -10,12 +10,12 @@ Fichero de cabecera para poder usar las funciones del Player.
 {\ttfamily \#include $<$math.\+h$>$}\newline
 {\ttfamily \#include $<$time.\+h$>$}\newline
 {\ttfamily \#include \char`\"{}Pantalla.\+h\char`\"{}}\newline
-\subsection*{Typedefs}
+\subsection*{typedefs}
 \begin{DoxyCompactItemize}
 \item 
-typedef struct \mbox{\hyperlink{struct_player_rep}{Player\+Rep}} $\ast$ \mbox{\hyperlink{_player_8h_a2f7cd97bf1bb760d427047b2fdead13d}{Player}}
+typedef struct Player\+Rep $\ast$ \mbox{\hyperlink{_player_8h_a2f7cd97bf1bb760d427047b2fdead13d}{Player}}
 \begin{DoxyCompactList}\small\item\em T\+DA Jugador. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\subsection*{Functions}
+\subsection*{Funciones}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{_player_8h_a2f7cd97bf1bb760d427047b2fdead13d}{Player}} \mbox{\hyperlink{_player_8h_a32d09780490775c6edfc74c1bd1132d5}{crea\+\_\+player}} ()
@@ -60,11 +60,11 @@ void \mbox{\hyperlink{_player_8h_a5c69eab69983e7427ec84a0faebfc452}{dibuja\+\_\+
 \begin{DoxyCompactList}\small\item\em Dibuja el jugador en la pantallla. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{_player_8h_a40170261676281f8e517fd1d72b0c942}{is\+Disparando}} (\mbox{\hyperlink{_player_8h_a2f7cd97bf1bb760d427047b2fdead13d}{Player}} player)
 \begin{DoxyCompactList}\small\item\em Devuelve si se está realizando un lanzamiento parabolico en ese momento o no. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{_player_8h_a5333b69c70726d7f7d26ac24a8e1235f}{añade\+Punto}} (\mbox{\hyperlink{_player_8h_a2f7cd97bf1bb760d427047b2fdead13d}{Player}} player, int puntos)
+void \mbox{\hyperlink{_player_8h_a71b71c3cf601ce03ea2ca7a549ec7895}{suma\+Puntos}} (\mbox{\hyperlink{_player_8h_a2f7cd97bf1bb760d427047b2fdead13d}{Player}} player, int puntos)
 \begin{DoxyCompactList}\small\item\em Suma puntos al jugador. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{_player_8h_a8ec1dcae671a079dd357e8a4c88bc15f}{get\+Puntos}} (\mbox{\hyperlink{_player_8h_a2f7cd97bf1bb760d427047b2fdead13d}{Player}} player)
 \begin{DoxyCompactList}\small\item\em Devuelve el numero de puntos de un jugador. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{_player_8h_a8d93dc8d4cda3b7923b67314191394fa}{añade\+Vidas}} (\mbox{\hyperlink{_player_8h_a2f7cd97bf1bb760d427047b2fdead13d}{Player}} player, int vidas)
+void \mbox{\hyperlink{_player_8h_ac60cb2bd66c4c904b405afc7b905e3c8}{suma\+Vidas}} (\mbox{\hyperlink{_player_8h_a2f7cd97bf1bb760d427047b2fdead13d}{Player}} player, int vidas)
 \begin{DoxyCompactList}\small\item\em Suma vidas al jugador. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{_player_8h_afc31c04c6e3233ca4b04413510c58816}{get\+Vidas}} (\mbox{\hyperlink{_player_8h_a2f7cd97bf1bb760d427047b2fdead13d}{Player}} player)
 \begin{DoxyCompactList}\small\item\em Devuelve el numero de vidas de un jugador. \end{DoxyCompactList}\item 
@@ -74,13 +74,13 @@ void \mbox{\hyperlink{_player_8h_a2f0cdea86b00d77398197df1dffdba30}{set\+Exp\+\_
 \begin{DoxyCompactList}\small\item\em Establece el estado de explosión de un jugador. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
-\subsection{Detailed Description}
+\subsection{Descripción detallada}
 Fichero de cabecera para poder usar las funciones del Player. 
 
-\begin{DoxyAuthor}{Author}
+\begin{DoxyAuthor}{Autor}
 Enrique 
 \end{DoxyAuthor}
-\begin{DoxyDate}{Date}
+\begin{DoxyDate}{Fecha}
 2019-\/05-\/21
 \end{DoxyDate}
 \begin{DoxyCopyright}{Copyright}
@@ -88,12 +88,12 @@ Copyright (c) 2019
 \end{DoxyCopyright}
 
 
-\subsection{Typedef Documentation}
+\subsection{Documentación de los \textquotesingle{}typedefs\textquotesingle{}}
 \mbox{\Hypertarget{_player_8h_a2f7cd97bf1bb760d427047b2fdead13d}\label{_player_8h_a2f7cd97bf1bb760d427047b2fdead13d}} 
 \index{Player.h@{Player.h}!Player@{Player}}
 \index{Player@{Player}!Player.h@{Player.h}}
 \subsubsection{\texorpdfstring{Player}{Player}}
-{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct_player_rep}{Player\+Rep}}$\ast$ \mbox{\hyperlink{_player_8h_a2f7cd97bf1bb760d427047b2fdead13d}{Player}}}
+{\footnotesize\ttfamily typedef struct Player\+Rep$\ast$ \mbox{\hyperlink{_player_8h_a2f7cd97bf1bb760d427047b2fdead13d}{Player}}}
 
 
 
@@ -101,47 +101,7 @@ T\+DA Jugador.
 
 
 
-\subsection{Function Documentation}
-\mbox{\Hypertarget{_player_8h_a5333b69c70726d7f7d26ac24a8e1235f}\label{_player_8h_a5333b69c70726d7f7d26ac24a8e1235f}} 
-\index{Player.h@{Player.h}!añadePunto@{añadePunto}}
-\index{añadePunto@{añadePunto}!Player.h@{Player.h}}
-\subsubsection{\texorpdfstring{añadePunto()}{añadePunto()}}
-{\footnotesize\ttfamily void añade\+Punto (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_player_8h_a2f7cd97bf1bb760d427047b2fdead13d}{Player}}}]{player,  }\item[{int}]{puntos }\end{DoxyParamCaption})}
-
-
-
-Suma puntos al jugador. 
-
-\begin{DoxyPrecond}{Precondition}
-El player debe ser distinto de N\+U\+LL 
-\end{DoxyPrecond}
-
-\begin{DoxyParams}{Parameters}
-{\em player} & Puntero a estructura tipo jugador \\
-\hline
-{\em puntos} & Numero de puntos a sumar, si es negativa, en vez de sumar, resta. \\
-\hline
-\end{DoxyParams}
-\mbox{\Hypertarget{_player_8h_a8d93dc8d4cda3b7923b67314191394fa}\label{_player_8h_a8d93dc8d4cda3b7923b67314191394fa}} 
-\index{Player.h@{Player.h}!añadeVidas@{añadeVidas}}
-\index{añadeVidas@{añadeVidas}!Player.h@{Player.h}}
-\subsubsection{\texorpdfstring{añadeVidas()}{añadeVidas()}}
-{\footnotesize\ttfamily void añade\+Vidas (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_player_8h_a2f7cd97bf1bb760d427047b2fdead13d}{Player}}}]{player,  }\item[{int}]{vidas }\end{DoxyParamCaption})}
-
-
-
-Suma vidas al jugador. 
-
-\begin{DoxyPrecond}{Precondition}
-El player debe ser distinto de N\+U\+LL 
-\end{DoxyPrecond}
-
-\begin{DoxyParams}{Parameters}
-{\em player} & Puntero a estructura tipo jugador \\
-\hline
-{\em vidas} & Numero de vidas a sumar, si es negativa, en vez de sumar, resta. \\
-\hline
-\end{DoxyParams}
+\subsection{Documentación de las funciones}
 \mbox{\Hypertarget{_player_8h_aa3f19c2f045a49590f254c029ea81b1e}\label{_player_8h_aa3f19c2f045a49590f254c029ea81b1e}} 
 \index{Player.h@{Player.h}!colision\_player@{colision\_player}}
 \index{colision\_player@{colision\_player}!Player.h@{Player.h}}
@@ -152,11 +112,11 @@ El player debe ser distinto de N\+U\+LL
 
 Detecta colisiones con los limites del mapa, si ha detectado una colision hace un rebote. 
 
-\begin{DoxyPrecond}{Precondition}
+\begin{DoxyPrecond}{Precondición}
 El player debe ser distinto de N\+U\+LL 
 \end{DoxyPrecond}
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{Parámetros}
 {\em player} & Puntero a estructura tipo jugador \\
 \hline
 \end{DoxyParams}
@@ -170,7 +130,7 @@ El player debe ser distinto de N\+U\+LL
 
 Crea e inicializa un jugador. 
 
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Devuelve}
 Player 
 \end{DoxyReturn}
 \mbox{\Hypertarget{_player_8h_a5c69eab69983e7427ec84a0faebfc452}\label{_player_8h_a5c69eab69983e7427ec84a0faebfc452}} 
@@ -183,11 +143,11 @@ Player
 
 Dibuja el jugador en la pantallla. 
 
-\begin{DoxyPrecond}{Precondition}
+\begin{DoxyPrecond}{Precondición}
 El player debe ser distinto de N\+U\+LL 
 \end{DoxyPrecond}
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{Parámetros}
 {\em player} & Puntero a estructura tipo jugador \\
 \hline
 \end{DoxyParams}
@@ -201,15 +161,15 @@ El player debe ser distinto de N\+U\+LL
 
 Obtiene el angulo de rotacion horizontal de la pelota. 
 
-\begin{DoxyPrecond}{Precondition}
+\begin{DoxyPrecond}{Precondición}
 El player debe ser distinto de N\+U\+LL 
 \end{DoxyPrecond}
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{Parámetros}
 {\em player} & Puntero a estructura tipo jugador \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Devuelve}
 double Angulo de rotacion horizontal 
 \end{DoxyReturn}
 \mbox{\Hypertarget{_player_8h_a7635175c1345c5161081e39812d802d5}\label{_player_8h_a7635175c1345c5161081e39812d802d5}} 
@@ -222,15 +182,15 @@ double Angulo de rotacion horizontal
 
 Obtiene la altura de Player. 
 
-\begin{DoxyPrecond}{Precondition}
+\begin{DoxyPrecond}{Precondición}
 El player debe ser distinto de N\+U\+LL 
 \end{DoxyPrecond}
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{Parámetros}
 {\em player} & Puntero a estructura tipo jugador \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Devuelve}
 int Altura de Player 
 \end{DoxyReturn}
 \mbox{\Hypertarget{_player_8h_a7953a0352de08008b4f47f70b7550d0f}\label{_player_8h_a7953a0352de08008b4f47f70b7550d0f}} 
@@ -243,15 +203,15 @@ int Altura de Player
 
 Obtiene la velocidad de la cordenada x de un jugador. 
 
-\begin{DoxyPrecond}{Precondition}
+\begin{DoxyPrecond}{Precondición}
 El player debe ser distinto de N\+U\+LL 
 \end{DoxyPrecond}
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{Parámetros}
 {\em player} & Puntero a estructura tipo jugador \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Devuelve}
 double Velocidad en el eje x 
 \end{DoxyReturn}
 \mbox{\Hypertarget{_player_8h_a211d0eab2d752ba268b8a79ceb079558}\label{_player_8h_a211d0eab2d752ba268b8a79ceb079558}} 
@@ -264,15 +224,15 @@ double Velocidad en el eje x
 
 Obtiene la velocidad de la cordenada y de un jugador. 
 
-\begin{DoxyPrecond}{Precondition}
+\begin{DoxyPrecond}{Precondición}
 El player debe ser distinto de N\+U\+LL 
 \end{DoxyPrecond}
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{Parámetros}
 {\em player} & Puntero a estructura tipo jugador \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Devuelve}
 double Velocidad en el eje y 
 \end{DoxyReturn}
 \mbox{\Hypertarget{_player_8h_aece53bae6252b7f7823b407d05bd2d80}\label{_player_8h_aece53bae6252b7f7823b407d05bd2d80}} 
@@ -285,15 +245,15 @@ double Velocidad en el eje y
 
 Obtiene la anchura de Player. 
 
-\begin{DoxyPrecond}{Precondition}
+\begin{DoxyPrecond}{Precondición}
 El player debe ser distinto de N\+U\+LL 
 \end{DoxyPrecond}
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{Parámetros}
 {\em player} & Puntero a estructura tipo jugador \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Devuelve}
 int Anchura de Player 
 \end{DoxyReturn}
 \mbox{\Hypertarget{_player_8h_a42ff9f87bbbaece9bde89ba4818c29f9}\label{_player_8h_a42ff9f87bbbaece9bde89ba4818c29f9}} 
@@ -306,15 +266,15 @@ int Anchura de Player
 
 Obtiene la coordenada x de un jugador. 
 
-\begin{DoxyPrecond}{Precondition}
+\begin{DoxyPrecond}{Precondición}
 El player debe ser distinto de N\+U\+LL 
 \end{DoxyPrecond}
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{Parámetros}
 {\em player} & Puntero a estructura tipo jugador \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Devuelve}
 double Coordenada x 
 \end{DoxyReturn}
 \mbox{\Hypertarget{_player_8h_a74d610f6461e6af5f64b7c4ec982160b}\label{_player_8h_a74d610f6461e6af5f64b7c4ec982160b}} 
@@ -327,15 +287,15 @@ double Coordenada x
 
 Obtiene la coordenada y de un jugador. 
 
-\begin{DoxyPrecond}{Precondition}
+\begin{DoxyPrecond}{Precondición}
 El player debe ser distinto de N\+U\+LL 
 \end{DoxyPrecond}
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{Parámetros}
 {\em player} & Puntero a estructura tipo jugador \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Devuelve}
 double Coordenada y 
 \end{DoxyReturn}
 \mbox{\Hypertarget{_player_8h_ace1afa09621e3867a82c2f11c5e8a1ab}\label{_player_8h_ace1afa09621e3867a82c2f11c5e8a1ab}} 
@@ -348,15 +308,15 @@ double Coordenada y
 
 Devuelve si un jugador esta en estado de explosión o no. 
 
-\begin{DoxyPrecond}{Precondition}
+\begin{DoxyPrecond}{Precondición}
 El player debe ser distinto de N\+U\+LL 
 \end{DoxyPrecond}
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{Parámetros}
 {\em player} & Puntero a estructura tipo jugador \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Devuelve}
 Estado de explosión de un jugador \mbox{[}1 ha explotado, 0 si no\mbox{]} 
 \end{DoxyReturn}
 \mbox{\Hypertarget{_player_8h_a8ec1dcae671a079dd357e8a4c88bc15f}\label{_player_8h_a8ec1dcae671a079dd357e8a4c88bc15f}} 
@@ -369,15 +329,15 @@ Estado de explosión de un jugador \mbox{[}1 ha explotado, 0 si no\mbox{]}
 
 Devuelve el numero de puntos de un jugador. 
 
-\begin{DoxyPrecond}{Precondition}
+\begin{DoxyPrecond}{Precondición}
 El player debe ser distinto de N\+U\+LL 
 \end{DoxyPrecond}
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{Parámetros}
 {\em player} & Puntero a estructura tipo jugador \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Devuelve}
 Puntos de un jugador en la partida 
 \end{DoxyReturn}
 \mbox{\Hypertarget{_player_8h_afc31c04c6e3233ca4b04413510c58816}\label{_player_8h_afc31c04c6e3233ca4b04413510c58816}} 
@@ -390,15 +350,15 @@ Puntos de un jugador en la partida
 
 Devuelve el numero de vidas de un jugador. 
 
-\begin{DoxyPrecond}{Precondition}
+\begin{DoxyPrecond}{Precondición}
 El player debe ser distinto de N\+U\+LL 
 \end{DoxyPrecond}
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{Parámetros}
 {\em player} & Puntero a estructura tipo jugador \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Devuelve}
 Vidas de un jugador en la partida 
 \end{DoxyReturn}
 \mbox{\Hypertarget{_player_8h_aef5d4593144cc4200011b645e318ffbc}\label{_player_8h_aef5d4593144cc4200011b645e318ffbc}} 
@@ -411,11 +371,11 @@ Vidas de un jugador en la partida
 
 Inicia la animacion del lanzamiento parabolico de jugador. 
 
-\begin{DoxyPrecond}{Precondition}
+\begin{DoxyPrecond}{Precondición}
 El player debe ser distinto de N\+U\+LL, no puede iniciarse un disparo si ya hay un disparo en proceso 
 \end{DoxyPrecond}
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{Parámetros}
 {\em player} & Puntero a estructura tipo jugador \\
 \hline
 {\em angulo} & Angulo en radianes con el que se va a realizar el disparo \\
@@ -433,15 +393,15 @@ El player debe ser distinto de N\+U\+LL, no puede iniciarse un disparo si ya hay
 
 Devuelve si se está realizando un lanzamiento parabolico en ese momento o no. 
 
-\begin{DoxyPrecond}{Precondition}
+\begin{DoxyPrecond}{Precondición}
 El player debe ser distinto de N\+U\+LL 
 \end{DoxyPrecond}
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{Parámetros}
 {\em player} & Puntero a estructura tipo jugador \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Devuelve}
 Devuelve si se está realizando un lanzamiento parabolico en ese momento o no 
 \end{DoxyReturn}
 \mbox{\Hypertarget{_player_8h_aae65d146b47f5b0a463f587dcd58e440}\label{_player_8h_aae65d146b47f5b0a463f587dcd58e440}} 
@@ -454,11 +414,11 @@ Devuelve si se está realizando un lanzamiento parabolico en ese momento o no
 
 Libera la memoria de Player. 
 
-\begin{DoxyPrecond}{Precondition}
+\begin{DoxyPrecond}{Precondición}
 El player debe ser distinto de N\+U\+LL 
 \end{DoxyPrecond}
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{Parámetros}
 {\em player} & Puntero a estructura tipo jugador \\
 \hline
 \end{DoxyParams}
@@ -472,11 +432,11 @@ El player debe ser distinto de N\+U\+LL
 
 Mueve el jugador, dependiendo de su velocidad. 
 
-\begin{DoxyPrecond}{Precondition}
+\begin{DoxyPrecond}{Precondición}
 El player debe ser distinto de N\+U\+LL 
 \end{DoxyPrecond}
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{Parámetros}
 {\em player} & Puntero a estructura tipo jugador \\
 \hline
 \end{DoxyParams}
@@ -490,11 +450,11 @@ El player debe ser distinto de N\+U\+LL
 
 Establece el angulo de rotacion horizontal de la pelota. 
 
-\begin{DoxyPrecond}{Precondition}
+\begin{DoxyPrecond}{Precondición}
 El player debe ser distinto de N\+U\+LL 
 \end{DoxyPrecond}
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{Parámetros}
 {\em player} & Puntero a estructura tipo jugador \\
 \hline
 {\em angulo} & Angulo de rotacion horizontal de la pelota \\
@@ -510,11 +470,11 @@ El player debe ser distinto de N\+U\+LL
 
 Establece la velocidad x del jugador. 
 
-\begin{DoxyPrecond}{Precondition}
+\begin{DoxyPrecond}{Precondición}
 El player debe ser distinto de N\+U\+LL 
 \end{DoxyPrecond}
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{Parámetros}
 {\em player} & Puntero a estructura tipo jugador \\
 \hline
 {\em vx} & Velocidad en el eje x \\
@@ -530,11 +490,11 @@ El player debe ser distinto de N\+U\+LL
 
 Establece la velocidad y del jugador. 
 
-\begin{DoxyPrecond}{Precondition}
+\begin{DoxyPrecond}{Precondición}
 El player debe ser distinto de N\+U\+LL 
 \end{DoxyPrecond}
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{Parámetros}
 {\em player} & Puntero a estructura tipo jugador \\
 \hline
 {\em vy} & Velocidad en el eje y \\
@@ -550,11 +510,11 @@ El player debe ser distinto de N\+U\+LL
 
 Establece la coordenada x del jugador. 
 
-\begin{DoxyPrecond}{Precondition}
+\begin{DoxyPrecond}{Precondición}
 El player debe ser distinto de N\+U\+LL 
 \end{DoxyPrecond}
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{Parámetros}
 {\em player} & Puntero a estructura tipo jugador \\
 \hline
 {\em x} & Coordenada x \\
@@ -570,11 +530,11 @@ El player debe ser distinto de N\+U\+LL
 
 Establece la coordenada y del jugador. 
 
-\begin{DoxyPrecond}{Precondition}
+\begin{DoxyPrecond}{Precondición}
 El player debe ser distinto de N\+U\+LL 
 \end{DoxyPrecond}
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{Parámetros}
 {\em player} & Puntero a estructura tipo jugador \\
 \hline
 {\em y} & Coordenada y \\
@@ -590,14 +550,54 @@ El player debe ser distinto de N\+U\+LL
 
 Establece el estado de explosión de un jugador. 
 
-\begin{DoxyPrecond}{Precondition}
+\begin{DoxyPrecond}{Precondición}
 El player debe ser distinto de N\+U\+LL 
 \end{DoxyPrecond}
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{Parámetros}
 {\em player} & Puntero a estructura tipo jugador \\
 \hline
 {\em Estado} & de explosión de un jugador \mbox{[}1 ha explotado, 0 si no\mbox{]} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_player_8h_a71b71c3cf601ce03ea2ca7a549ec7895}\label{_player_8h_a71b71c3cf601ce03ea2ca7a549ec7895}} 
+\index{Player.h@{Player.h}!sumaPuntos@{sumaPuntos}}
+\index{sumaPuntos@{sumaPuntos}!Player.h@{Player.h}}
+\subsubsection{\texorpdfstring{sumaPuntos()}{sumaPuntos()}}
+{\footnotesize\ttfamily void suma\+Puntos (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_player_8h_a2f7cd97bf1bb760d427047b2fdead13d}{Player}}}]{player,  }\item[{int}]{puntos }\end{DoxyParamCaption})}
+
+
+
+Suma puntos al jugador. 
+
+\begin{DoxyPrecond}{Precondición}
+El player debe ser distinto de N\+U\+LL 
+\end{DoxyPrecond}
+
+\begin{DoxyParams}{Parámetros}
+{\em player} & Puntero a estructura tipo jugador \\
+\hline
+{\em puntos} & Numero de puntos a sumar, si es negativa, en vez de sumar, resta. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_player_8h_ac60cb2bd66c4c904b405afc7b905e3c8}\label{_player_8h_ac60cb2bd66c4c904b405afc7b905e3c8}} 
+\index{Player.h@{Player.h}!sumaVidas@{sumaVidas}}
+\index{sumaVidas@{sumaVidas}!Player.h@{Player.h}}
+\subsubsection{\texorpdfstring{sumaVidas()}{sumaVidas()}}
+{\footnotesize\ttfamily void suma\+Vidas (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_player_8h_a2f7cd97bf1bb760d427047b2fdead13d}{Player}}}]{player,  }\item[{int}]{vidas }\end{DoxyParamCaption})}
+
+
+
+Suma vidas al jugador. 
+
+\begin{DoxyPrecond}{Precondición}
+El player debe ser distinto de N\+U\+LL 
+\end{DoxyPrecond}
+
+\begin{DoxyParams}{Parámetros}
+{\em player} & Puntero a estructura tipo jugador \\
+\hline
+{\em vidas} & Numero de vidas a sumar, si es negativa, en vez de sumar, resta. \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{_player_8h_ab020fdb8e5b0b1058079b0fce2796acb}\label{_player_8h_ab020fdb8e5b0b1058079b0fce2796acb}} 
@@ -610,11 +610,11 @@ El player debe ser distinto de N\+U\+LL
 
 Cambia el signo de la velocidad x, aplicandole un porcentaje de perdida de velocidad. 
 
-\begin{DoxyPrecond}{Precondition}
+\begin{DoxyPrecond}{Precondición}
 El player debe ser distinto de N\+U\+LL y el porcentaje debe estar entre 0 y 1 
 \end{DoxyPrecond}
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{Parámetros}
 {\em player} & Puntero a estructura tipo jugador \\
 \hline
 {\em percent} & Porcentaje de perdidad de velocidad \\
@@ -630,11 +630,11 @@ El player debe ser distinto de N\+U\+LL y el porcentaje debe estar entre 0 y 1
 
 Cambia el signo de la velocidad y, aplicandole un porcentaje de perdida de velocidad. 
 
-\begin{DoxyPrecond}{Precondition}
+\begin{DoxyPrecond}{Precondición}
 El player debe ser distinto de N\+U\+LL y el porcentaje debe estar entre 0 y 1 
 \end{DoxyPrecond}
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{Parámetros}
 {\em player} & Puntero a estructura tipo jugador \\
 \hline
 {\em percent} & Porcentaje de perdidad de velocidad \\

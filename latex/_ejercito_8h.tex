@@ -1,4 +1,4 @@
-\hypertarget{_ejercito_8h}{}\section{Ejercito.\+h File Reference}
+\hypertarget{_ejercito_8h}{}\section{Referencia del Archivo Ejercito.\+h}
 \label{_ejercito_8h}\index{Ejercito.h@{Ejercito.h}}
 
 
@@ -12,12 +12,12 @@ Fichero de cabecera para poder usar las funciones del Ejercito (Grupo de enemigo
 {\ttfamily \#include $<$stdio.\+h$>$}\newline
 {\ttfamily \#include $<$stdlib.\+h$>$}\newline
 {\ttfamily \#include $<$math.\+h$>$}\newline
-\subsection*{Typedefs}
+\subsection*{typedefs}
 \begin{DoxyCompactItemize}
 \item 
-typedef struct \mbox{\hyperlink{struct_ejercito_rep}{Ejercito\+Rep}} $\ast$ \mbox{\hyperlink{_ejercito_8h_a10180dd7b9b6f8179b6be972176e7885}{Ejercito}}
+typedef struct Ejercito\+Rep $\ast$ \mbox{\hyperlink{_ejercito_8h_a10180dd7b9b6f8179b6be972176e7885}{Ejercito}}
 \begin{DoxyCompactList}\small\item\em T\+DA Ejercito. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\subsection*{Functions}
+\subsection*{Funciones}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{_ejercito_8h_a10180dd7b9b6f8179b6be972176e7885}{Ejercito}} \mbox{\hyperlink{_ejercito_8h_aaafa676c862eff3d4d10f4f541166d0e}{crea\+\_\+ejercito}} ()
@@ -44,16 +44,16 @@ void \mbox{\hyperlink{_ejercito_8h_ada6b8bb5a7796d0f798e15e8f3a7f98a}{libera\+\_
 \begin{DoxyCompactList}\small\item\em Libera la memoria de un ejercito. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
-\subsection{Detailed Description}
+\subsection{Descripción detallada}
 Fichero de cabecera para poder usar las funciones del Ejercito (Grupo de enemigos) 
 
-\begin{DoxyAuthor}{Author}
+\begin{DoxyAuthor}{Autor}
 Ejercito 
 \end{DoxyAuthor}
-\begin{DoxyVersion}{Version}
+\begin{DoxyVersion}{Versión}
 0.\+1 
 \end{DoxyVersion}
-\begin{DoxyDate}{Date}
+\begin{DoxyDate}{Fecha}
 2019-\/05-\/21
 \end{DoxyDate}
 \begin{DoxyCopyright}{Copyright}
@@ -61,12 +61,12 @@ Copyright (c) 2019
 \end{DoxyCopyright}
 
 
-\subsection{Typedef Documentation}
+\subsection{Documentación de los \textquotesingle{}typedefs\textquotesingle{}}
 \mbox{\Hypertarget{_ejercito_8h_a10180dd7b9b6f8179b6be972176e7885}\label{_ejercito_8h_a10180dd7b9b6f8179b6be972176e7885}} 
 \index{Ejercito.h@{Ejercito.h}!Ejercito@{Ejercito}}
 \index{Ejercito@{Ejercito}!Ejercito.h@{Ejercito.h}}
 \subsubsection{\texorpdfstring{Ejercito}{Ejercito}}
-{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct_ejercito_rep}{Ejercito\+Rep}}$\ast$ \mbox{\hyperlink{_ejercito_8h_a10180dd7b9b6f8179b6be972176e7885}{Ejercito}}}
+{\footnotesize\ttfamily typedef struct Ejercito\+Rep$\ast$ \mbox{\hyperlink{_ejercito_8h_a10180dd7b9b6f8179b6be972176e7885}{Ejercito}}}
 
 
 
@@ -74,7 +74,7 @@ T\+DA Ejercito.
 
 
 
-\subsection{Function Documentation}
+\subsection{Documentación de las funciones}
 \mbox{\Hypertarget{_ejercito_8h_ad9d8c0d79d3c0b4fb689365961124b71}\label{_ejercito_8h_ad9d8c0d79d3c0b4fb689365961124b71}} 
 \index{Ejercito.h@{Ejercito.h}!colision\_ejercito@{colision\_ejercito}}
 \index{colision\_ejercito@{colision\_ejercito}!Ejercito.h@{Ejercito.h}}
@@ -85,11 +85,11 @@ T\+DA Ejercito.
 
 Gestiona las colisiones de un ejercito con un jugador. 
 
-\begin{DoxyPrecond}{Precondition}
+\begin{DoxyPrecond}{Precondición}
 El ejercito y el jugador deben estar inicializados 
 \end{DoxyPrecond}
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{Parámetros}
 {\em e} & Puntero a estructura tipo ejecito \\
 \hline
 {\em player} & Puntero a estructura tipo player \\
@@ -105,11 +105,11 @@ El ejercito y el jugador deben estar inicializados
 
 Gestiona la colision de un ejercito con una bomba. 
 
-\begin{DoxyPrecond}{Precondition}
+\begin{DoxyPrecond}{Precondición}
 El ejercito debe estar inicializados
 \end{DoxyPrecond}
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{Parámetros}
 {\em e} & Puntero a estructura tipo ejecito \\
 \hline
 {\em x} & Coordenada x de la bomba \\
@@ -121,7 +121,7 @@ El ejercito debe estar inicializados
 {\em h} & Altura de la bomba \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Devuelve}
 int Devuelve 1 si se ha producido alguna colision del ejercito con una bomba 
 \end{DoxyReturn}
 \mbox{\Hypertarget{_ejercito_8h_aaafa676c862eff3d4d10f4f541166d0e}\label{_ejercito_8h_aaafa676c862eff3d4d10f4f541166d0e}} 
@@ -134,7 +134,7 @@ int Devuelve 1 si se ha producido alguna colision del ejercito con una bomba
 
 Crea e inicializa un ejercito. 
 
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Devuelve}
 Ejercito 
 \end{DoxyReturn}
 \mbox{\Hypertarget{_ejercito_8h_a80b90efe9aec896168cc5a77746af68b}\label{_ejercito_8h_a80b90efe9aec896168cc5a77746af68b}} 
@@ -147,15 +147,15 @@ Ejercito
 
 Devuelve el numero de enemigos activos de un ejercito. 
 
-\begin{DoxyPrecond}{Precondition}
+\begin{DoxyPrecond}{Precondición}
 El ejercito debe estar inicializados
 \end{DoxyPrecond}
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{Parámetros}
 {\em e} & \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Devuelve}
 int Numero de enemigos de un ejercito 
 \end{DoxyReturn}
 \mbox{\Hypertarget{_ejercito_8h_af7ce79c458f61b83090d276f6b3f1927}\label{_ejercito_8h_af7ce79c458f61b83090d276f6b3f1927}} 
@@ -168,11 +168,11 @@ int Numero de enemigos de un ejercito
 
 Dibuja un ejercito. 
 
-\begin{DoxyPrecond}{Precondition}
+\begin{DoxyPrecond}{Precondición}
 El ejercito debe estar inicializados 
 \end{DoxyPrecond}
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{Parámetros}
 {\em e} & Puntero a estructura tipo ejecito \\
 \hline
 \end{DoxyParams}
@@ -186,11 +186,11 @@ El ejercito debe estar inicializados
 
 Inserta n enemigos a un ejercito. 
 
-\begin{DoxyPrecond}{Precondition}
+\begin{DoxyPrecond}{Precondición}
 El ejercito debe estar inicializados
 \end{DoxyPrecond}
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{Parámetros}
 {\em e} & Puntero a estructura tipo ejecito \\
 \hline
 {\em n} & Numero de enemigos a crear \\
@@ -208,11 +208,11 @@ El ejercito debe estar inicializados
 
 Inserta un enemigo dentro de un ejercito. 
 
-\begin{DoxyPrecond}{Precondition}
+\begin{DoxyPrecond}{Precondición}
 El enemigo y el ejercito deben estar inicializados 
 \end{DoxyPrecond}
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{Parámetros}
 {\em e} & Puntero a estructura tipo ejecito \\
 \hline
 {\em enemy} & Puntero a estructura tipo enemigo \\
@@ -228,11 +228,11 @@ El enemigo y el ejercito deben estar inicializados
 
 Libera la memoria de un ejercito. 
 
-\begin{DoxyPrecond}{Precondition}
+\begin{DoxyPrecond}{Precondición}
 El ejercito debe estar inicializados
 \end{DoxyPrecond}
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{Parámetros}
 {\em e} & \\
 \hline
 \end{DoxyParams}
@@ -246,11 +246,11 @@ El ejercito debe estar inicializados
 
 Mueve un ejercito, tambien elimina los enemigos que se salen fuera de los limites. 
 
-\begin{DoxyPrecond}{Precondition}
+\begin{DoxyPrecond}{Precondición}
 El ejercito y el jugador deben estar inicializados 
 \end{DoxyPrecond}
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{Parámetros}
 {\em e} & Puntero a estructura tipo ejecito \\
 \hline
 {\em player} & Puntero a estructura tipo player \\
@@ -266,11 +266,11 @@ El ejercito y el jugador deben estar inicializados
 
 Elimina todos los enemigos de un ejercito. 
 
-\begin{DoxyPrecond}{Precondition}
+\begin{DoxyPrecond}{Precondición}
 El ejercito debe estar inicializados
 \end{DoxyPrecond}
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{Parámetros}
 {\em e} & \\
 \hline
 \end{DoxyParams}
@@ -284,11 +284,11 @@ El ejercito debe estar inicializados
 
 Suprime un enemigo de un ejercito. 
 
-\begin{DoxyPrecond}{Precondition}
+\begin{DoxyPrecond}{Precondición}
 El ejercito debe estar inicializados, pos $>$= 0
 \end{DoxyPrecond}
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{Parámetros}
 {\em e} & Puntero a estructura tipo ejecito \\
 \hline
 {\em pos} & Posicion del enemigo en el ejercito \\

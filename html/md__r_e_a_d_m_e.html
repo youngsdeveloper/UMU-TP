@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.15"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MalditoPajaro | Proyecto TP: proyectoTP</title>
+<title>MalditoPajaro: proyectoTP</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">MalditoPajaro | Proyecto TP
+   <div id="projectname">MalditoPajaro
    </div>
   </td>
  </tr>
@@ -66,7 +66,50 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p>Proyecto de Tecnologias de programación para 1º de Ingenieria Informática.</p>
-<p>Comando para compilar con GCC: gcc *.c -o prueba -lSDL2 -lm -std=c99 </p>
+<p>Comando para compilar con GCC: gcc *.c -o prueba -lSDL2 -lm -std=c99</p>
+<p>Enrique Rodríguez López 1º Ingeniería Informática</p>
+<p>Tecnologías de la Programación</p>
+<p> Índice de contenidos</p>
+<p>Pantallas Jugabilidad Implementación  Pantallas</p>
+<p>Menú La primera pantalla que observamos nada más iniciar el juego es el menú principal, en dicho menú observamos el logotipo del videojuego y tres botones principales.</p>
+<p>“Jugar ya”: Inicia el videojuego “Ayuda”: Inicia la pantalla de ayuda “Salir”: Cierra el videojuego</p>
+<p>También podemos observar que abajo a la izquierda aparece la máxima puntuación obtenida. A la derecha podemos observar un balón y el suelo dibujados como parte decorativa de la escena, pero si mueves el ratón el balón inicia una animación y sale disparado hacía el pajaro, haciendo una referencia a las mecánicas del videojuego.</p>
+<p> Ayuda En la pantalla de ayuda puedes encontrar unos gráficos que explican de forma muy sencilla cómo jugar al juego, podemos encontrar tres botones:</p>
+<p>“&lt; ”="" y="" “&gt;=""&gt;”: Estos botones son para pasar a la anterior y a la próxima explicación “Volver al menú”: Botón para volver al menú principal</p>
+<p>Juego Esta es la pantalla principal del videojuego, nos encontramos en un escenario donde aparece una pelota sobre un fondo de un cielo y un suelo.</p>
+<p>Arriba a la izquierda aparece los puntos que hemos conseguido, cuál es el record actual y cuantas vidas nos quedas. También, si has logrado un nuevo record te lo indica ahí.</p>
+<p>Arriba a la derecha nos encontramos con la barra de fuerza, cuando hacemos click izquierdo e iniciamos un disparo, aparece un indicador con la fuerza con la que saldrá disparado el balón.</p>
+<p>Post-juego Una vez ha finalizado la partida, aparece una pantalla intermedia con información sobre cómo ha ido tu partida con datos interesantes, una vez quieras continuar solo tienes que pulsar “Volver al menú” y regresarás al menú para iniciar otra partida de nuevo.</p>
+<p>Jugabilidad La jugabilidad del juego es muy sencilla, el jugador controla una pelota que puede mover haciendo lanzamientos parabólicos.</p>
+<p>El objetivo del jugador será disparar a una serie de pájaros que se irán desplazando por la pantalla de forma horizontal de derecha a izquierda.</p>
+<p>Si has alcanzado a uno de ellos, ¡enhorabuena! acabas de sumar un punto a tu marcador, pero cuidado, que si alguno de ellos consigue cruzar toda la pantalla sin que le hayas alcanzado, te restará un punto, por lo que siempre tendrás que estar atento para alcanzar un balance positivo.</p>
+<p>¿Parece fácil, no? No todo es tan bonito, con cierta frecuencia, unas bombas intentarán alcanzarte para quitarte vidas.</p>
+<p>Al principio tienes 3 vidas, pero si tocas una bomba o alguna explota cerca tuyo, te quitan una vida. Cuando te quedes sin vidas, el juego terminará.</p>
+<p>Las bombas no sólo son malas para ti, ya que si por casualidad alcanza a un pájaro este explotará y podría ayudarte… eso sí, no te sumarán puntos las muertes causadas por las bombas.</p>
+<p>Además, cuanta más puntuación consigas, el juego se irá complicando, pues a más puntuación, la velocidad de los pájaros puede ser mayor, la frecuencia con la que aparecen las bombas o la altura a la que vuelan los pájaros...</p>
+<p>Implementación</p>
+<p>Para implementar este juego, se ha utilizado varios modelos de datos:</p>
+<ol type="1">
+<li>Jugador</li>
+</ol>
+<p>Guarda la información básica del jugador, además de información sobre la partida, como por ejemplo la puntuación conseguida.</p>
+<ol type="1">
+<li>Enemigo</li>
+</ol>
+<p>Guarda la información básica del enemigo</p>
+<ol type="1">
+<li>Ejercicio</li>
+</ol>
+<p>Se trata de un TDA que almacena el conjunto de enemigos, está implementada con memoria contigua.</p>
+<p>Cómo se van generando y eliminando enemigos simultáneamente, era una buena idea utilizar memoria contigua ya que en ningún momento se iba a superar los 12 enemigos simultáneamente.</p>
+<ol type="1">
+<li>Bombas</li>
+</ol>
+<p>Guarda la información básica de la bomba</p>
+<ol type="1">
+<li>Ráfaga de Bombas</li>
+</ol>
+<p>Se trata de un TDA que almacena el conjunto de enemigos, está implementada con estructuras enlazadas. </p>
 </div></div><!-- PageDoc -->
 </div><!-- contents -->
 <!-- start footer part -->

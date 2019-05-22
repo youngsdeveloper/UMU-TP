@@ -1,4 +1,4 @@
-\hypertarget{_enemy_8h}{}\section{Enemy.\+h File Reference}
+\hypertarget{_enemy_8h}{}\section{Referencia del Archivo Enemy.\+h}
 \label{_enemy_8h}\index{Enemy.h@{Enemy.h}}
 
 
@@ -10,15 +10,15 @@ Fichero de cabecera para poder usar las funciones del Enemigo.
 {\ttfamily \#include $<$stdlib.\+h$>$}\newline
 {\ttfamily \#include $<$stdio.\+h$>$}\newline
 {\ttfamily \#include $<$math.\+h$>$}\newline
-\subsection*{Typedefs}
+\subsection*{typedefs}
 \begin{DoxyCompactItemize}
 \item 
-typedef struct \mbox{\hyperlink{struct_enemy_rep}{Enemy\+Rep}} $\ast$ \mbox{\hyperlink{_enemy_8h_a79aeea8a42dc103d27442b64a43d513d}{Enemy}}
+typedef struct Enemy\+Rep $\ast$ \mbox{\hyperlink{_enemy_8h_a79aeea8a42dc103d27442b64a43d513d}{Enemy}}
 \begin{DoxyCompactList}\small\item\em T\+DA Enemigo. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\subsection*{Functions}
+\subsection*{Funciones}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{_enemy_8h_a79aeea8a42dc103d27442b64a43d513d}{Enemy}} \mbox{\hyperlink{_enemy_8h_adab0408e16a36471518c9bb6cb8a77c0}{crea\+\_\+enemy}} (double x, double y, double vx, double vy, \mbox{\hyperlink{_pantalla_8h_a768e3409329f2389c63495f1a1684379}{Imagen}} $\ast$imagenes)
+\mbox{\hyperlink{_enemy_8h_a79aeea8a42dc103d27442b64a43d513d}{Enemy}} \mbox{\hyperlink{_enemy_8h_adab0408e16a36471518c9bb6cb8a77c0}{crea\+\_\+enemy}} (double x, double y, double vx, double vy, Imagen $\ast$imagenes)
 \begin{DoxyCompactList}\small\item\em Crear e inicializa un enemigo. \end{DoxyCompactList}\item 
 double \mbox{\hyperlink{_enemy_8h_aa15f3909b7f59361266b8c582d6402ed}{get\+\_\+enemy\+\_\+x}} (\mbox{\hyperlink{_enemy_8h_a79aeea8a42dc103d27442b64a43d513d}{Enemy}} \mbox{\hyperlink{_enemy_8h_a79aeea8a42dc103d27442b64a43d513d}{Enemy}})
 \begin{DoxyCompactList}\small\item\em Obtiene la coordenada x del enemigo. \end{DoxyCompactList}\item 
@@ -50,16 +50,16 @@ void \mbox{\hyperlink{_enemy_8h_a9f4d49a5d0205a7bbff543d7d8dcc657}{libera\+\_\+e
 \begin{DoxyCompactList}\small\item\em Libera la memoria de un enemigo. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
-\subsection{Detailed Description}
+\subsection{Descripción detallada}
 Fichero de cabecera para poder usar las funciones del Enemigo. 
 
-\begin{DoxyAuthor}{Author}
+\begin{DoxyAuthor}{Autor}
 Enrique 
 \end{DoxyAuthor}
-\begin{DoxyVersion}{Version}
+\begin{DoxyVersion}{Versión}
 0.\+1 
 \end{DoxyVersion}
-\begin{DoxyDate}{Date}
+\begin{DoxyDate}{Fecha}
 2019-\/05-\/21
 \end{DoxyDate}
 \begin{DoxyCopyright}{Copyright}
@@ -67,12 +67,12 @@ Copyright (c) 2019
 \end{DoxyCopyright}
 
 
-\subsection{Typedef Documentation}
+\subsection{Documentación de los \textquotesingle{}typedefs\textquotesingle{}}
 \mbox{\Hypertarget{_enemy_8h_a79aeea8a42dc103d27442b64a43d513d}\label{_enemy_8h_a79aeea8a42dc103d27442b64a43d513d}} 
 \index{Enemy.h@{Enemy.h}!Enemy@{Enemy}}
 \index{Enemy@{Enemy}!Enemy.h@{Enemy.h}}
 \subsubsection{\texorpdfstring{Enemy}{Enemy}}
-{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct_enemy_rep}{Enemy\+Rep}}$\ast$ \mbox{\hyperlink{_enemy_8h_a79aeea8a42dc103d27442b64a43d513d}{Enemy}}}
+{\footnotesize\ttfamily typedef struct Enemy\+Rep$\ast$ \mbox{\hyperlink{_enemy_8h_a79aeea8a42dc103d27442b64a43d513d}{Enemy}}}
 
 
 
@@ -80,7 +80,7 @@ T\+DA Enemigo.
 
 
 
-\subsection{Function Documentation}
+\subsection{Documentación de las funciones}
 \mbox{\Hypertarget{_enemy_8h_a180ddb064c03302478cf3fd92f31c37a}\label{_enemy_8h_a180ddb064c03302478cf3fd92f31c37a}} 
 \index{Enemy.h@{Enemy.h}!colision\_enemy\_player@{colision\_enemy\_player}}
 \index{colision\_enemy\_player@{colision\_enemy\_player}!Enemy.h@{Enemy.h}}
@@ -91,11 +91,11 @@ T\+DA Enemigo.
 
 Gestiona las colisiones de un enemigo con un jugador, si colision el jugador y un enemigo, se le añade un punto al jugador y el enemigo entra en estado de explosión. 
 
-\begin{DoxyPrecond}{Precondition}
+\begin{DoxyPrecond}{Precondición}
 El enemigo debe ser distinto de N\+U\+LL y el player tambien 
 \end{DoxyPrecond}
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{Parámetros}
 {\em Enemy} & Puntero a estructura tipo enemigo \\
 \hline
 {\em Player} & Puntero a estructura tipo player \\
@@ -105,14 +105,14 @@ El enemigo debe ser distinto de N\+U\+LL y el player tambien
 \index{Enemy.h@{Enemy.h}!crea\_enemy@{crea\_enemy}}
 \index{crea\_enemy@{crea\_enemy}!Enemy.h@{Enemy.h}}
 \subsubsection{\texorpdfstring{crea\_enemy()}{crea\_enemy()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{_enemy_8h_a79aeea8a42dc103d27442b64a43d513d}{Enemy}} crea\+\_\+enemy (\begin{DoxyParamCaption}\item[{double}]{x,  }\item[{double}]{y,  }\item[{double}]{vx,  }\item[{double}]{vy,  }\item[{\mbox{\hyperlink{_pantalla_8h_a768e3409329f2389c63495f1a1684379}{Imagen}} $\ast$}]{imagenes }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \mbox{\hyperlink{_enemy_8h_a79aeea8a42dc103d27442b64a43d513d}{Enemy}} crea\+\_\+enemy (\begin{DoxyParamCaption}\item[{double}]{x,  }\item[{double}]{y,  }\item[{double}]{vx,  }\item[{double}]{vy,  }\item[{Imagen $\ast$}]{imagenes }\end{DoxyParamCaption})}
 
 
 
 Crear e inicializa un enemigo. 
 
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{Parámetros}
 {\em x} & Coordenada x del enemigo \\
 \hline
 {\em y} & Coordenada y del enemigo \\
@@ -124,7 +124,7 @@ Crear e inicializa un enemigo.
 {\em imagenes} & Array de imagenes precargas para realizar las animaciones \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Devuelve}
 Enemy 
 \end{DoxyReturn}
 \mbox{\Hypertarget{_enemy_8h_ae6a9925280c51c956e25bc15947ecc69}\label{_enemy_8h_ae6a9925280c51c956e25bc15947ecc69}} 
@@ -137,11 +137,11 @@ Enemy
 
 Dibuja el enemigo. 
 
-\begin{DoxyPrecond}{Precondition}
+\begin{DoxyPrecond}{Precondición}
 El enemigo debe ser distinto de N\+U\+LL 
 \end{DoxyPrecond}
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{Parámetros}
 {\em Enemy} & Puntero a estructura tipo enemigo \\
 \hline
 \end{DoxyParams}
@@ -155,15 +155,15 @@ El enemigo debe ser distinto de N\+U\+LL
 
 Obtiene si el enemigo está en estado de explosión o no. 
 
-\begin{DoxyPrecond}{Precondition}
+\begin{DoxyPrecond}{Precondición}
 El enemigo debe ser distinto de N\+U\+LL 
 \end{DoxyPrecond}
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{Parámetros}
 {\em Enemy} & Puntero a estructura tipo enemigo \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Devuelve}
 int Estado de explosion del enemigo 
 \end{DoxyReturn}
 \mbox{\Hypertarget{_enemy_8h_aec69b5db1c0b85e7ab859dbc6e8145fb}\label{_enemy_8h_aec69b5db1c0b85e7ab859dbc6e8145fb}} 
@@ -176,15 +176,15 @@ int Estado de explosion del enemigo
 
 Obtiene la altura del enemigo. 
 
-\begin{DoxyPrecond}{Precondition}
+\begin{DoxyPrecond}{Precondición}
 El enemigo debe ser distinto de N\+U\+LL 
 \end{DoxyPrecond}
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{Parámetros}
 {\em Enemy} & Puntero a estructura tipo enemigo \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Devuelve}
 double Altura del enemigo 
 \end{DoxyReturn}
 \mbox{\Hypertarget{_enemy_8h_a7782063f4e9a2e46ce93451468ca817d}\label{_enemy_8h_a7782063f4e9a2e46ce93451468ca817d}} 
@@ -197,15 +197,15 @@ double Altura del enemigo
 
 Obtiene la velocidad x del enemigo. 
 
-\begin{DoxyPrecond}{Precondition}
+\begin{DoxyPrecond}{Precondición}
 El enemigo debe ser distinto de N\+U\+LL 
 \end{DoxyPrecond}
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{Parámetros}
 {\em Enemy} & Puntero a estructura tipo enemigo \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Devuelve}
 double Velocidad x del enemigo 
 \end{DoxyReturn}
 \mbox{\Hypertarget{_enemy_8h_a2807cbceb2f322f2c9785f84d925ce1e}\label{_enemy_8h_a2807cbceb2f322f2c9785f84d925ce1e}} 
@@ -218,15 +218,15 @@ double Velocidad x del enemigo
 
 Obtiene la velocidad y del enemigo. 
 
-\begin{DoxyPrecond}{Precondition}
+\begin{DoxyPrecond}{Precondición}
 El enemigo debe ser distinto de N\+U\+LL 
 \end{DoxyPrecond}
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{Parámetros}
 {\em Enemy} & Puntero a estructura tipo enemigo \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Devuelve}
 double Velocidad y del enemigo 
 \end{DoxyReturn}
 \mbox{\Hypertarget{_enemy_8h_a9a4dadaa96be9dbd63228819b8ca2af8}\label{_enemy_8h_a9a4dadaa96be9dbd63228819b8ca2af8}} 
@@ -239,15 +239,15 @@ double Velocidad y del enemigo
 
 Obtiene la anchura del enemigo. 
 
-\begin{DoxyPrecond}{Precondition}
+\begin{DoxyPrecond}{Precondición}
 El enemigo debe ser distinto de N\+U\+LL 
 \end{DoxyPrecond}
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{Parámetros}
 {\em Enemy} & Puntero a estructura tipo enemigo \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Devuelve}
 double Anchura del enemigo 
 \end{DoxyReturn}
 \mbox{\Hypertarget{_enemy_8h_aa15f3909b7f59361266b8c582d6402ed}\label{_enemy_8h_aa15f3909b7f59361266b8c582d6402ed}} 
@@ -260,15 +260,15 @@ double Anchura del enemigo
 
 Obtiene la coordenada x del enemigo. 
 
-\begin{DoxyPrecond}{Precondition}
+\begin{DoxyPrecond}{Precondición}
 El enemigo debe ser distinto de N\+U\+LL 
 \end{DoxyPrecond}
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{Parámetros}
 {\em Enemy} & Puntero a estructura tipo enemigo \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Devuelve}
 double Coordenada x del enemigo 
 \end{DoxyReturn}
 \mbox{\Hypertarget{_enemy_8h_a25f10709152ce7fcb6bb8f8a138db2d5}\label{_enemy_8h_a25f10709152ce7fcb6bb8f8a138db2d5}} 
@@ -281,15 +281,15 @@ double Coordenada x del enemigo
 
 Obtiene la coordenada y del enemigo. 
 
-\begin{DoxyPrecond}{Precondition}
+\begin{DoxyPrecond}{Precondición}
 El enemigo debe ser distinto de N\+U\+LL 
 \end{DoxyPrecond}
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{Parámetros}
 {\em Enemy} & Puntero a estructura tipo enemigo \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Devuelve}
 double Coordenada y del enemigo 
 \end{DoxyReturn}
 \mbox{\Hypertarget{_enemy_8h_a9f4d49a5d0205a7bbff543d7d8dcc657}\label{_enemy_8h_a9f4d49a5d0205a7bbff543d7d8dcc657}} 
@@ -302,11 +302,11 @@ double Coordenada y del enemigo
 
 Libera la memoria de un enemigo. 
 
-\begin{DoxyPrecond}{Precondition}
+\begin{DoxyPrecond}{Precondición}
 El enemigo debe ser distinto de N\+U\+LL 
 \end{DoxyPrecond}
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{Parámetros}
 {\em Enemy} & Puntero a estructura tipo enemigo \\
 \hline
 \end{DoxyParams}
@@ -320,11 +320,11 @@ El enemigo debe ser distinto de N\+U\+LL
 
 Mueve el enemigo y gestiona las animaciones del vuelo del pajaro. 
 
-\begin{DoxyPrecond}{Precondition}
+\begin{DoxyPrecond}{Precondición}
 El enemigo debe ser distinto de N\+U\+LL 
 \end{DoxyPrecond}
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{Parámetros}
 {\em Enemy} & Puntero a estructura tipo enemigo \\
 \hline
 \end{DoxyParams}
@@ -338,11 +338,11 @@ El enemigo debe ser distinto de N\+U\+LL
 
 Establece el estado de explosion del enemigo. 
 
-\begin{DoxyPrecond}{Precondition}
+\begin{DoxyPrecond}{Precondición}
 El enemigo debe ser distinto de N\+U\+LL 
 \end{DoxyPrecond}
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{Parámetros}
 {\em Enemy} & Puntero a estructura tipo enemigo \\
 \hline
 \end{DoxyParams}
@@ -356,11 +356,11 @@ El enemigo debe ser distinto de N\+U\+LL
 
 Establece la coordenada x del enemigo. 
 
-\begin{DoxyPrecond}{Precondition}
+\begin{DoxyPrecond}{Precondición}
 El enemigo debe ser distinto de N\+U\+LL 
 \end{DoxyPrecond}
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{Parámetros}
 {\em Enemy} & Puntero a estructura tipo enemigo \\
 \hline
 \end{DoxyParams}
@@ -374,11 +374,11 @@ El enemigo debe ser distinto de N\+U\+LL
 
 Establece la coordenada y del enemigo. 
 
-\begin{DoxyPrecond}{Precondition}
+\begin{DoxyPrecond}{Precondición}
 El enemigo debe ser distinto de N\+U\+LL 
 \end{DoxyPrecond}
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{Parámetros}
 {\em Enemy} & Puntero a estructura tipo enemigo \\
 \hline
 \end{DoxyParams}

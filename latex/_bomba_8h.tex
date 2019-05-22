@@ -1,4 +1,4 @@
-\hypertarget{_bomba_8h}{}\section{Bomba.\+h File Reference}
+\hypertarget{_bomba_8h}{}\section{Referencia del Archivo Bomba.\+h}
 \label{_bomba_8h}\index{Bomba.h@{Bomba.h}}
 
 
@@ -12,15 +12,15 @@ Fichero de cabecera para poder usar las funciones de la Bomba.
 {\ttfamily \#include $<$stdio.\+h$>$}\newline
 {\ttfamily \#include $<$stdlib.\+h$>$}\newline
 {\ttfamily \#include $<$math.\+h$>$}\newline
-\subsection*{Typedefs}
+\subsection*{typedefs}
 \begin{DoxyCompactItemize}
 \item 
-typedef struct \mbox{\hyperlink{struct_bomba_rep}{Bomba\+Rep}} $\ast$ \mbox{\hyperlink{_bomba_8h_aa7502670a5779cfa4126e95d52b1ce8b}{Bomba}}
+typedef struct Bomba\+Rep $\ast$ \mbox{\hyperlink{_bomba_8h_aa7502670a5779cfa4126e95d52b1ce8b}{Bomba}}
 \begin{DoxyCompactList}\small\item\em T\+DA Bomba. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\subsection*{Functions}
+\subsection*{Funciones}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{_bomba_8h_aa7502670a5779cfa4126e95d52b1ce8b}{Bomba}} \mbox{\hyperlink{_bomba_8h_a32fb8ad6329cd5c80c45d36281115ee6}{crea\+\_\+bomba}} (double x, double y, \mbox{\hyperlink{_pantalla_8h_a768e3409329f2389c63495f1a1684379}{Imagen}} $\ast$imagenes)
+\mbox{\hyperlink{_bomba_8h_aa7502670a5779cfa4126e95d52b1ce8b}{Bomba}} \mbox{\hyperlink{_bomba_8h_a32fb8ad6329cd5c80c45d36281115ee6}{crea\+\_\+bomba}} (double x, double y, Imagen $\ast$imagenes)
 \begin{DoxyCompactList}\small\item\em Crea e inicializa una bomba. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{_bomba_8h_ac83e3c379064f5721ec703aa532109df}{libera\+\_\+bomba}} (\mbox{\hyperlink{_bomba_8h_aa7502670a5779cfa4126e95d52b1ce8b}{Bomba}} bomba)
 \begin{DoxyCompactList}\small\item\em Libera la memoria de una bomba. \end{DoxyCompactList}\item 
@@ -40,16 +40,16 @@ void \mbox{\hyperlink{_bomba_8h_a41fc5a956d7feafb2c449204b94d07ff}{colision\+\_\
 \begin{DoxyCompactList}\small\item\em Gestiona la colision de una bomba con un jugador y con un ejercito de enemigos, si colision con alguna de ellas, la bomba entra en estado de explosion. Además\+: \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
-\subsection{Detailed Description}
+\subsection{Descripción detallada}
 Fichero de cabecera para poder usar las funciones de la Bomba. 
 
-\begin{DoxyAuthor}{Author}
+\begin{DoxyAuthor}{Autor}
 Enrique 
 \end{DoxyAuthor}
-\begin{DoxyVersion}{Version}
+\begin{DoxyVersion}{Versión}
 0.\+1 
 \end{DoxyVersion}
-\begin{DoxyDate}{Date}
+\begin{DoxyDate}{Fecha}
 2019-\/05-\/21
 \end{DoxyDate}
 \begin{DoxyCopyright}{Copyright}
@@ -57,12 +57,12 @@ Copyright (c) 2019
 \end{DoxyCopyright}
 
 
-\subsection{Typedef Documentation}
+\subsection{Documentación de los \textquotesingle{}typedefs\textquotesingle{}}
 \mbox{\Hypertarget{_bomba_8h_aa7502670a5779cfa4126e95d52b1ce8b}\label{_bomba_8h_aa7502670a5779cfa4126e95d52b1ce8b}} 
 \index{Bomba.h@{Bomba.h}!Bomba@{Bomba}}
 \index{Bomba@{Bomba}!Bomba.h@{Bomba.h}}
 \subsubsection{\texorpdfstring{Bomba}{Bomba}}
-{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct_bomba_rep}{Bomba\+Rep}}$\ast$ \mbox{\hyperlink{_bomba_8h_aa7502670a5779cfa4126e95d52b1ce8b}{Bomba}}}
+{\footnotesize\ttfamily typedef struct Bomba\+Rep$\ast$ \mbox{\hyperlink{_bomba_8h_aa7502670a5779cfa4126e95d52b1ce8b}{Bomba}}}
 
 
 
@@ -70,7 +70,7 @@ T\+DA Bomba.
 
 
 
-\subsection{Function Documentation}
+\subsection{Documentación de las funciones}
 \mbox{\Hypertarget{_bomba_8h_a41fc5a956d7feafb2c449204b94d07ff}\label{_bomba_8h_a41fc5a956d7feafb2c449204b94d07ff}} 
 \index{Bomba.h@{Bomba.h}!colision\_bomba@{colision\_bomba}}
 \index{colision\_bomba@{colision\_bomba}!Bomba.h@{Bomba.h}}
@@ -87,11 +87,11 @@ Gestiona la colision de una bomba con un jugador y con un ejercito de enemigos, 
 \item Si colision con un enemigo de un ejercito\+: Ese enemigo entra en estado de explosion
 \end{DoxyItemize}
 
-\begin{DoxyPrecond}{Precondition}
+\begin{DoxyPrecond}{Precondición}
 La bomba, jugador y el ejercito deben estar inicializados
 \end{DoxyPrecond}
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{Parámetros}
 {\em bomba} & Puntero a estructura tipo bomba \\
 \hline
 {\em player} & Puntero a estructura tipo player \\
@@ -103,14 +103,14 @@ La bomba, jugador y el ejercito deben estar inicializados
 \index{Bomba.h@{Bomba.h}!crea\_bomba@{crea\_bomba}}
 \index{crea\_bomba@{crea\_bomba}!Bomba.h@{Bomba.h}}
 \subsubsection{\texorpdfstring{crea\_bomba()}{crea\_bomba()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{_bomba_8h_aa7502670a5779cfa4126e95d52b1ce8b}{Bomba}} crea\+\_\+bomba (\begin{DoxyParamCaption}\item[{double}]{x,  }\item[{double}]{y,  }\item[{\mbox{\hyperlink{_pantalla_8h_a768e3409329f2389c63495f1a1684379}{Imagen}} $\ast$}]{imagenes }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \mbox{\hyperlink{_bomba_8h_aa7502670a5779cfa4126e95d52b1ce8b}{Bomba}} crea\+\_\+bomba (\begin{DoxyParamCaption}\item[{double}]{x,  }\item[{double}]{y,  }\item[{Imagen $\ast$}]{imagenes }\end{DoxyParamCaption})}
 
 
 
 Crea e inicializa una bomba. 
 
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{Parámetros}
 {\em x} & Coordenada x de la bomba \\
 \hline
 {\em y} & Coordenada y de la bomba \\
@@ -118,7 +118,7 @@ Crea e inicializa una bomba.
 {\em imagenes} & Array de imagenes precargadas \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Devuelve}
 Bomba 
 \end{DoxyReturn}
 \mbox{\Hypertarget{_bomba_8h_af88fa2c7dbc5e13f6f492ee53cb871ed}\label{_bomba_8h_af88fa2c7dbc5e13f6f492ee53cb871ed}} 
@@ -131,11 +131,11 @@ Bomba
 
 Dibuja una bomba en la pantalla. 
 
-\begin{DoxyPrecond}{Precondition}
+\begin{DoxyPrecond}{Precondición}
 La bomba debe estar inicializada
 \end{DoxyPrecond}
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{Parámetros}
 {\em bomba} & Puntero a estructura tipo bomba \\
 \hline
 \end{DoxyParams}
@@ -149,15 +149,15 @@ La bomba debe estar inicializada
 
 Devuelve la coordenada altura de una bomba. 
 
-\begin{DoxyPrecond}{Precondition}
+\begin{DoxyPrecond}{Precondición}
 La bomba debe estar inicializada
 \end{DoxyPrecond}
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{Parámetros}
 {\em bomba} & Puntero a estructura tipo bomba \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Devuelve}
 double Altura de la bomba 
 \end{DoxyReturn}
 \mbox{\Hypertarget{_bomba_8h_a71034aeb91a46e75998f0a9ad39c2c20}\label{_bomba_8h_a71034aeb91a46e75998f0a9ad39c2c20}} 
@@ -170,15 +170,15 @@ double Altura de la bomba
 
 Devuelve la anchura de una bomba. 
 
-\begin{DoxyPrecond}{Precondition}
+\begin{DoxyPrecond}{Precondición}
 La bomba debe estar inicializada
 \end{DoxyPrecond}
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{Parámetros}
 {\em bomba} & Puntero a estructura tipo bomba \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Devuelve}
 double Anchura de una bomba 
 \end{DoxyReturn}
 \mbox{\Hypertarget{_bomba_8h_a5261e7e1f372ea741e6fd93e174ae339}\label{_bomba_8h_a5261e7e1f372ea741e6fd93e174ae339}} 
@@ -191,15 +191,15 @@ double Anchura de una bomba
 
 Devuelve la coordenada x de una bomba. 
 
-\begin{DoxyPrecond}{Precondition}
+\begin{DoxyPrecond}{Precondición}
 La bomba debe estar inicializada
 \end{DoxyPrecond}
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{Parámetros}
 {\em bomba} & Puntero a estructura tipo bomba \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Devuelve}
 double Coordenada x de la bomba 
 \end{DoxyReturn}
 \mbox{\Hypertarget{_bomba_8h_ac486af3dc4a6d157617096de80797a2a}\label{_bomba_8h_ac486af3dc4a6d157617096de80797a2a}} 
@@ -212,15 +212,15 @@ double Coordenada x de la bomba
 
 Devuelve la coordenada y de una bomba. 
 
-\begin{DoxyPrecond}{Precondition}
+\begin{DoxyPrecond}{Precondición}
 La bomba debe estar inicializada
 \end{DoxyPrecond}
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{Parámetros}
 {\em bomba} & Puntero a estructura tipo bomba \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Devuelve}
 double Coordenada y de la bomba 
 \end{DoxyReturn}
 \mbox{\Hypertarget{_bomba_8h_ac83e3c379064f5721ec703aa532109df}\label{_bomba_8h_ac83e3c379064f5721ec703aa532109df}} 
@@ -233,11 +233,11 @@ double Coordenada y de la bomba
 
 Libera la memoria de una bomba. 
 
-\begin{DoxyPrecond}{Precondition}
+\begin{DoxyPrecond}{Precondición}
 La bomba debe estar inicializada
 \end{DoxyPrecond}
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{Parámetros}
 {\em bomba} & \\
 \hline
 \end{DoxyParams}
@@ -251,11 +251,11 @@ La bomba debe estar inicializada
 
 Mueve una bomba. 
 
-\begin{DoxyPrecond}{Precondition}
+\begin{DoxyPrecond}{Precondición}
 La bomba debe estar inicializada
 \end{DoxyPrecond}
 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{Parámetros}
 {\em bomba} & Puntero a estructura tipo bomba \\
 \hline
 \end{DoxyParams}
