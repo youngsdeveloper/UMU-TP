@@ -1,69 +1,39 @@
-# proyectoTP
+![Logo Maldito Pajaro](./docs/images/logo.png)
+
+# MalditoPajaro
 Proyecto de Tecnologias de programación para 1º de Ingenieria Informática.
 
+Se trata de un videojuego simple en el que tienes que alanzar a una serie de pajaros utilizando una pelota.
 
-Comando para compilar con GCC: gcc *.c -o prueba -lSDL2 -lm -std=c99 
+El movimiento de la pelota se basa en el movimiento parabolico.
 
+Cuidado con las bombas, si te alcanzan, te restarán vidas.
 
-
-
-Enrique Rodríguez López
-1º Ingeniería Informática
-
-Tecnologías de la Programación
+![Gameplay](./docs/images/gameplay.gif)
 
 
+# Requisitos
+
+Para la instalacion de este juego es necesario tener instalado la libreria de SDL.
+
+```console
+enrique@pc:~$ sudo apt-get install libsdl2-dev
+```
 
 
+# Compilar
 
-
-Índice de contenidos
+Para compilar solo tendrás que hacer "make", ya que está disponible el Makefile.
 
-Pantallas
-Jugabilidad
-Implementación
-
-Pantallas
+Una vez compilado, podrás ejecutar el juego sin problemas.
 
-Menú
-La primera pantalla que observamos nada más iniciar el juego es el menú principal, en dicho menú observamos el logotipo del videojuego y tres botones principales.
+```console
+enrique@pc:~$ make
+enrique@pc:~$ ./MalditoPajaro
+```
 
 
-“Jugar ya”: Inicia el videojuego
-“Ayuda”: Inicia la pantalla de ayuda
-“Salir”: Cierra el videojuego
-
-También podemos observar que abajo a la izquierda aparece la máxima puntuación obtenida. A la derecha podemos observar un balón y el suelo dibujados como parte decorativa de la escena, pero si mueves el ratón el balón inicia una animación y sale disparado hacía el pajaro, haciendo una referencia a las mecánicas del videojuego.
-
-
-
-
-
-
-
-
-
-Ayuda
-En la pantalla de ayuda puedes encontrar unos gráficos que explican de forma muy sencilla cómo jugar al juego, podemos encontrar tres botones:
-
-“<” y “>”: Estos botones son para pasar a la anterior y a la próxima explicación
-“Volver al menú”: Botón para volver al menú principal
-
-
-Juego
-Esta es la pantalla principal del videojuego, nos encontramos en un escenario donde aparece una pelota sobre un fondo de un cielo y un suelo.
-
-Arriba a la izquierda aparece los puntos que hemos conseguido, cuál es el record actual y cuantas vidas nos quedas. También, si has logrado un nuevo record te lo indica ahí.
-
-Arriba a la derecha nos encontramos con la barra de fuerza, cuando hacemos click izquierdo e iniciamos un disparo, aparece un indicador con la fuerza con la que saldrá disparado el balón.
-
-
-
-Post-juego
-Una vez ha finalizado la partida, aparece una pantalla intermedia con información sobre cómo ha ido tu partida con datos interesantes, una vez quieras continuar solo tienes que pulsar “Volver al menú” y regresarás al menú para iniciar otra partida de nuevo.
-
-
-Jugabilidad
+# Jugabilidad
 La jugabilidad del juego es muy sencilla, el jugador controla una pelota que puede mover haciendo lanzamientos parabólicos.
 
 El objetivo del jugador será disparar a una serie de pájaros que se irán desplazando por la pantalla de forma horizontal de derecha a izquierda.
@@ -78,7 +48,7 @@ Las bombas no sólo son malas para ti, ya que si por casualidad alcanza a un pá
 
 Además, cuanta más puntuación consigas, el juego se irá complicando, pues a más puntuación, la velocidad de los pájaros puede ser mayor, la frecuencia con la que aparecen las bombas o la altura a la que vuelan los pájaros...
 
-Implementación
+# Implementación
 
 Para implementar este juego, se ha utilizado varios modelos de datos:
 
